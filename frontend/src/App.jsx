@@ -12,6 +12,7 @@ import AgriServicesHub from './components/AgriServicesHub';
 import ChatAssistant from './components/ChatAssistant';
 import { translations } from './translations';
 import { API_BASE_URL } from './config';
+import { AlertOctagon, ShieldCheck, Leaf, BookOpen, CloudSun, IndianRupee, Landmark } from 'lucide-react';
 
 export default function App() {
   const [lang, setLang] = useState('or'); // Odia default per target farmer spec
