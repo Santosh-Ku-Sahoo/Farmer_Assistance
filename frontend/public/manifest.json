@@ -1,0 +1,17 @@
+{
+  "short_name": "FarmerAssistant",
+  "name": "AI Farmer Assistant - Krishi Sahayak",
+  "description": "AI crop disease diagnosis, spray weather advisory, mandi prices & extension support for Odisha farmers",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1E4D2B",
+  "background_color": "#EAF0E6",
+  "orientation": "portrait"
+}

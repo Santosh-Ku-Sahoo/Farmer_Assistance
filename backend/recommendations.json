@@ -1,0 +1,500 @@
+{
+  "Rice___Bacterial_Leaf_Blight": {
+    "crop": "Rice",
+    "crop_odia": "ଧାନ (Dhan)",
+    "disease_name": "Bacterial Leaf Blight",
+    "disease_name_odia": "ଜୀବାଣୁ ଜନିତ ପତ୍ରପୋଡ଼ା ରୋଗ (Bacterial Leaf Blight)",
+    "severity": "High",
+    "dosage_per_liter_g_ml": 2.5,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Copper Oxychloride 50% WP + Streptocycline (90:10)",
+    "common_market_names": ["Blitox 50", "Cupramar", "Plantomycin", "Streptocycline"],
+    "symptoms_en": "Water-soaked lesions on leaf margins that turn yellowish-white with wavy edges. Droplets of bacterial ooze may dry on leaves.",
+    "symptoms_or": "ପତ୍ରର ଧାରରେ ପାଣିଚିହ୍ନିତ ଦାଗ ସୃଷ୍ଟି ହୋଇ ଧୀରେ ଧୀରେ ଧଳା ବା ହଳଦିଆ ହୋଇ ତଳକୁ ଶୁଖିଯାଏ।",
+    "immediate_action_en": "Drain excess stagnant water from the field immediately to prevent bacterial spread through irrigation channels.",
+    "immediate_action_or": "ଜମିରୁ ତୁରନ୍ତ ଅଧିକ ଜଳ ନିଷ୍କାସନ କରନ୍ତୁ ଯାହାଦ୍ୱାରା ରୋଗ ଜଳ ମାଧ୍ୟମରେ ଅନ୍ୟ କ୍ଷେତକୁ ବ୍ୟାପିବ ନାହିଁ।",
+    "recovery_day_1_en": "Drain field water and apply Streptocycline (1g) + Copper Oxychloride (25g) per 10L.",
+    "recovery_day_1_or": "କ୍ଷେତରୁ ପାଣି ବାହାର କରନ୍ତୁ ଏବଂ ଷ୍ଟ୍ରେପ୍ଟୋସାଇକ୍ଲିନ୍ + କପର ଅକ୍ସିକ୍ଲୋରାଇଡ୍ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_3_en": "Check leaf edges; bacterial ooze droplets should dry up and lesions should stop advancing downwards.",
+    "recovery_day_3_or": "ପତ୍ରର ଧାର ଯାଞ୍ଚ କରନ୍ତୁ; ହଳଦିଆ ପାଣିଚିହ୍ନ ଶୁଖିବା ଆରମ୍ଭ କରିବା ଦରକାର।",
+    "recovery_day_7_en": "Inspect newly emerged flag leaves. Apply Potash (MOP 10 kg/acre) to build stem resistance.",
+    "recovery_day_7_or": "ନୂଆ ବାହାରୁଥିବା ପତ୍ର ଦେଖନ୍ତୁ। ଗଛର ଶକ୍ତି ବୃଦ୍ଧି ପାଇଁ ଏକର ପିଛା ୧୦ କେଜି ପଟାସ ଦିଅନ୍ତୁ।",
+    "management_en": [
+      "Stop applying urea or nitrogenous fertilizers while disease is active.",
+      "Spray Streptocycline (1 g) + Copper Oxychloride 50% WP (25 g) in 10 liters of water per 5 decimals.",
+      "Apply potash fertilizer (MOP) at 10-15 kg/acre to boost plant cell wall resistance.",
+      "Avoid field-to-field irrigation."
+    ],
+    "management_or": [
+      "ରୋଗ ଲାଗିଥିବା ସମୟରେ ୟୁରିଆ (ଯବକ୍ଷାରଜାନ) ସାର ପ୍ରୟୋଗ ବନ୍ଦ ରଖନ୍ତୁ।",
+      "ପ୍ରତି ୧୦ ଲିଟର ପାଣିରେ ୧ ଗ୍ରାମ ଷ୍ଟ୍ରେପ୍ଟୋସାଇକ୍ଲିନ୍ + ୨୫ ଗ୍ରାମ କପର ଅକ୍ସିକ୍ଲୋରାଇଡ୍ ମିଶାଇ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ଗଛର ରୋଗ ପ୍ରତିରୋଧକ ଶକ୍ତି ବୃଦ୍ଧି ପାଇଁ ଏକର ପିଛା ୧୦-୧୫ କେଜି ପଟାସ ସାର ପ୍ରୟୋଗ କରନ୍ତୁ।",
+      "ଗୋଟିଏ କ୍ଷେତରୁ ଅନ୍ୟ କ୍ଷେତକୁ ଜଳ ପ୍ରବାହ ବନ୍ଦ ରଖନ୍ତୁ।"
+    ]
+  },
+  "Rice___Brown_Spot": {
+    "crop": "Rice",
+    "crop_odia": "ଧାନ (Dhan)",
+    "disease_name": "Brown Spot",
+    "disease_name_odia": "ବାଦାମୀ ଦାଗ ରୋଗ (Brown Spot)",
+    "severity": "Medium",
+    "dosage_per_liter_g_ml": 2.5,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Mancozeb 75% WP / Propiconazole 25% EC",
+    "common_market_names": ["Dithane M-45", "Indofil M-45", "Tilt", "Result"],
+    "symptoms_en": "Oval or circular brown lesions with yellow halo on leaves and grain glumes. Often indicates soil nutrient deficiency (potassium or zinc).",
+    "symptoms_or": "ପତ୍ର ଉପରେ ହଳଦିଆ ଧାର ବିଶିଷ୍ଟ ଛୋଟ ଛୋଟ ବାଦାମୀ ରଙ୍ଗର ଗୋଲାକାର ଦାଗ ଦେଖାଯାଏ। ଏହା ମୁଖ୍ୟତଃ ମାଟିରେ ପୋଷକ ତତ୍ତ୍ୱର ଅଭାବରୁ ହୁଏ।",
+    "immediate_action_en": "Check soil moisture and ensure balanced nutrient management rather than water-logging.",
+    "immediate_action_or": "ଜମିରେ ପର୍ଯ୍ୟାପ୍ତ ଆର୍ଦ୍ରତା ବଜାୟ ରଖନ୍ତୁ ଏବଂ ସନ୍ତୁଳିତ ଖତ-ସାର ପ୍ରୟୋଗ କରନ୍ତୁ।",
+    "recovery_day_1_en": "Foliar spray of Mancozeb @ 2.5 g/L or Propiconazole @ 1 ml/L in calm morning weather.",
+    "recovery_day_1_or": "ପ୍ରତି ଲିଟର ପାଣିରେ ୨.୫ ଗ୍ରାମ ମାଙ୍କୋଜେବ୍ ସକାଳ ସମୟରେ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_3_en": "Brown circular spots should turn dark and necrotic without enlarging.",
+    "recovery_day_3_or": "ବାଦାମୀ ଦାଗଗୁଡ଼ିକ ଶୁଖିଯାଇ ଅନ୍ୟ ପତ୍ରକୁ ବଢ଼ିବା ବନ୍ଦ ହେବ।",
+    "recovery_day_7_en": "Top dress Zinc Sulphate (10 kg/acre) if deficient, ensuring vigorous green regrowth.",
+    "recovery_day_7_or": "ଜିଙ୍କ୍ ଅଭାବ ଥିଲେ ଏକର ପିଛା ୧୦ କେଜି ଜିଙ୍କ୍ ସଲଫେଟ୍ ପ୍ରୟୋଗ କରନ୍ତୁ।",
+    "management_en": [
+      "Spray Mancozeb 75% WP @ 2.5 g/liter or Edifenphos 50% EC @ 1 ml/liter of water.",
+      "Apply balanced NPK along with Zinc Sulphate (10 kg/acre) during land preparation.",
+      "Seed treatment with Carbendazim 50% WP @ 2 g/kg seed before next sowing season."
+    ],
+    "management_or": [
+      "ପ୍ରତି ଲିଟର ପାଣିରେ ୨.୫ ଗ୍ରାମ ମାଙ୍କୋଜେବ୍ (Mancozeb) ବା ୧ ମିଲି ଏଡିଫେନଫସ୍ ମିଶାଇ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ଜମି ପ୍ରସ୍ତୁତି ସମୟରେ ଏକର ପ୍ରତି ୧୦ କେଜି ଜିଙ୍କ୍ ସଲଫେଟ୍ ଏବଂ ସନ୍ତୁଳିତ ପଟାସ ପ୍ରୟୋଗ କରନ୍ତୁ।",
+      "ପରବର୍ତ୍ତୀ ବିହନ ବୁଣିବା ପୂର୍ବରୁ କିଲୋଗ୍ରାମ ପ୍ରତି ୨ ଗ୍ରାମ କାର୍ବେଣ୍ଡାଜିମରେ ବିଶୋଧନ କରନ୍ତୁ।"
+    ]
+  },
+  "Rice___Leaf_Blast": {
+    "crop": "Rice",
+    "crop_odia": "ଧାନ (Dhan)",
+    "disease_name": "Leaf Blast",
+    "disease_name_odia": "ପତ୍ର ମହିଷା ରୋଗ (Leaf Blast)",
+    "severity": "High",
+    "dosage_per_liter_g_ml": 0.6,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Tricyclazole 75% WP",
+    "common_market_names": ["Beam", "Baan", "Sivic", "Tricare", "Blastin"],
+    "symptoms_en": "Spindle-shaped lesions with grey or whitish centers and brown-to-reddish margins, tapering at both ends like an eye.",
+    "symptoms_or": "ପତ୍ର ଉପରେ ଆଖି ଆକୃତିର (ଦୁଇ ମୁଣ୍ଡ ସରୁ) ଧୂସର କେନ୍ଦ୍ର ବିଶିଷ୍ଟ ବାଦାମୀ ଦାଗ ସୃଷ୍ଟି ହୁଏ।",
+    "immediate_action_en": "Avoid excessive nitrogen fertilizer immediately and maintain continuous shallow standing water in the paddy field.",
+    "immediate_action_or": "ତୁରନ୍ତ ୟୁରିଆ ପ୍ରୟୋଗ ବନ୍ଦ କରନ୍ତୁ ଏବଂ କ୍ଷେତରେ ଅଳ୍ପ ପାଣି ବାନ୍ଧି ରଖନ୍ତୁ।",
+    "recovery_day_1_en": "Spray Tricyclazole 75% WP @ 0.6 g/L (9g in 15L knapsack tank) with sticker.",
+    "recovery_day_1_or": "ଟ୍ରାଇସାଇକ୍ଲାଜୋଲ୍ ୭୫% WP (୧୫ ଲିଟର ଟାଙ୍କିରେ ୯ ଗ୍ରାମ) ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_3_en": "Spindle eye lesions should stop producing greyish spore centers and turn dark brown.",
+    "recovery_day_3_or": "ଆଖି ଆକୃତିର ଦାଗର ଧୂସର କେନ୍ଦ୍ର ଶୁଖିଯାଇ କଳା-ବାଦାମୀ ପଡ଼ିବ।",
+    "recovery_day_7_en": "If cloudy/dewy weather persists and neck nodes show lesions, apply second booster spray.",
+    "recovery_day_7_or": "କାକର ଓ କୁହୁଡ଼ି ଲାଗି ରହିଲେ ୭-୧୦ ଦିନ ପରେ ଦ୍ୱିତୀୟ ଥର ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "management_en": [
+      "Spray Tricyclazole 75% WP @ 0.6 g/liter or Isoprothiolane 40% EC @ 1.5 ml/liter water at first appearance of lesions.",
+      "Alternatively spray Kasugamycin 3% SL @ 2.5 ml/liter water in severe morning dew conditions.",
+      "Burn or compost infected stubbles after harvest."
+    ],
+    "management_or": [
+      "ରୋଗ ଦେଖାଦେବା ମାତ୍ରେ ପ୍ରତି ଲିଟର ପାଣିରେ ୦.୬ ଗ୍ରାମ ଟ୍ରାଇସାଇକ୍ଲାଜୋଲ୍ (Tricyclazole) ବା ୧.୫ ମିଲି ଆଇସୋପ୍ରୋଥିଓଲେନ୍ ମିଶାଇ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "କାକର ଅଧିକ ଥିଲେ କାସୁଗାମାଇସିନ୍ (Kasugamycin) ୨.୫ ମିଲି/ଲିଟର ପାଣିରେ ପ୍ରୟୋଗ କରାଯାଇପାରେ।",
+      "ଫସଲ କାଟିବା ପରେ ଆକ୍ରାନ୍ତ ନଡ଼ା କ୍ଷେତରୁ ସଫା କରନ୍ତୁ।"
+    ]
+  },
+  "Rice___Healthy": {
+    "crop": "Rice",
+    "crop_odia": "ଧାନ (Dhan)",
+    "disease_name": "Healthy Plant",
+    "disease_name_odia": "ସୁସ୍ଥ ଫସଲ (Healthy Crop)",
+    "severity": "None",
+    "dosage_per_liter_g_ml": 0.0,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "None Required (Prophylactic Neem Oil 3 ml/L optional)",
+    "common_market_names": ["Econeem", "Neemazal", "Nimbecidine"],
+    "symptoms_en": "Vigorous green leaves without visible lesions, discoloration, or wilt symptoms.",
+    "symptoms_or": "ପତ୍ର ସବୁଜ, ସତେଜ ଏବଂ କୌଣସି ପ୍ରକାର ଦାଗ ବା ପୋଡ଼ା ଚିହ୍ନ ନାହିଁ।",
+    "immediate_action_en": "No chemical intervention needed. Continue regular crop monitoring and weed management.",
+    "immediate_action_or": "କୌଣସି ଔଷଧ ସ୍ପ୍ରେ କରିବାର ଆବଶ୍ୟକତା ନାହିଁ। ନିୟମିତ ଘାସ ବଛା ଓ ଯତ୍ନ ଜାରି ରଖନ୍ତୁ।",
+    "recovery_day_1_en": "Maintain healthy water balance with alternate wetting and drying.",
+    "recovery_day_1_or": "ଜମିରେ ପାଣି ନିୟନ୍ତ୍ରଣ ଓ ଯତ୍ନ ବଜାୟ ରଖନ୍ତୁ।",
+    "recovery_day_3_en": "Continue scout inspection around field bunds for leaf folder or stem borer moths.",
+    "recovery_day_3_or": "ହିଡ଼ ପାଖ ଘାସ ସଫା ରଖି କୀଟପତଙ୍ଗ ଉପରେ ନଜର ରଖନ୍ତୁ।",
+    "recovery_day_7_en": "Apply top dressing of MOP Potash at panicle initiation for grain weight.",
+    "recovery_day_7_or": "କେଣ୍ଡା ବାହାରିବା ସମୟରେ ଅଳ୍ପ ପଟାସ ସାର ପ୍ରୟୋଗ କରନ୍ତୁ।",
+    "management_en": [
+      "Maintain intermittent wetting and drying (AWD) water management.",
+      "Apply top-dressing of potash at panicle initiation stage for strong stem and disease tolerance.",
+      "Keep field borders free from weed hosts like Echinochloa grass."
+    ],
+    "management_or": [
+      "ଜମିରେ ପାଣିର ଉପଯୁକ୍ତ ପରିଚାଳନା (ପାଣି ଶୁଖାଇ ପୁଣି ଦେବା) କରନ୍ତୁ।",
+      "କେଣ୍ଡା ବାହାରିବା ସମୟରେ ଅଳ୍ପ ପଟାସ ସାର ଦିଅନ୍ତୁ ଯାହା ଫସଲକୁ ସୁଦୃଢ଼ କରିବ।",
+      "ହିଡ଼ ପାଖ ଘାସ ନିୟମିତ ସଫା ରଖନ୍ତୁ।"
+    ]
+  },
+  "Tomato___Bacterial_Spot": {
+    "crop": "Tomato",
+    "crop_odia": "ବିଲାତି ବାଇଗଣ (Tomato)",
+    "disease_name": "Bacterial Spot",
+    "disease_name_odia": "ଜୀବାଣୁ ଦାଗ ରୋଗ (Bacterial Spot)",
+    "severity": "Medium",
+    "dosage_per_liter_g_ml": 2.5,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Copper Oxychloride 50% WP + Streptocycline",
+    "common_market_names": ["Blitox", "Cupramar", "Plantomycin"],
+    "symptoms_en": "Small, dark, water-soaked circular spots on leaves that turn brown with a yellowish border; sunken scab-like spots on green fruits.",
+    "symptoms_or": "ପତ୍ର ଉପରେ ଛୋଟ ଛୋଟ କଳା-ବାଦାମୀ ଦାଗ ଏବଂ କଞ୍ଚା ଟମାଟୋ ଉପରେ ଖାଲୁଆ ଦାଗ ଦେଖାଯାଏ।",
+    "immediate_action_en": "Avoid overhead watering; irrigate near root zone only to prevent bacterial splash between foliage.",
+    "immediate_action_or": "ପତ୍ର ଉପରେ ପାଣି ଛିଞ୍ଚିବା ବନ୍ଦ କରନ୍ତୁ, କେବଳ ଗଛ ମୂଳରେ ପାଣି ଦିଅନ୍ତୁ।",
+    "recovery_day_1_en": "Spray Copper Oxychloride 50% WP @ 2.5 g/L + 0.5g Streptocycline per 10L.",
+    "recovery_day_1_or": "ପ୍ରତି ଲିଟର ପାଣିରେ ୨.୫ ଗ୍ରାମ କପର ଅକ୍ସିକ୍ଲୋରାଇଡ୍ + ଷ୍ଟ୍ରେପ୍ଟୋସାଇକ୍ଲିନ୍ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_3_en": "Remove infected lower foliage touching soil surface.",
+    "recovery_day_3_or": "ମାଟି ସଂସ୍ପର୍ଶରେ ଥିବା ତଳ ରୋଗା ପତ୍ର ଛାଣ୍ଟି ଦିଅନ୍ତୁ।",
+    "recovery_day_7_en": "Check fruit surfaces for scab arrest; repeat spray if humid rain persists.",
+    "recovery_day_7_or": "ଫଳ ଉପରେ ନୂଆ ଦାଗ ଯାଞ୍ଚ କରନ୍ତୁ; ବର୍ଷା ଥିଲେ ୭ ଦିନ ପରେ ପୁନର୍ବାର ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "management_en": [
+      "Spray Copper Oxychloride 50% WP (2.5 g/L) combined with Plantomycin/Streptocycline (0.5 g/10 L).",
+      "Remove and destroy severely spotted lower leaves using clean pruners.",
+      "Follow 2-year crop rotation with non-solanaceous crops like maize or pulses."
+    ],
+    "management_or": [
+      "ପ୍ରତି ଲିଟର ପାଣିରେ ୨.୫ ଗ୍ରାମ କପର ଅକ୍ସିକ୍ଲୋରାଇଡ୍ ଏବଂ ୧୦ ଲିଟର ପାଣିରେ ୦.୫ ଗ୍ରାମ ଷ୍ଟ୍ରେପ୍ଟୋସାଇକ୍ଲିନ୍ ମିଶାଇ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ରୋଗାକ୍ରାନ୍ତ ତଳ ପତ୍ରଗୁଡ଼ିକୁ କାଟି କ୍ଷେତରୁ ଦୂରରେ ନଷ୍ଟ କରନ୍ତୁ।",
+      "ମକା ବା ଡାଲି ଜାତୀୟ ଫସଲ ସହିତ ଫସଲ ପର୍ଯ୍ୟାୟ ପାଳନ କରନ୍ତୁ।"
+    ]
+  },
+  "Tomato___Early_Blight": {
+    "crop": "Tomato",
+    "crop_odia": "ବିଲାତି ବାଇଗଣ (Tomato)",
+    "disease_name": "Early Blight",
+    "disease_name_odia": "ଆଗୁଆ ଝାଉଁଳା / ପତ୍ରପୋଡ଼ା ରୋଗ (Early Blight)",
+    "severity": "Medium",
+    "dosage_per_liter_g_ml": 2.0,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Mancozeb 75% WP / Chlorothalonil 75% WP",
+    "common_market_names": ["Indofil M-45", "Kavach", "Dithane M-45"],
+    "symptoms_en": "Concentric rings ('target board' appearance) on older lower leaves, leading to yellowing and premature leaf drop.",
+    "symptoms_or": "ତଳ ପତ୍ରରେ ଚକ୍ରାକାର (Target Board ଭଳି) ବାଦାମୀ ଦାଗ ହୋଇ ପତ୍ର ଶୁଖି ଝଡ଼ିପଡ଼େ।",
+    "immediate_action_en": "Prune infected bottom leaves touching the soil surface and mulch ground with paddy straw.",
+    "immediate_action_or": "ମାଟିକୁ ଲାଗି ରହିଥିବା ରୋଗାକ୍ରାନ୍ତ ତଳ ପତ୍ର କାଟି ଦିଅନ୍ତୁ ଏବଂ ମୂଳରେ ନଡ଼ା ବିଛାନ୍ତୁ।",
+    "recovery_day_1_en": "Spray Mancozeb @ 2 g/L (30g per 15L pump) thoroughly coating lower canopy.",
+    "recovery_day_1_or": "ପ୍ରତି ଲିଟର ପାଣିରେ ୨ ଗ୍ରାମ ମାଙ୍କୋଜେବ୍ (୧୫ ଲିଟର ଟାଙ୍କିରେ ୩୦ ଗ୍ରାମ) ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_3_en": "Target spot concentric rings should dry out without yellow halos.",
+    "recovery_day_3_or": "ଚକ୍ରାକାର ଦାଗଗୁଡ଼ିକ ଶୁଖିଯିବା ଲକ୍ଷ୍ୟ କରନ୍ତୁ।",
+    "recovery_day_7_en": "Stake tomato plants with bamboo poles to keep canopy off wet ground.",
+    "recovery_day_7_or": "ଗଛଗୁଡ଼ିକୁ ବାଉଁଶ ବାଡ଼ି ସାହାଯ୍ୟରେ ଠିଆ କରି ବାନ୍ଧନ୍ତୁ।",
+    "management_en": [
+      "Spray Mancozeb 75% WP @ 2 g/liter or Chlorothalonil 75% WP @ 2 g/liter at 10-day intervals.",
+      "For organic management, apply Trichoderma viride enriched compost to soil before planting.",
+      "Stake tomato vines to keep foliage off moist soil."
+    ],
+    "management_or": [
+      "ପ୍ରତି ଲିଟର ପାଣିରେ ୨ ଗ୍ରାମ ମାଙ୍କୋଜେବ୍ (Mancozeb) ବା କ୍ଲୋରୋଥାଲୋନିଲ୍ ମିଶାଇ ୧୦ ଦିନ ବ୍ୟବଧାନରେ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ଜୈବିକ ଉପାୟରେ ଟ୍ରାଇକୋଡର୍ମା (Trichoderma viride) ମିଶ୍ରିତ ଖତ ପ୍ରୟୋଗ କରନ୍ତୁ।",
+      "ଗଛକୁ ବାଉଁଶ ବା ବାଡ଼ି ସାହାଯ୍ୟରେ ଠିଆ କରି ବାନ୍ଧନ୍ତୁ ଯାହା ଫଳରେ ପତ୍ର ମାଟି ସଂସ୍ପର୍ଶରେ ଆସିବ ନାହିଁ।"
+    ]
+  },
+  "Tomato___Late_Blight": {
+    "crop": "Tomato",
+    "crop_odia": "ବିଲାତି ବାଇଗଣ (Tomato)",
+    "disease_name": "Late Blight",
+    "disease_name_odia": "ପଛୁଆ ପତ୍ରପୋଡ଼ା ମହାମାରୀ (Late Blight)",
+    "severity": "High",
+    "dosage_per_liter_g_ml": 2.5,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Cymoxanil 8% + Mancozeb 64% WP / Metalaxyl 8% + Mancozeb 64% WP",
+    "common_market_names": ["Curzate M8", "Ridomil Gold MZ", "Section", "Master"],
+    "symptoms_en": "Large irregular greenish-black water-soaked lesions that spread rapidly in cool, humid foggy weather; white fungal fuzz under leaves.",
+    "symptoms_or": "ଶୀତ ଓ କୁହୁଡ଼ିଆ ପାଗରେ ପତ୍ରରେ ବଡ଼ ବଡ଼ କଳା-ବାଦାମୀ ପାଣିଚିହ୍ନିତ ଦାଗ ହୋଇ ଗଛ ଦ୍ରୁତ ଗତିରେ ପୋଡ଼ିଯାଏ।",
+    "immediate_action_en": "Act rapidly — late blight can destroy an entire field within 3-5 days of persistent foggy conditions.",
+    "immediate_action_or": "ତୁରନ୍ତ ପଦକ୍ଷେପ ନିଅନ୍ତୁ — କୁହୁଡ଼ି ପାଗରେ ଏହି ରୋଗ ୩ ରୁ ୫ ଦିନ ମଧ୍ୟରେ ସମଗ୍ର ଫସଲ ନଷ୍ଟ କରିଦିଏ।",
+    "recovery_day_1_en": "Emergency spray of Cymoxanil+Mancozeb @ 2.5 g/L (37.5g per 15L pump).",
+    "recovery_day_1_or": "ତୁରନ୍ତ ସାଇମୋକ୍ସାନିଲ୍ + ମାଙ୍କୋଜେବ୍ (୧୫ ଲିଟର ଟାଙ୍କିରେ ୩୭.୫ ଗ୍ରାମ) ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_3_en": "White fungal fuzz underneath leaves must collapse into crisp black margins.",
+    "recovery_day_3_or": "ପତ୍ର ତଳେ ଥିବା ଧଳା ଫିମ୍ପି ନଷ୍ଟ ହୋଇ କଳା ପଡ଼ି ଶୁଖିବା ଆବଶ୍ୟକ।",
+    "recovery_day_7_en": "If fog continues, alternate with Dimethomorph 50% WP (1 g/L) to prevent resistance.",
+    "recovery_day_7_or": "କୁହୁଡ଼ି ଲାଗି ରହିଲେ ଡାଇମେଥୋମର୍ଫ୍ (୧ ଗ୍ରାମ/ଲିଟର) ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "management_en": [
+      "Spray systemic fungicide Cymoxanil 8% + Mancozeb 64% WP (2.5 g/L) or Metalaxyl 8% + Mancozeb 64% WP (2 g/L).",
+      "Ensure proper row spacing to maximize sunlight penetration and air circulation.",
+      "Avoid harvesting fruits during morning dew or wet foliage conditions."
+    ],
+    "management_or": [
+      "ସାଇମୋକ୍ସାନିଲ୍ + ମାଙ୍କୋଜେବ୍ (Cymoxanil + Mancozeb 2.5 g/L) କିମ୍ବା ମେଟାଲାକ୍ସିଲ୍ + ମାଙ୍କୋଜେବ୍ (2 g/L) ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ଗଛ ମଧ୍ୟରେ ଉପଯୁକ୍ତ ଦୂରତା ରଖନ୍ତୁ ଯାହାଦ୍ୱାରା ଖରା ଓ ପବନ ଭଲ ଭାବେ ଚଳାଚଳ କରିପାରିବ।",
+      "ଓଦା ଥିବା ସମୟରେ ଟମାଟୋ ତୋଳନ୍ତୁ ନାହିଁ।"
+    ]
+  },
+  "Tomato___Leaf_Mold": {
+    "crop": "Tomato",
+    "crop_odia": "ବିଲାତି ବାଇଗଣ (Tomato)",
+    "disease_name": "Leaf Mold",
+    "disease_name_odia": "ପତ୍ର ଫିମ୍ପି ରୋଗ (Leaf Mold)",
+    "severity": "Medium",
+    "dosage_per_liter_g_ml": 2.0,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Carbendazim 12% + Mancozeb 63% WP",
+    "common_market_names": ["Saaf", "Sixer", "Companion"],
+    "symptoms_en": "Pale green or yellowish spots on upper leaf surface with velvety olive-green to brown fungal growth underneath.",
+    "symptoms_or": "ପତ୍ରର ଉପର ପାଖରେ ହଳଦିଆ ଦାଗ ଏବଂ ତଳ ପାଖରେ ମଖମଲ ଭଳି ବାଦାମୀ/ସବୁଜ ଫିମ୍ପି ଦେଖାଯାଏ।",
+    "immediate_action_en": "Improve ventilation around plant canopy and avoid dense foliage overcrowding.",
+    "immediate_action_or": "ଗଛର ଘଞ୍ଚତା କମାନ୍ତୁ ଏବଂ ପବନ ଚଳାଚଳ ସୁବିଧା କରନ୍ତୁ।",
+    "recovery_day_1_en": "Spray Carbendazim+Mancozeb (Saaf @ 2 g/L) ensuring underside of leaves is covered.",
+    "recovery_day_1_or": "ପ୍ରତି ଲିଟର ପାଣିରେ ୨ ଗ୍ରାମ ସାଫ୍ (Saaf) ମିଶାଇ ପତ୍ରର ତଳ ପାଖରେ ଭଲ ଭାବେ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_3_en": "Prune excess suckers and crowded bottom branches for better airflow.",
+    "recovery_day_3_or": "ଅଦରକାରୀ ଶାଖା ଓ ତଳ ପତ୍ର କାଟି ପବନ ଚଳାଚଳ ସୁଗମ କରନ୍ତୁ।",
+    "recovery_day_7_en": "Check newly formed foliage for clean spot-free growth.",
+    "recovery_day_7_or": "ନୂଆ ପତ୍ର ସୁସ୍ଥ ରହିବା ନିଶ୍ଚିତ କରନ୍ତୁ।",
+    "management_en": [
+      "Spray Copper Hydroxide 77% WP @ 2 g/liter or Carbendazim 12% + Mancozeb 63% WP @ 2 g/liter.",
+      "Prune dense suckers and old leaves to lower relative humidity within the canopy.",
+      "Water soil in early morning so foliage dries quickly during daylight."
+    ],
+    "management_or": [
+      "ପ୍ରତି ଲିଟର ପାଣିରେ ୨ ଗ୍ରାମ କପର ହାଇଡ୍ରୋକ୍ସାଇଡ୍ କିମ୍ବା କାର୍ବେଣ୍ଡାଜିମ + ମାଙ୍କୋଜେବ୍ ମିଶାଇ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ପତ୍ରର ଆର୍ଦ୍ରତା କମାଇବା ପାଇଁ ଅଦରକାରୀ ଶାଖା ଓ ତଳ ପତ୍ର ଛାଟି ଦିଅନ୍ତୁ।",
+      "ସକାଳ ସମୟରେ ଜଳସେଚନ କରନ୍ତୁ ଯାହା ଫଳରେ ଦିନ ବେଳା ପତ୍ର ଶୁଖି ରହିବ।"
+    ]
+  },
+  "Tomato___Septoria_Leaf_Spot": {
+    "crop": "Tomato",
+    "crop_odia": "ବିଲାତି ବାଇଗଣ (Tomato)",
+    "disease_name": "Septoria Leaf Spot",
+    "disease_name_odia": "ସେପ୍ଟୋରିଆ ପତ୍ର ଦାଗ (Septoria Leaf Spot)",
+    "severity": "Medium",
+    "dosage_per_liter_g_ml": 2.0,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Zineb 75% WP / Azoxystrobin 23% SC",
+    "common_market_names": ["Indofil Z-78", "Amistar", "Custodia"],
+    "symptoms_en": "Numerous tiny circular spots with dark brown margins and greyish centers containing tiny black specks.",
+    "symptoms_or": "ପତ୍ର ଉପରେ ବହୁ ସଂଖ୍ୟକ ଛୋଟ ଗୋଲାକାର ଦାଗ, ଯାହାର କେନ୍ଦ୍ର ଧୂସର ଏବଂ ଧାର କଳା-ବାଦାମୀ ହୋଇଥାଏ।",
+    "immediate_action_en": "Strip infected lower leaves and discard away from field borders.",
+    "immediate_action_or": "ରୋଗାକ୍ରାନ୍ତ ତଳ ପତ୍ରଗୁଡ଼ିକୁ ଛିଣ୍ଡାଇ କ୍ଷେତ ବାହାରେ ପୋତି ଦିଅନ୍ତୁ।",
+    "recovery_day_1_en": "Spray Zineb @ 2 g/L and mulch beds with paddy straw to prevent rain splash.",
+    "recovery_day_1_or": "ପ୍ରତି ଲିଟର ପାଣିରେ ୨ ଗ୍ରାମ ଜିନେବ୍ ସ୍ପ୍ରେ କରନ୍ତୁ ଏବଂ ମୂଳରେ ନଡ଼ା ବିଛାନ୍ତୁ।",
+    "recovery_day_3_en": "Infected lower leaves will drop; ensure they are buried away from the crop.",
+    "recovery_day_3_or": "ଝଡ଼ି ପଡ଼ିଥିବା ରୋଗା ପତ୍ରକୁ ଜମିରୁ ଦୂରରେ ପୋତି ଦିଅନ୍ତୁ।",
+    "recovery_day_7_en": "Inspect upper canopy leaves to confirm disease arrest.",
+    "recovery_day_7_or": "ଉପର ପତ୍ରରେ ନୂଆ ଦାଗ ନ ଥିବା ଯାଞ୍ଚ କରନ୍ତୁ।",
+    "management_en": [
+      "Spray Zineb 75% WP @ 2 g/L or Azoxystrobin 23% SC @ 1 ml/L.",
+      "Mulch soil around plants to prevent fungal spores from splashing up during heavy rains.",
+      "Ensure proper weeding around crop beds."
+    ],
+    "management_or": [
+      "ପ୍ରତି ଲିଟର ପାଣିରେ ୨ ଗ୍ରାମ ଜିନେବ୍ (Zineb) ବା ୧ ମିଲି ଆଜୋକ୍ସିଷ୍ଟ୍ରୋବିନ୍ ମିଶାଇ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ବର୍ଷା ପାଣି ଛିଞ୍ଚି ହୋଇ ପତ୍ରରେ ନ ଲାଗିବା ପାଇଁ ଗଛ ମୂଳରେ ନଡ଼ା ବିଛାନ୍ତୁ।",
+      "କିଆରୀ ଚାରିପାଖ ଘାସମୁକ୍ତ ରଖନ୍ତୁ।"
+    ]
+  },
+  "Tomato___Target_Spot": {
+    "crop": "Tomato",
+    "crop_odia": "ବିଲାତି ବାଇଗଣ (Tomato)",
+    "disease_name": "Target Spot",
+    "disease_name_odia": "ଚକ୍ରାକାର ପତ୍ର ଦାଗ ରୋଗ (Target Spot)",
+    "severity": "Medium",
+    "dosage_per_liter_g_ml": 2.0,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Chlorothalonil 75% WP / Difenoconazole 25% EC",
+    "common_market_names": ["Kavach", "Score", "Inspire"],
+    "symptoms_en": "Brown circular lesions with faint concentric rings that expand and cause leaf collapse.",
+    "symptoms_or": "ବାଦାମୀ ରଙ୍ଗର ବୃତ୍ତାକାର ଦାଗ ଯାହା କ୍ରମଶଃ ବୃଦ୍ଧି ପାଇ ପତ୍ରକୁ ଶୁଖାଇଦିଏ।",
+    "immediate_action_en": "Avoid sprinkler irrigation and ensure proper row spacing.",
+    "immediate_action_or": "ସ୍ପ୍ରିଙ୍କଲର ଜଳସେଚନ ବନ୍ଦ କରି ନାଳି ମାଧ୍ୟମରେ ମୂଳରେ ପାଣି ଦିଅନ୍ତୁ।",
+    "recovery_day_1_en": "Foliar application of Chlorothalonil @ 2 g/L in morning sun.",
+    "recovery_day_1_or": "ପ୍ରତି ଲିଟର ପାଣିରେ ୨ ଗ୍ରାମ କ୍ଲୋରୋଥାଲୋନିଲ୍ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_3_en": "Lesion margins should cease expanding across leaf veins.",
+    "recovery_day_3_or": "ଦାଗର ଆକାର ବୃଦ୍ଧି ବନ୍ଦ ହେବ।",
+    "recovery_day_7_en": "Ensure proper 60cm plant spacing for air circulation.",
+    "recovery_day_7_or": "ଗଛ ମଧ୍ୟରେ ଉପଯୁକ୍ତ ବ୍ୟବଧାନ ବଜାୟ ରଖନ୍ତୁ।",
+    "management_en": [
+      "Spray Chlorothalonil @ 2 g/liter or Difenoconazole 25% EC @ 1 ml/liter.",
+      "Maintain adequate plant spacing (60 cm x 45 cm) for airflow."
+    ],
+    "management_or": [
+      "ପ୍ରତି ଲିଟର ପାଣିରେ ୨ ଗ୍ରାମ କ୍ଲୋରୋଥାଲୋନିଲ୍ ବା ୧ ମିଲି ଡାଇଫେନୋକୋନାଜୋଲ୍ ମିଶାଇ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ଗଛ ମଧ୍ୟରେ ଉପଯୁକ୍ତ ଦୂରତା (୬୦ ସେମି x ୪୫ ସେମି) ବଜାୟ ରଖନ୍ତୁ।"
+    ]
+  },
+  "Tomato___Yellow_Leaf_Curl_Virus": {
+    "crop": "Tomato",
+    "crop_odia": "ବିଲାତି ବାଇଗଣ (Tomato)",
+    "disease_name": "Yellow Leaf Curl Virus",
+    "disease_name_odia": "ପତ୍ର କୁଞ୍ଚୁକୁଞ୍ଚିଆ ହଳଦିଆ ଭୂତାଣୁ ରୋଗ (Yellow Leaf Curl Virus)",
+    "severity": "High",
+    "dosage_per_liter_g_ml": 0.5,
+    "dosage_unit": "ml",
+    "generic_active_ingredient": "Imidacloprid 17.8% SL / Acetamiprid 20% SP",
+    "common_market_names": ["Confidor", "Tatamida", "Pride", "Ekka"],
+    "symptoms_en": "Severe upward leaf curling, cupping, yellow margins, stunted bushy plant growth, and heavy flower drop.",
+    "symptoms_or": "ପତ୍ର କୁଞ୍ଚୁକୁଞ୍ଚିଆ ହୋଇ ଉପରକୁ ମୁଡ଼ିଯାଏ, ହଳଦିଆ ପଡ଼ିଯାଏ ଏବଂ ଗଛ ବାଙ୍ଗରା ହୋଇ ଫୁଲ-ଫଳ ଝଡ଼ିପଡ଼େ।",
+    "immediate_action_en": "Rogue out and bury severely stunted dwarf plants. Target the vector (whitefly) immediately.",
+    "immediate_action_or": "ଅତ୍ୟଧିକ ଆକ୍ରାନ୍ତ ବାଙ୍ଗରା ଗଛକୁ ମୂଳରୁ ଉପାଡ଼ି ପୋତି ଦିଅନ୍ତୁ। ଧଳାମାଛି ଦମନ ତୁରନ୍ତ କରନ୍ତୁ।",
+    "recovery_day_1_en": "Install 15 Yellow Sticky Traps/acre and spray Imidacloprid @ 0.5 ml/L.",
+    "recovery_day_1_or": "ହଳଦିଆ ଫାନ୍ଦ ଲଗାନ୍ତୁ ଏବଂ ଇମିଡାକ୍ଲୋପ୍ରିଡ୍ (୦.୫ ମିଲି/ଲିଟର) ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_3_en": "Whitefly count should drop visibly; rogue out any dwarf infected plants.",
+    "recovery_day_3_or": "ଧଳାମାଛି ସଂଖ୍ୟା କମିବା ଦେଖନ୍ତୁ ଏବଂ ଅତ୍ୟଧିକ ଆକ୍ରାନ୍ତ ଗଛ ଉପାଡ଼ି ଦିଅନ୍ତୁ।",
+    "recovery_day_7_en": "Spray Neem Oil (3 ml/L) as a natural repellent to prevent reinfection.",
+    "recovery_day_7_or": "ପୁନର୍ବାର ପୋକ ନ ଲାଗିବା ପାଇଁ ନିମ୍ବ ତେଲ (୩ ମିଲି/ଲିଟର) ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "management_en": [
+      "Install yellow sticky traps @ 15-20 traps/acre to monitor and trap whiteflies.",
+      "Spray Imidacloprid 17.8% SL @ 0.5 ml/liter or Acetamiprid 20% SP @ 0.3 g/liter to control insect vectors.",
+      "Spray 5% Neem Seed Kernel Extract (NSKE) or Neem oil (3 ml/L) as a natural repellent.",
+      "Use nylon net (40 mesh) in nursery beds before transplanting."
+    ],
+    "management_or": [
+      "ଏକର ପିଛା ୧୫-୨୦ ଟି ହଳଦିଆ ଅଠାଯୁକ୍ତ ଫାନ୍ଦ (Yellow sticky trap) ଲଗାନ୍ତୁ।",
+      "ଧଳାମାଛି ନିୟନ୍ତ୍ରଣ ପାଇଁ ଇମିଡାକ୍ଲୋପ୍ରିଡ୍ (Imidacloprid 0.5 ml/L) ବା ଆସେଟାମିପ୍ରିଡ୍ (0.3 g/L) ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ଜୈବିକ ଉପାୟରେ ନିମ୍ବ ତେଲ (୩ ମିଲି/ଲିଟର) ପ୍ରୟୋଗ କରନ୍ତୁ।",
+      "ତଳି ଘରେ ୪୦ ମେସ୍ ମଶାରି ଜାଲି ବ୍ୟବହାର କରନ୍ତୁ।"
+    ]
+  },
+  "Tomato___Mosaic_Virus": {
+    "crop": "Tomato",
+    "crop_odia": "ବିଲାତି ବାଇଗଣ (Tomato)",
+    "disease_name": "Tomato Mosaic Virus",
+    "disease_name_odia": "ମୋଜାଇକ୍ ଭୂତାଣୁ ରୋଗ (Mosaic Virus)",
+    "severity": "High",
+    "dosage_per_liter_g_ml": 0.5,
+    "dosage_unit": "ml",
+    "generic_active_ingredient": "Dimethoate 30% EC (Vector Control) + Milk Solution",
+    "common_market_names": ["Rogor", "Tafgor", "Chemispray"],
+    "symptoms_en": "Mottled light and dark green pattern on leaves, 'fern-like' distorted leaves, and uneven fruit ripening.",
+    "symptoms_or": "ପତ୍ରରେ ଗାଢ଼ ଓ ହାଲୁକା ସବୁଜ ମିଶ୍ରିତ ଦାଗ, ପତ୍ର ସରୁ ହୋଇ ବିକୃତ ହେବା ଏବଂ ଫଳ ସମାନ ଭାବେ ନ ପାଚିବା।",
+    "immediate_action_en": "Wash hands with soap/milk before handling plants. Avoid smoking/bidi near field (tobacco spreads virus).",
+    "immediate_action_or": "ଗଛ ଛୁଇଁବା ପୂର୍ବରୁ ସାବୁନରେ ହାତ ଧୁଅନ୍ତୁ। କ୍ଷେତରେ ବିଡ଼ି/ସିଗାରେଟ୍ ଟାଣିବା ସଂପୂର୍ଣ୍ଣ ବାରଣ କରନ୍ତୁ।",
+    "recovery_day_1_en": "Uproot infected plants; disinfect tools with 10% detergent solution.",
+    "recovery_day_1_or": "ଆକ୍ରାନ୍ତ ଗଛ ଉପାଡ଼ି ନଷ୍ଟ କରନ୍ତୁ ଏବଂ କଟୁରି/ଛୁରୀକୁ ସାବୁନ ପାଣିରେ ଧୁଅନ୍ତୁ।",
+    "recovery_day_3_en": "Spray Dimethoate (1.5 ml/L) if aphid colonies are observed.",
+    "recovery_day_3_or": "ଜାଭୁଆ ପୋକ ଥିଲେ ରୋଗୋର (Rogor 1.5 ml/L) ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_7_en": "Monitor surrounding plants for new mottled mosaic leaves.",
+    "recovery_day_7_or": "ପାଖ ଗଛଗୁଡ଼ିକରେ କୌଣସି ବିକୃତି ନ ଥିବା ଯାଞ୍ଚ କରନ୍ତୁ।",
+    "management_en": [
+      "Uproot and destroy infected plants to stop mechanical spread.",
+      "Disinfect pruning tools with 10% trisodium phosphate or bleach solution.",
+      "Spray systemic insecticide if aphid vectors are present."
+    ],
+    "management_or": [
+      "ରୋଗାକ୍ରାନ୍ତ ଗଛକୁ ସାଙ୍ଗେ ସାଙ୍ଗେ ଉପାଡ଼ି ନଷ୍ଟ କରନ୍ତୁ।",
+      "ଛାଟଣି କରୁଥିବା ଉପକରଣକୁ ଡିଟରଜେଣ୍ଟ ବା ସାବୁନ ପାଣିରେ ପରିଷ୍କାର କରନ୍ତୁ।",
+      "ଜାଭୁଆ ପୋକ ଥିଲେ କୀଟନାଶକ ପ୍ରୟୋଗ କରନ୍ତୁ।"
+    ]
+  },
+  "Tomato___Healthy": {
+    "crop": "Tomato",
+    "crop_odia": "ବିଲାତି ବାଇଗଣ (Tomato)",
+    "disease_name": "Healthy Plant",
+    "disease_name_odia": "ସୁସ୍ଥ ଫସଲ (Healthy Crop)",
+    "severity": "None",
+    "dosage_per_liter_g_ml": 0.0,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "None Required (Prophylactic Neem Oil 3 ml/L)",
+    "common_market_names": ["Econeem", "Neem Gold"],
+    "symptoms_en": "Uniform green foliage, robust branching, healthy flower clusters without spots or curling.",
+    "symptoms_or": "ଗଛ ସତେଜ, ସବୁଜ ପତ୍ର ଏବଂ କୌଣସି ଦାଗ ବା କୁଞ୍ଚୁକୁଞ୍ଚିଆ ଲକ୍ଷଣ ନାହିଁ।",
+    "immediate_action_en": "Continue regular staking, balanced irrigation, and monitoring for whitefly pests.",
+    "immediate_action_or": "ଗଛକୁ ଠିଆ କରି ବାନ୍ଧନ୍ତୁ ଏବଂ ନିୟମିତ ପାଣି ଓ ଯତ୍ନ ପ୍ରଦାନ କରନ୍ତୁ।",
+    "recovery_day_1_en": "Apply organic neem cake and vermicompost around roots.",
+    "recovery_day_1_or": "ମୂଳରେ ଜିଆଖତ ଏବଂ ନିମ୍ବ ପିଡ଼ିଆ ପ୍ରୟୋଗ କରନ୍ତୁ।",
+    "recovery_day_3_en": "Ensure regular furrow irrigation without splashing foliage.",
+    "recovery_day_3_or": "କେବଳ ମୂଳରେ ନିୟମିତ ଜଳସେଚନ କରନ୍ତୁ।",
+    "recovery_day_7_en": "Prophylactic neem oil spray (3 ml/L) to maintain vigorous pest-free growth.",
+    "recovery_day_7_or": "ପ୍ରତିରୋଧକ ଭାବେ ନିମ୍ବ ତେଲ ସିଞ୍ଚନ ଜାରି ରଖନ୍ତୁ।",
+    "management_en": [
+      "Apply vermicompost and neem cake at root zone every 25-30 days.",
+      "Maintain regular prophylactic spray of neem oil (3 ml/L) once every 15 days.",
+      "Install bird perches in field for natural caterpillar predation."
+    ],
+    "management_or": [
+      "ପ୍ରତି ୨୫-୩୦ ଦିନରେ ଗଛ ମୂଳରେ ଜିଆଖତ ଏବଂ ନିମ୍ବ ପିଡ଼ିଆ ପ୍ରୟୋଗ କରନ୍ତୁ।",
+      "ପ୍ରତି ୧୫ ଦିନରେ ଥରେ ନିମ୍ବ ତେଲ (୩ ମିଲି/ଲିଟର) ସିଞ୍ଚନ କରନ୍ତୁ।",
+      "ପୋକ ଖାଇବା ପାଇଁ କ୍ଷେତରେ ପକ୍ଷୀ ବସିବା ବାଉଁଶ ଖୁଣ୍ଟି ଲଗାନ୍ତୁ।"
+    ]
+  },
+  "Potato___Early_Blight": {
+    "crop": "Potato",
+    "crop_odia": "ଆଳୁ (Potato)",
+    "disease_name": "Early Blight",
+    "disease_name_odia": "ଆଗୁଆ ପତ୍ରପୋଡ଼ା ରୋଗ (Early Blight)",
+    "severity": "Medium",
+    "dosage_per_liter_g_ml": 2.5,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Mancozeb 75% WP / Propineb 70% WP",
+    "common_market_names": ["Antracol", "Dithane M-45", "Indofil M-45"],
+    "symptoms_en": "Small, dark brown spots on lower leaves with distinct concentric rings giving a target-like pattern.",
+    "symptoms_or": "ତଳ ପତ୍ରରେ ଚକ୍ରାକାର ଗୋଲାକାର ବାଦାମୀ ଦାଗ ହୋଇ ପତ୍ର କ୍ରମଶଃ ହଳଦିଆ ହୋଇ ଶୁଖିଯାଏ।",
+    "immediate_action_en": "Irrigate furrow base without splashing water over foliage; remove dried bottom leaves.",
+    "immediate_action_or": "ପତ୍ର ଉପରେ ପାଣି ନ ପକାଇ କେବଳ ଧାଡ଼ି ମଝିରେ ପାଣି ଦିଅନ୍ତୁ।",
+    "recovery_day_1_en": "Spray Mancozeb @ 2.5 g/L (37.5g in 15L pump) thoroughly covering foliage.",
+    "recovery_day_1_or": "ପ୍ରତି ଲିଟର ପାଣିରେ ୨.୫ ଗ୍ରାମ ମାଙ୍କୋଜେବ୍ (୧୫ ଲିଟରରେ ୩୭.୫ ଗ୍ରାମ) ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_3_en": "Brown target spots should dry up and leaf yellowing should halt.",
+    "recovery_day_3_or": "ବାଦାମୀ ଦାଗ ଶୁଖିଯିବା ସହ ପତ୍ର ହଳଦିଆ ପଡ଼ିବା ବନ୍ଦ ହେବ।",
+    "recovery_day_7_en": "Earthing up potato ridges to cover tubers and boost root vigor.",
+    "recovery_day_7_or": "ଆଳୁ ମୂଳରେ ଭଲ ଭାବେ ମାଟି ଟେକି ଦିଅନ୍ତୁ।",
+    "management_en": [
+      "Spray Mancozeb 75% WP @ 2.5 g/liter or Propineb 70% WP @ 2 g/liter at the first sign of lesions.",
+      "Repeat spray after 10-12 days if warm, damp weather persists.",
+      "Earthing up around potato ridges to cover tubers well."
+    ],
+    "management_or": [
+      "ପ୍ରତି ଲିଟର ପାଣିରେ ୨.୫ ଗ୍ରାମ ମାଙ୍କୋଜେବ୍ (Mancozeb) ବା ୨ ଗ୍ରାମ ପ୍ରୋପିନେବ୍ ମିଶାଇ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ପାଗ ଆର୍ଦ୍ର ଥିଲେ ୧୦-୧୨ ଦିନ ପରେ ପୁନର୍ବାର ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ଆଳୁ ମୂଳରେ ଭଲ ଭାବେ ମାଟି ଟେକି ଦିଅନ୍ତୁ।"
+    ]
+  },
+  "Potato___Late_Blight": {
+    "crop": "Potato",
+    "crop_odia": "ଆଳୁ (Potato)",
+    "disease_name": "Late Blight",
+    "disease_name_odia": "ପଛୁଆ ପତ୍ରପୋଡ଼ା / ମଡ଼କ ରୋଗ (Late Blight / Madaka)",
+    "severity": "High",
+    "dosage_per_liter_g_ml": 2.5,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Metalaxyl 8% + Mancozeb 64% WP / Dimethomorph 50% WP",
+    "common_market_names": ["Ridomil MZ", "Acrobat", "Matco", "Krushil Gold"],
+    "symptoms_en": "Water-soaked irregular blackish-brown spots on leaf tips and margins with white mildew underneath in morning mist.",
+    "symptoms_or": "କୁହୁଡ଼ିଆ ପାଗରେ ପତ୍ରର ଅଗ୍ରଭାଗରେ କଳା-ବାଦାମୀ ପାଣିଚିହ୍ନିତ ଦାଗ ହୋଇ ସମଗ୍ର କ୍ଷେତ ଅଳ୍ପ ଦିନରେ କଳା ପଡ଼ି ନଷ୍ଟ ହୋଇଯାଏ।",
+    "immediate_action_en": "High alert: Spray immediately at first weather advisory of continuous overcast / foggy conditions.",
+    "immediate_action_or": "ଜରୁରୀ ସୂଚନା: କୁହୁଡ଼ି ବା ମେଘୁଆ ପାଗ ହେବା ମାତ୍ରେ ତୁରନ୍ତ ଔଷଧ ସିଞ୍ଚନ କରନ୍ତୁ।",
+    "recovery_day_1_en": "Emergency spray of Ridomil MZ @ 2.5 g/L (37.5g in 15L pump) with adjuvant.",
+    "recovery_day_1_or": "ପ୍ରତି ଲିଟର ପାଣିରେ ୨.୫ ଗ୍ରାମ ରିଡୋମିଲ୍ ଏମଜେଡ୍ (Ridomil MZ) ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "recovery_day_3_en": "Water-soaked leaf tips must turn dry and dark; white mildew underleaf must vanish.",
+    "recovery_day_3_or": "ପତ୍ରର କଳା ପାଣିଚିହ୍ନ ଶୁଖି କଡ଼ା ପଡ଼ିଯିବ ଏବଂ ତଳ ଧଳା ଫିମ୍ପି ନଷ୍ଟ ହେବ।",
+    "recovery_day_7_en": "Ensure complete earthing up so zoospores cannot reach underground tubers.",
+    "recovery_day_7_or": "ଆଳୁ ଉପରେ ଭଲ ଭାବେ ମାଟି ଢାଙ୍କନ୍ତୁ ଯାହାଦ୍ୱାରା ରୋଗ ତଳ ଆଳୁକୁ ବ୍ୟାପିବ ନାହିଁ।",
+    "management_en": [
+      "Spray systemic fungicide: Metalaxyl 8% + Mancozeb 64% WP (Ridomil MZ @ 2.5 g/L) or Dimethomorph 50% WP (1 g/L) + Mancozeb (2 g/L).",
+      "Ensure proper earthing up so zoospores do not wash down into exposed tubers.",
+      "Stop irrigation 10 days before harvesting and destroy vine haulms."
+    ],
+    "management_or": [
+      "ପ୍ରତି ଲିଟର ପାଣିରେ ୨.୫ ଗ୍ରାମ ମେଟାଲାକ୍ସିଲ୍ + ମାଙ୍କୋଜେବ୍ (Ridomil MZ) କିମ୍ବା ଡାଇମେଥୋମର୍ଫ୍ (୧ ଗ୍ରାମ) + ମାଙ୍କୋଜେବ୍ (୨ ଗ୍ରାମ) ମିଶାଇ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+      "ଆଳୁ ଉପରେ ଯେପରି ରୋଗ ଜୀବାଣୁ ନ ପହଞ୍ଚିବ, ସେଥିପାଇଁ ଆଳୁ ଉପରେ ଭଲ ଭାବରେ ମାଟି ଢାଙ୍କନ୍ତୁ।",
+      "ଅମଳର ୧୦ ଦିନ ପୂର୍ବରୁ ପାଣି ଦେବା ବନ୍ଦ କରନ୍ତୁ ଏବଂ ଡାଳ କାଟି ଦିଅନ୍ତୁ।"
+    ]
+  },
+  "Potato___Healthy": {
+    "crop": "Potato",
+    "crop_odia": "ଆଳୁ (Potato)",
+    "disease_name": "Healthy Plant",
+    "disease_name_odia": "ସୁସ୍ଥ ଫସଲ (Healthy Crop)",
+    "severity": "None",
+    "dosage_per_liter_g_ml": 0.0,
+    "dosage_unit": "g",
+    "generic_active_ingredient": "Prophylactic Mancozeb 75% WP (2 g/L before fog)",
+    "common_market_names": ["Dithane M-45", "Indofil M-45"],
+    "symptoms_en": "Dark green, upright canopy without leaf necrotic lesions or stem rot.",
+    "symptoms_or": "ସତେଜ ଗାଢ଼ ସବୁଜ ପତ୍ର, ଦୃଢ଼ ଡାଳ ଏବଂ କୌଣସି ପତ୍ରପୋଡ଼ା ଦାଗ ନାହିଁ।",
+    "immediate_action_en": "No chemical fungicide required. Maintain earthing up and regulated furrow irrigation.",
+    "immediate_action_or": "କୌଣସି ରାସାୟନିକ ସ୍ପ୍ରେ ଆବଶ୍ୟକ ନାହିଁ। ଠିକ୍ ଭାବେ ମାଟି ଟେକିବା ଓ ପାଣି ପରିଚାଳନା କରନ୍ତୁ।",
+    "recovery_day_1_en": "Earth up soil around potato ridges at 30 and 45 days after planting.",
+    "recovery_day_1_or": "ଲଗାଇବାର ୩୦ ଓ ୪୫ ଦିନରେ ମୂଳରେ ମାଟି ଟେକନ୍ତୁ।",
+    "recovery_day_3_en": "Regulate furrow irrigation without water stagnating.",
+    "recovery_day_3_or": "ନାଳିରେ ପାଣି ନ ଜମାଇ ସୁବିଧାରେ ନିଷ୍କାସନ କରନ୍ତୁ।",
+    "recovery_day_7_en": "If fog/mist forecast arrives, apply prophylactic Mancozeb spray @ 2 g/L.",
+    "recovery_day_7_or": "କୁହୁଡ଼ି ପାଗ ପୂର୍ବରୁ ସତର୍କତାମୂଳକ ଭାବେ ମାଙ୍କୋଜେବ୍ ସ୍ପ୍ରେ କରନ୍ତୁ।",
+    "management_en": [
+      "Earthing up at 30 and 45 days after planting.",
+      "Prophylactic spray of Mancozeb 75% WP @ 2 g/L prior to forecasted foggy weather.",
+      "Maintain adequate moisture without water stagnating in furrows."
+    ],
+    "management_or": [
+      "ଲଗାଇବାର ୩୦ ଏବଂ ୪୫ ଦିନରେ ମୂଳରେ ମାଟି ଟେକନ୍ତୁ।",
+      "କୁହୁଡ଼ି ପାଗ ପୂର୍ବରୁ ସତର୍କତାମୂଳକ ଭାବେ ମାଙ୍କୋଜେବ୍ (୨ ଗ୍ରାମ/ଲିଟର) ସ୍ପ୍ରେ କରିପାରିବେ।",
+      "ନାଳିରେ ପାଣି ଜମିବାକୁ ନ ଦେଇ ଉପଯୁକ୍ତ ନିଷ୍କାସନ ବ୍ୟବସ୍ଥା ରଖନ୍ତୁ।"
+    ]
+  }
+}
