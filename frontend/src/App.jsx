@@ -117,6 +117,8 @@ export default function App() {
       }
     } catch (e) {
       console.warn('Sample fetch issue:', e);
+    } finally {
+      setIsLoading(false);
     }
   };
 
