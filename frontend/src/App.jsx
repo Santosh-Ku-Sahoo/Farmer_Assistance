@@ -26,28 +26,18 @@ export default function App() {
 
   const t = translations[lang];
 
-  // Check backend health on mount & auto-load initial sample diagnosis
+  // Check backend health on mount
   useEffect(() => {
-    const checkHealthAndInit = async () => {
+    const checkHealth = async () => {
       try {
         const res = await fetch(`${API_BASE_URL}/health`);
-        if (res.ok) {
-          setBackendOnline(true);
-          // Pre-load interactive live demo sample so the page is 100% full & working
-          handleSelectSample('rice_blast.jpg');
-        } else {
-          setBackendOnline(false);
-        }
+        setBackendOnline(res.ok);
       } catch (err) {
         setBackendOnline(false);
       }
     };
-    checkHealthAndInit();
-    const interval = setInterval(() => {
-      fetch(`${API_BASE_URL}/health`)
-        .then((r) => setBackendOnline(r.ok))
-        .catch(() => setBackendOnline(false));
-    }, 10000);
+    checkHealth();
+    const interval = setInterval(checkHealth, 15000);
     return () => clearInterval(interval);
   }, []);
 
