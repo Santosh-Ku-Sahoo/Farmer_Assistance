@@ -117,6 +117,18 @@ class ChatResponse(BaseModel):
     is_fallback: bool
 
 
+@app.get("/")
+async def root_welcome():
+    """Root endpoint welcoming visitors and providing links to health and docs."""
+    return {
+        "name": "AI Farmer Assistant Backend API (କୃଷକ ସହାୟକ)",
+        "status": "online",
+        "health_check": "/health",
+        "interactive_docs": "/docs",
+        "supported_crops": ["Rice", "Tomato", "Potato"]
+    }
+
+
 @app.get("/health")
 async def health_check():
     """Health check endpoint to verify service and model readiness."""
