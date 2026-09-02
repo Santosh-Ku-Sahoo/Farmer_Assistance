@@ -165,6 +165,15 @@ async def get_districts():
     }
 
 
+@app.get("/recommendations")
+async def get_all_recommendations():
+    """Returns all ICAR/OUAT static recommendations for client offline cache."""
+    return {
+        "count": len(RECOMMENDATIONS),
+        "recommendations": RECOMMENDATIONS
+    }
+
+
 @app.get("/weather-advisory")
 async def get_weather_advisory(
     district: str = Query("bhubaneswar", description="Odisha district key"),
