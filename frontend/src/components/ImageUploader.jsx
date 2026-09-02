@@ -44,13 +44,37 @@ export default function ImageUploader({
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0, width, height);
 
-        canvas.toBlob((blob) => {
-          const optimizedFile = new File([blob], file.name || 'capture.jpg', { type: 'image/jpeg' });
-          const preview = URL.createObjectURL(blob);
-          onImageSelected(optimizedFile, preview);
-        }, 'image/jpeg', 0.85);
+        try {
+          canvas.toBlob((blob) => {
+            if (!blob) {
+              const preview = URL.createObjectURL(file);
+              onImageSelected(file, preview);
+              return;
+            }
+            let optimizedFile;
+            try {
+              optimizedFile = new File([blob], file.name || 'capture.jpg', { type: 'image/jpeg' });
+            } catch (err) {
+              optimizedFile = blob;
+              optimizedFile.name = file.name || 'capture.jpg';
+            }
+            const preview = URL.createObjectURL(blob);
+            onImageSelected(optimizedFile, preview);
+          }, 'image/jpeg', 0.85);
+        } catch (canvasErr) {
+          const preview = URL.createObjectURL(file);
+          onImageSelected(file, preview);
+        }
+      };
+      img.onerror = () => {
+        const preview = URL.createObjectURL(file);
+        onImageSelected(file, preview);
       };
       img.src = e.target.result;
+    };
+    reader.onerror = () => {
+      const preview = URL.createObjectURL(file);
+      onImageSelected(file, preview);
     };
     reader.readAsDataURL(file);
   };

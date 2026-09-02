@@ -53,7 +53,7 @@ export default function App() {
     setPredictionResult(null);
 
     const formData = new FormData();
-    formData.append('file', file);
+    formData.append('file', file, file.name || 'leaf_capture.jpg');
     if (selectedCrop && selectedCrop !== 'all') {
       formData.append('crop_hint', selectedCrop);
     }
@@ -94,15 +94,26 @@ export default function App() {
   };
 
   /**
-   * Loads quick test sample from backend samples directory
+   * Loads quick test sample from bundled public directory with remote fallback
    */
   const handleSelectSample = async (sampleFilename) => {
     try {
       setIsLoading(true);
-      const res = await fetch(`${API_BASE_URL}/sample-file/${sampleFilename}`);
+      setErrorMessage(null);
+      // Try local bundled public sample first (instant & reliable on mobile)
+      let res = await fetch(`/samples/${sampleFilename}`);
+      if (!res.ok) {
+        res = await fetch(`${API_BASE_URL}/sample-file/${sampleFilename}`);
+      }
       if (res.ok) {
         const blob = await res.blob();
-        const file = new File([blob], sampleFilename, { type: 'image/jpeg' });
+        let file;
+        try {
+          file = new File([blob], sampleFilename, { type: 'image/jpeg' });
+        } catch (e) {
+          file = blob;
+          file.name = sampleFilename;
+        }
         const preview = URL.createObjectURL(blob);
         handleImageSelected(file, preview);
       }
