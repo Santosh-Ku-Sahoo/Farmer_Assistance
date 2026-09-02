@@ -127,77 +127,77 @@ export default function App() {
       <Header lang={lang} setLang={setLang} backendOnline={backendOnline} />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-2xl w-full mx-auto px-3 sm:px-4 py-4 sm:py-6 relative">
+      <main className="flex-1 max-w-2xl w-full mx-auto px-3 sm:px-4 pt-3 sm:pt-6 pb-28 sm:pb-8 relative">
         
-        {/* Navigation Tabs - Glare-resistant 5-tab grid */}
-        <div className="grid grid-cols-5 gap-1 mb-5 p-1 bg-[#D5DEC9]/60 rounded-xl border border-[#BAC8AA]">
+        {/* Desktop Navigation Tabs (Visible on tablets and PCs) */}
+        <div className="hidden sm:grid grid-cols-5 gap-1 mb-5 p-1 bg-[#D5DEC9]/60 rounded-xl border border-[#BAC8AA]">
           <button
             type="button"
             onClick={() => handleTabChange('diagnosis')}
-            className={`py-2 px-1 text-[11px] sm:text-xs font-bold rounded-lg flex flex-col sm:flex-row items-center justify-center space-y-0.5 sm:space-y-0 sm:space-x-1 transition-all cursor-pointer ${
+            className={`py-2 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1.5 transition-all cursor-pointer ${
               activeTab === 'diagnosis'
                 ? 'bg-[#1E4D2B] text-white shadow-xs'
                 : 'text-[#382E28] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Leaf Disease Diagnosis (Primary ML Feature)"
           >
-            <Leaf className="w-3.5 h-3.5 flex-shrink-0" />
+            <Leaf className="w-4 h-4 flex-shrink-0" />
             <span className="truncate">{t.tab_diagnosis}</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleTabChange('guide')}
-            className={`py-2 px-1 text-[11px] sm:text-xs font-bold rounded-lg flex flex-col sm:flex-row items-center justify-center space-y-0.5 sm:space-y-0 sm:space-x-1 transition-all cursor-pointer ${
+            className={`py-2 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1.5 transition-all cursor-pointer ${
               activeTab === 'guide'
                 ? 'bg-[#1E4D2B] text-white shadow-xs'
                 : 'text-[#382E28] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Crop Cultivation Guide (Static Reference)"
           >
-            <BookOpen className="w-3.5 h-3.5 flex-shrink-0" />
+            <BookOpen className="w-4 h-4 flex-shrink-0" />
             <span className="truncate">{t.tab_guide}</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleTabChange('weather')}
-            className={`py-2 px-1 text-[11px] sm:text-xs font-bold rounded-lg flex flex-col sm:flex-row items-center justify-center space-y-0.5 sm:space-y-0 sm:space-x-1 transition-all cursor-pointer ${
+            className={`py-2 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1.5 transition-all cursor-pointer ${
               activeTab === 'weather'
                 ? 'bg-[#1E4D2B] text-white shadow-xs'
                 : 'text-[#382E28] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Spray Weather Advisory & Cyclone Alert"
           >
-            <CloudSun className="w-3.5 h-3.5 flex-shrink-0" />
+            <CloudSun className="w-4 h-4 flex-shrink-0" />
             <span className="truncate">{t.tab_weather}</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleTabChange('mandi')}
-            className={`py-2 px-1 text-[11px] sm:text-xs font-bold rounded-lg flex flex-col sm:flex-row items-center justify-center space-y-0.5 sm:space-y-0 sm:space-x-1 transition-all cursor-pointer ${
+            className={`py-2 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1.5 transition-all cursor-pointer ${
               activeTab === 'mandi'
                 ? 'bg-[#1E4D2B] text-white shadow-xs'
                 : 'text-[#382E28] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Odisha Mandi Prices"
           >
-            <IndianRupee className="w-3.5 h-3.5 flex-shrink-0" />
+            <IndianRupee className="w-4 h-4 flex-shrink-0" />
             <span className="truncate">{t.tab_mandi}</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleTabChange('services')}
-            className={`py-2 px-1 text-[11px] sm:text-xs font-bold rounded-lg flex flex-col sm:flex-row items-center justify-center space-y-0.5 sm:space-y-0 sm:space-x-1 transition-all cursor-pointer ${
+            className={`py-2 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1.5 transition-all cursor-pointer ${
               activeTab === 'services'
                 ? 'bg-[#1E4D2B] text-white shadow-xs'
                 : 'text-[#382E28] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Comprehensive Categorized Agro Services"
           >
-            <Landmark className="w-3.5 h-3.5 flex-shrink-0 text-[#D97706]" />
+            <Landmark className="w-4 h-4 flex-shrink-0 text-[#D97706]" />
             <span className="truncate">{lang === 'or' ? 'କୃଷି ସେବା' : 'Agri Care'}</span>
           </button>
         </div>
@@ -293,7 +293,7 @@ export default function App() {
         )}
 
         {/* Privacy & Ag Extension Note */}
-        <footer className="mt-8 text-center text-xs text-[#7A6E62] border-t border-[#D5DEC9] pt-4 pb-16 space-y-1">
+        <footer className="mt-8 text-center text-xs text-[#7A6E62] border-t border-[#D5DEC9] pt-4 pb-16 sm:pb-6 space-y-1">
           <p className="flex items-center justify-center space-x-1.5 font-medium">
             <ShieldCheck className="w-4 h-4 text-[#1E4D2B]" />
             <span>{t.privacy_note}</span>
@@ -306,6 +306,76 @@ export default function App() {
         </footer>
 
       </main>
+
+      {/* Mobile Fixed Bottom Navigation Bar (App-like 1-thumb ergonomics) */}
+      <nav className="sm:hidden fixed bottom-0 left-0 right-0 z-30 bg-[#FFFFFF]/95 backdrop-blur-md border-t border-[#BAC8AA] pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
+        <div className="grid grid-cols-5 h-16 max-w-lg mx-auto">
+          <button
+            type="button"
+            onClick={() => handleTabChange('diagnosis')}
+            className={`flex flex-col items-center justify-center space-y-0.5 transition-all tap-active cursor-pointer ${
+              activeTab === 'diagnosis' ? 'text-[#1E4D2B] font-bold' : 'text-[#7A6E62]'
+            }`}
+          >
+            <div className={`p-1.5 rounded-full ${activeTab === 'diagnosis' ? 'bg-[#EAF0E6]' : ''}`}>
+              <Leaf className="w-4 h-4" />
+            </div>
+            <span className="text-[10px] leading-tight truncate">{lang === 'or' ? 'ପତ୍ର ଯାଞ୍ଚ' : 'Diagnosis'}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleTabChange('guide')}
+            className={`flex flex-col items-center justify-center space-y-0.5 transition-all tap-active cursor-pointer ${
+              activeTab === 'guide' ? 'text-[#1E4D2B] font-bold' : 'text-[#7A6E62]'
+            }`}
+          >
+            <div className={`p-1.5 rounded-full ${activeTab === 'guide' ? 'bg-[#EAF0E6]' : ''}`}>
+              <BookOpen className="w-4 h-4" />
+            </div>
+            <span className="text-[10px] leading-tight truncate">{lang === 'or' ? 'ଚାଷ ବିଧି' : 'Guide'}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleTabChange('weather')}
+            className={`flex flex-col items-center justify-center space-y-0.5 transition-all tap-active cursor-pointer ${
+              activeTab === 'weather' ? 'text-[#1E4D2B] font-bold' : 'text-[#7A6E62]'
+            }`}
+          >
+            <div className={`p-1.5 rounded-full ${activeTab === 'weather' ? 'bg-[#EAF0E6]' : ''}`}>
+              <CloudSun className="w-4 h-4" />
+            </div>
+            <span className="text-[10px] leading-tight truncate">{lang === 'or' ? 'ସ୍ପ୍ରେ ପାଗ' : 'Weather'}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleTabChange('mandi')}
+            className={`flex flex-col items-center justify-center space-y-0.5 transition-all tap-active cursor-pointer ${
+              activeTab === 'mandi' ? 'text-[#1E4D2B] font-bold' : 'text-[#7A6E62]'
+            }`}
+          >
+            <div className={`p-1.5 rounded-full ${activeTab === 'mandi' ? 'bg-[#EAF0E6]' : ''}`}>
+              <IndianRupee className="w-4 h-4" />
+            </div>
+            <span className="text-[10px] leading-tight truncate">{lang === 'or' ? 'ମଣ୍ଡି ଦର' : 'Mandi'}</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => handleTabChange('services')}
+            className={`flex flex-col items-center justify-center space-y-0.5 transition-all tap-active cursor-pointer ${
+              activeTab === 'services' ? 'text-[#1E4D2B] font-bold' : 'text-[#7A6E62]'
+            }`}
+          >
+            <div className={`p-1.5 rounded-full ${activeTab === 'services' ? 'bg-[#EAF0E6]' : ''}`}>
+              <Landmark className="w-4 h-4 text-[#D97706]" />
+            </div>
+            <span className="text-[10px] leading-tight truncate">{lang === 'or' ? 'କୃଷି ସେବା' : 'Agri Care'}</span>
+          </button>
+        </div>
+      </nav>
 
       {/* Floating AI Agronomic Chat Assistant at Bottom Right */}
       <ChatAssistant lang={lang} isInline={false} />
