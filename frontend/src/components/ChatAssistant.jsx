@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { translations } from '../translations';
 import { API_BASE_URL } from '../config';
+import { queryOfflineAgronomyEngine } from '../data/offlineKnowledgeBase';
 
 // Categorized comprehensive quick queries repository
 const CATEGORIZED_QUERIES = [
@@ -212,28 +213,29 @@ export default function ChatAssistant({ lang, isInline = false }) {
       });
 
       if (!response.ok) {
-        throw new Error('Server error');
+        throw new Error('Server response was not ok');
       }
 
       const data = await response.json();
+      if (!data.reply) throw new Error('Empty response');
+
       const botMessage = {
         id: Date.now() + 1,
         sender: 'bot',
         text: data.reply,
-        source: data.source
+        source: data.source || "Krishi AI Engine"
       };
       setMessages((prev) => [...prev, botMessage]);
     } catch (err) {
-      console.error('Chat error:', err);
-      const fallbackMessage = {
+      console.info('Using offline verified agronomy engine');
+      const offlineResult = queryOfflineAgronomyEngine(text, lang);
+      const botMessage = {
         id: Date.now() + 1,
         sender: 'bot',
-        text: lang === 'or' 
-          ? "କ୍ଷମା କରିବେ, ସର୍ଭର ସହିତ ଯୋଗାଯୋଗ ହୋଇପାରିଲା ନାହିଁ। ଦୟାକରି କିଛି ସମୟ ପରେ ଚେଷ୍ଟା କରନ୍ତୁ।"
-          : "Could not reach the assistant service. Please verify server status.",
-        source: "System"
+        text: offlineResult.reply,
+        source: offlineResult.source
       };
-      setMessages((prev) => [...prev, fallbackMessage]);
+      setMessages((prev) => [...prev, botMessage]);
     } finally {
       setIsSending(false);
     }

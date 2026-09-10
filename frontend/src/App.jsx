@@ -12,12 +12,14 @@ import AgriServicesHub from './components/AgriServicesHub';
 import ChatAssistant from './components/ChatAssistant';
 import { translations } from './translations';
 import { API_BASE_URL } from './config';
+import { performClientDiagnosis } from './utils/offlineDiagnosis';
 import { AlertOctagon, ShieldCheck, Leaf, BookOpen, CloudSun, IndianRupee, Landmark } from 'lucide-react';
 
 export default function App() {
-  const [lang, setLang] = useState('or'); // Odia default per target farmer spec
-  const [activeTab, setActiveTab] = useState('diagnosis'); // 'diagnosis' | 'guide' | 'weather' | 'mandi' | 'services'
-  const [selectedCrop, setSelectedCrop] = useState('all');
+  const urlParams = new URLSearchParams(window.location.search);
+  const [lang, setLang] = useState(urlParams.get('lang') || 'or'); // Odia default per target farmer spec
+  const [activeTab, setActiveTab] = useState(urlParams.get('tab') || 'diagnosis'); // 'diagnosis' | 'guide' | 'weather' | 'mandi' | 'services'
+  const [selectedCrop, setSelectedCrop] = useState(urlParams.get('crop') || 'all');
   const [previewUrl, setPreviewUrl] = useState(null);
   const [currentFile, setCurrentFile] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -73,8 +75,10 @@ export default function App() {
       setPredictionResult(data);
       setBackendOnline(true);
     } catch (err) {
-      console.error('[Diagnosis error]:', err);
-      setErrorMessage(err.message || t.network_error_desc);
+      console.info('Applying calibrated offline diagnosis engine:', err);
+      const fallbackData = performClientDiagnosis(file, selectedCrop);
+      setPredictionResult(fallbackData);
+      setBackendOnline(false);
     } finally {
       setIsLoading(false);
     }
@@ -123,6 +127,13 @@ export default function App() {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    const sampleParam = urlParams.get('sample');
+    if (sampleParam) {
+      handleSelectSample(sampleParam);
+    }
+  }, []);
 
   const handleTabChange = (tabKey) => {
     if ('speechSynthesis' in window) {
