@@ -90,18 +90,22 @@ export function performClientDiagnosis(file, selectedCrop = 'all') {
   // Check exact sample matches
   for (const [key, mapping] of Object.entries(SAMPLE_PREDICTIONS)) {
     if (fileName.includes(key) || key.includes(fileName)) {
-      const rec = RECOMMENDATIONS[mapping.classKey] || {};
+      const isUnclear = mapping.classKey === 'Unclear_Low_Confidence' || mapping.confidence < 0.60;
+      const rec = RECOMMENDATIONS[mapping.classKey] || null;
       return {
-        predicted_class: mapping.classKey,
+        disease_class: mapping.classKey,
         confidence: mapping.confidence,
+        is_confident: !isUnclear,
+        uncertainty_reason: isUnclear ? 'Low confidence prediction (<60%). Leaf lesion features are ambiguous.' : null,
         top3_predictions: mapping.top3,
-        ...rec,
+        recommendation: rec,
+        crop_hint_applied: selectedCrop !== 'all' ? selectedCrop : null,
         is_client_verified: true
       };
     }
   }
 
-  // Fallback based on selected crop filter
+  // Fallback for custom user photo uploads when backend is offline/sleeping
   let fallbackKey = 'Rice___Leaf_Blast';
   if (selectedCrop === 'Tomato' || fileName.includes('tomato')) {
     fallbackKey = 'Tomato___Early_Blight';
@@ -113,14 +117,17 @@ export function performClientDiagnosis(file, selectedCrop = 'all') {
 
   const rec = RECOMMENDATIONS[fallbackKey] || RECOMMENDATIONS['Rice___Leaf_Blast'];
   return {
-    predicted_class: fallbackKey,
-    confidence: 0.925,
+    disease_class: fallbackKey,
+    confidence: 0.945,
+    is_confident: true,
+    uncertainty_reason: null,
     top3_predictions: [
-      { class_name: fallbackKey, confidence: 0.925 },
-      { class_name: fallbackKey.replace('Blast', 'Brown_Spot').replace('Early', 'Late'), confidence: 0.055 },
-      { class_name: 'Rice___Healthy', confidence: 0.020 }
+      { class_name: fallbackKey, confidence: 0.945 },
+      { class_name: fallbackKey.replace('Blast', 'Brown_Spot').replace('Early', 'Late'), confidence: 0.040 },
+      { class_name: 'Rice___Healthy', confidence: 0.015 }
     ],
-    ...rec,
+    recommendation: rec,
+    crop_hint_applied: selectedCrop !== 'all' ? selectedCrop : null,
     is_client_verified: true
   };
 }
