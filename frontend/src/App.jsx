@@ -29,23 +29,17 @@ export default function App() {
 
   const t = translations[lang];
 
-  // Check backend health on mount
+  // Check health of backend on mount
   useEffect(() => {
-    const checkHealth = async () => {
-      try {
-        const res = await fetch(`${API_BASE_URL}/health`);
-        setBackendOnline(res.ok);
-      } catch (err) {
-        setBackendOnline(false);
-      }
-    };
-    checkHealth();
-    const interval = setInterval(checkHealth, 15000);
-    return () => clearInterval(interval);
+    fetch(`${API_BASE_URL}/health`)
+      .then((res) => {
+        if (res.ok) setBackendOnline(true);
+      })
+      .catch(() => setBackendOnline(false));
   }, []);
 
   /**
-   * Sends image file to FastAPI /predict endpoint
+   * Sends image file to FastAPI /predict endpoint with client-side fallback
    */
   const handleDiagnose = async (file) => {
     if (!file) return;
@@ -128,13 +122,6 @@ export default function App() {
     }
   };
 
-  useEffect(() => {
-    const sampleParam = urlParams.get('sample');
-    if (sampleParam) {
-      handleSelectSample(sampleParam);
-    }
-  }, []);
-
   const handleTabChange = (tabKey) => {
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
@@ -152,7 +139,7 @@ export default function App() {
       <main className="flex-1 max-w-2xl w-full mx-auto px-3 sm:px-4 pt-3 sm:pt-6 pb-28 sm:pb-8 relative">
         
         {/* Desktop Navigation Tabs (Visible on tablets and PCs) */}
-        <div className="hidden sm:grid grid-cols-5 gap-1 mb-5 p-1 bg-[#D5DEC9]/60 rounded-xl border border-[#BAC8AA]">
+        <div className="hidden sm:grid grid-cols-5 gap-1 mb-7 p-1 bg-[#D5DEC9]/60 rounded-xl border border-[#BAC8AA]">
           <button
             type="button"
             onClick={() => handleTabChange('diagnosis')}
@@ -160,7 +147,7 @@ export default function App() {
             title="Leaf Disease Diagnosis (Primary ML Feature)"
           >
             <Leaf className="w-4 h-4 flex-shrink-0" />
-            <span className="truncate">{t.tab_diagnosis}</span>
+            <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_diagnosis}</span>
           </button>
 
           <button
@@ -170,7 +157,7 @@ export default function App() {
             title="Crop Cultivation Guide (Static Reference)"
           >
             <BookOpen className="w-4 h-4 flex-shrink-0" />
-            <span className="truncate">{t.tab_guide}</span>
+            <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_guide}</span>
           </button>
 
           <button
@@ -180,7 +167,7 @@ export default function App() {
             title="Spray Weather Advisory & Cyclone Alert"
           >
             <CloudSun className="w-4 h-4 flex-shrink-0" />
-            <span className="truncate">{t.tab_weather}</span>
+            <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_weather}</span>
           </button>
 
           <button
@@ -190,7 +177,7 @@ export default function App() {
             title="Odisha Mandi Prices"
           >
             <IndianRupee className="w-4 h-4 flex-shrink-0" />
-            <span className="truncate">{t.tab_mandi}</span>
+            <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_mandi}</span>
           </button>
 
           <button
@@ -200,13 +187,13 @@ export default function App() {
             title="Comprehensive Categorized Agro Services"
           >
             <Landmark className="w-4 h-4 flex-shrink-0 text-[#D97706]" />
-            <span className="truncate">{lang === 'or' ? 'କୃଷି ସେବା' : 'Agri Care'}</span>
+            <span className="whitespace-nowrap sm:whitespace-normal">{lang === 'or' ? 'କୃଷି ସେବା' : 'Agri Care'}</span>
           </button>
         </div>
 
         {/* Tab 1: Leaf Disease Diagnosis (Default Primary ML Flow) */}
         {activeTab === 'diagnosis' && (
-          <div>
+          <div className="space-y-6">
             {/* Crop Filter Context */}
             <CropSelectorFilter
               selectedCrop={selectedCrop}
@@ -226,7 +213,7 @@ export default function App() {
 
             {/* Error State if Backend fails */}
             {errorMessage && (
-              <div className="bg-[#FEF2F2] border border-[#FCA5A5] rounded-xl p-4 sm:p-5 mb-6 text-left">
+              <div className="bg-[#FEF2F2] border border-[#FCA5A5] rounded-xl p-4 sm:p-5 text-left">
                 <div className="flex items-start space-x-3">
                   <AlertOctagon className="w-5 h-5 text-[#B91C1C] flex-shrink-0 mt-0.5" />
                   <div>
@@ -240,7 +227,7 @@ export default function App() {
                       <button
                         type="button"
                         onClick={() => handleDiagnose(currentFile)}
-                        className="mt-3 px-4 py-1.5 text-xs font-semibold rounded-lg bg-[#B91C1C] text-white hover:bg-[#991B1B] transition-colors cursor-pointer"
+                        className="btn-primary !bg-[#B91C1C] hover:!bg-[#991B1B] text-xs py-1.5 px-4 mt-3"
                       >
                         {t.retry_button}
                       </button>
@@ -300,7 +287,7 @@ export default function App() {
             <ShieldCheck className="w-4 h-4 text-[#1E4D2B]" />
             <span>{t.privacy_note}</span>
           </p>
-          <p className="text-[11px] text-[#8C8074]">
+          <p className="text-xs text-[#7A6E62] leading-relaxed">
             {lang === 'or'
               ? 'ପ୍ରତିକାର ପରାମର୍ଶ ICAR-NRRI (କଟକ) ଏବଂ OUAT (ଭୁବନେଶ୍ୱର) କୃଷି ମାନକ ଉପରେ ଆଧାରିତ।'
               : 'Recommendations aligned with ICAR-NRRI (Cuttack) & OUAT (Bhubaneswar) IPM standards.'}

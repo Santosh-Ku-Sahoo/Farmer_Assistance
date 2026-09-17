@@ -265,11 +265,11 @@ export default function ChatAssistant({ lang, isInline = false }) {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-20 sm:bottom-5 right-4 sm:right-5 z-30 bg-[#1E4D2B] text-white p-3.5 sm:p-4 rounded-full shadow-2xl hover:bg-[#163B21] transition-all flex items-center space-x-2 border-2 border-[#86EFAC]/40 cursor-pointer tap-active group"
+          className="fixed bottom-20 sm:bottom-5 right-4 sm:right-5 z-30 bg-[#1E4D2B] text-white py-2.5 px-3.5 sm:px-4 rounded-full shadow-lg hover:bg-[#163B21] transition-all flex items-center space-x-2 border border-[#86EFAC]/30 cursor-pointer tap-active group"
           title="Open Krishi AI Assistant"
         >
-          <Bot className="w-6 h-6 text-[#86EFAC]" />
-          <span className="text-xs font-bold hidden sm:inline-block pr-1">
+          <Bot className="w-4 h-4 text-[#86EFAC]" />
+          <span className="text-xs font-semibold hidden sm:inline-block pr-0.5">
             {lang === 'or' ? 'କୃଷି ସହାୟକ ଚାଟ୍' : 'Ask Krishi AI'}
           </span>
         </button>

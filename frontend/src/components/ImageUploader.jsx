@@ -150,62 +150,62 @@ export default function ImageUploader({
               : 'Take a picture or click one of the quick test samples below'}
           </p>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 mb-5">
+          {/* Action Buttons with elevated primary hierarchy */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6 max-w-md mx-auto">
             <button
               type="button"
               onClick={() => cameraInputRef.current?.click()}
-              className="btn-primary w-full sm:w-auto"
+              className="btn-primary w-full sm:w-auto py-3.5 px-6 sm:px-8 text-sm sm:text-base font-extrabold shadow-md min-h-[48px]"
             >
-              <Camera className="w-4 h-4" />
+              <Camera className="w-5 h-5" />
               <span>{t.take_photo}</span>
             </button>
 
             <button
               type="button"
               onClick={() => fileInputRef.current?.click()}
-              className="btn-secondary w-full sm:w-auto"
+              className="btn-secondary w-full sm:w-auto py-3.5 px-6 text-sm sm:text-base font-bold min-h-[48px]"
             >
-              <Upload className="w-4 h-4 text-[#5A4D41]" />
+              <Upload className="w-5 h-5 text-[#5A4D41]" />
               <span>{t.upload_photo}</span>
             </button>
           </div>
 
-          {/* Test Sample Quick Buttons */}
+          {/* Test Sample Quick Buttons - Clean Uniform Grid */}
           <div className="pt-3.5 border-t border-[#EAF0E6] bg-[#FAFDF8] -mx-5 -mb-5 p-3.5 rounded-b-xl">
-            <div className="flex items-center justify-center space-x-1 text-[11px] font-bold uppercase tracking-wider text-[#1E4D2B] mb-2">
-              <Zap className="w-3.5 h-3.5 text-[#D97706]" />
+            <div className="flex items-center justify-center space-x-1.5 text-xs font-bold text-[#1E4D2B] mb-2.5">
+              <Zap className="w-4 h-4 text-[#D97706]" />
               <span>{lang === 'or' ? 'ଶୀଘ୍ର ପରୀକ୍ଷଣ ନମୁନା (1-Click Test Samples):' : 'Instant 1-Click Test Samples:'}</span>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full">
               <button
                 type="button"
                 onClick={() => onSelectSample('rice_blast.jpg')}
-                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B]"
+                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B] py-2 px-2 text-xs truncate justify-center"
               >
-                <span>🌾 {lang === 'or' ? 'ଧାନ ପତ୍ର ମହିଷା (Rice Blast)' : 'Rice Blast'}</span>
+                <span className="truncate">🌾 {lang === 'or' ? 'ଧାନ ମହିଷା' : 'Rice Blast'}</span>
               </button>
               <button
                 type="button"
                 onClick={() => onSelectSample('tomato_early_blight.jpg')}
-                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B]"
+                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B] py-2 px-2 text-xs truncate justify-center"
               >
-                <span>🍅 {lang === 'or' ? 'ଟମାଟୋ ଆଗୁଆ ଝାଉଁଳା' : 'Tomato Early Blight'}</span>
+                <span className="truncate">🍅 {lang === 'or' ? 'ଟମାଟୋ ଝାଉଁଳା' : 'Tomato Blight'}</span>
               </button>
               <button
                 type="button"
                 onClick={() => onSelectSample('potato_late_blight.jpg')}
-                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B]"
+                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B] py-2 px-2 text-xs truncate justify-center"
               >
-                <span>🥔 {lang === 'or' ? 'ଆଳୁ ପଛୁଆ ପତ୍ରପୋଡ଼ା' : 'Potato Late Blight'}</span>
+                <span className="truncate">🥔 {lang === 'or' ? 'ଆଳୁ ମଡ଼କ' : 'Potato Blight'}</span>
               </button>
               <button
                 type="button"
                 onClick={() => onSelectSample('unclear_photo.jpg')}
-                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B]"
+                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B] py-2 px-2 text-xs truncate justify-center"
                 title="Test low-confidence retake guidance"
               >
-                <span>📷 {lang === 'or' ? 'ଅସ୍ପଷ୍ଟ ନମୁନା (Blurry Sample)' : 'Blurry Leaf Sample'}</span>
+                <span className="truncate">📷 {lang === 'or' ? 'ଅସ୍ପଷ୍ଟ ନମୁନା' : 'Blurry Sample'}</span>
               </button>
             </div>
           </div>
