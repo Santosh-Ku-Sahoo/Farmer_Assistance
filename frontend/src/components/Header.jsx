@@ -19,9 +19,9 @@ export default function Header({ lang, setLang, backendOnline }) {
             </span>
           </div>
           <div className="hidden sm:flex items-center space-x-3 text-[10px] text-[#D5DEC9]">
-            <span>🌾 ଖରିଫ ଓ ରବି ସହାୟତା</span>
+            <span>{lang === 'or' ? '🌾 ଖରିଫ ଓ ରବି ସହାୟତା' : '🌾 Kharif & Rabi Assistance'}</span>
             <span>•</span>
-            <span>📞 କୃଷି ହେଲ୍ପଲାଇନ୍: 155333</span>
+            <span>{lang === 'or' ? '📞 କୃଷି ହେଲ୍ପଲାଇନ୍: 155333' : '📞 Krushi Helpline: 155333'}</span>
           </div>
         </div>
       </div>
