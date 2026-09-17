@@ -156,7 +156,7 @@ export default function HelplineDirectory({ lang }) {
           />
         </div>
 
-        <div className="space-y-2 max-h-72 overflow-y-auto pr-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 max-h-96 overflow-y-auto pr-1">
           {filteredKVKs.map((k, idx) => (
             <div key={idx} className="p-3 rounded-lg bg-[#F8FAF5] border border-[#E2EAD6] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
               <div>

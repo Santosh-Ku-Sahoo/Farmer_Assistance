@@ -6,6 +6,7 @@ import EmptyState from './components/EmptyState';
 import ResultCard from './components/ResultCard';
 import RetakeGuidance from './components/RetakeGuidance';
 import Footer from './components/Footer';
+import DesktopSidebar from './components/DesktopSidebar';
 import { translations } from './translations';
 import { API_BASE_URL } from './config';
 import { performClientDiagnosis } from './utils/offlineDiagnosis';
@@ -167,13 +168,13 @@ export default function App() {
       <Header lang={lang} setLang={setLang} backendOnline={backendOnline} />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-2xl w-full mx-auto px-3 sm:px-4 pt-3 sm:pt-6 pb-28 sm:pb-8 relative">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-3 sm:pt-6 pb-28 sm:pb-12 relative">
         
         {/* Desktop Navigation Tabs (Visible on tablets and PCs) */}
         <div 
           role="tablist" 
           aria-label={lang === 'or' ? "ମୁଖ୍ୟ ନେଭିଗେସନ୍" : "Main Navigation"}
-          className="hidden sm:grid grid-cols-7 gap-1 mb-7 p-1.5 bg-[#FFFFFF] shadow-xs rounded-xl border border-[#BAC8AA]"
+          className="hidden sm:grid grid-cols-7 gap-1.5 mb-7 p-1.5 bg-[#FFFFFF] shadow-xs rounded-xl border border-[#BAC8AA]"
         >
           <button
             type="button"
@@ -182,7 +183,7 @@ export default function App() {
             aria-selected={activeTab === 'diagnosis'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('diagnosis')}
-            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
               activeTab === 'diagnosis' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Leaf Disease Diagnosis (Primary ML Feature)"
@@ -198,7 +199,7 @@ export default function App() {
             aria-selected={activeTab === 'guide'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('guide')}
-            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
               activeTab === 'guide' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Crop Cultivation Guide (Static Reference)"
@@ -214,7 +215,7 @@ export default function App() {
             aria-selected={activeTab === 'weather'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('weather')}
-            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
               activeTab === 'weather' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Spray Weather Advisory & Cyclone Alert"
@@ -230,7 +231,7 @@ export default function App() {
             aria-selected={activeTab === 'mandi'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('mandi')}
-            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
               activeTab === 'mandi' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Odisha Mandi Prices"
@@ -246,7 +247,7 @@ export default function App() {
             aria-selected={activeTab === 'schemes'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('schemes')}
-            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
               activeTab === 'schemes' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Govt Schemes & Subsidies"
@@ -262,7 +263,7 @@ export default function App() {
             aria-selected={activeTab === 'helpline'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('helpline')}
-            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
               activeTab === 'helpline' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Emergency Helplines & KVK Directory"
@@ -278,7 +279,7 @@ export default function App() {
             aria-selected={activeTab === 'services'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('services')}
-            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
               activeTab === 'services' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Comprehensive Categorized Agro Services"
@@ -290,73 +291,83 @@ export default function App() {
 
         {/* Tab Panel Container */}
         <div role="tabpanel" id="main-tabpanel" aria-labelledby={`tab-btn-${activeTab}`}>
-          {/* Tab 1: Leaf Disease Diagnosis (Default Primary ML Flow) */}
+          {/* Tab 1: Leaf Disease Diagnosis (Responsive 2-Column Desktop Grid) */}
           {activeTab === 'diagnosis' && (
-            <div className="space-y-6">
-              {/* Crop Filter Context */}
-              <CropSelectorFilter
-                selectedCrop={selectedCrop}
-                onSelectCrop={setSelectedCrop}
-                lang={lang}
-              />
+            <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-start">
+              
+              {/* Primary Left Column: Upload, Scan & Diagnosis Results */}
+              <div className="lg:col-span-7 xl:col-span-7 space-y-6">
+                {/* Crop Filter Context */}
+                <CropSelectorFilter
+                  selectedCrop={selectedCrop}
+                  onSelectCrop={setSelectedCrop}
+                  lang={lang}
+                />
 
-              {/* Leaf Image Capture & Dropzone */}
-              <ImageUploader
-                onImageSelected={handleImageSelected}
-                previewUrl={previewUrl}
-                onReset={handleReset}
-                isLoading={isLoading}
-                lang={lang}
-                onSelectSample={handleSelectSample}
-              />
+                {/* Leaf Image Capture & Dropzone */}
+                <ImageUploader
+                  onImageSelected={handleImageSelected}
+                  previewUrl={previewUrl}
+                  onReset={handleReset}
+                  isLoading={isLoading}
+                  lang={lang}
+                  onSelectSample={handleSelectSample}
+                />
 
-              {/* Error State if Backend fails */}
-              {errorMessage && (
-                <div className="bg-[#FEF2F2] border border-[#FCA5A5] rounded-xl p-4 sm:p-5 text-left" role="alert">
-                  <div className="flex items-start space-x-3">
-                    <AlertOctagon className="w-5 h-5 text-[#B91C1C] flex-shrink-0 mt-0.5" aria-hidden="true" />
-                    <div>
-                      <h4 className="text-sm font-bold text-[#991B1B]">
-                        {t.network_error_title}
-                      </h4>
-                      <p className="text-xs sm:text-sm text-[#7F1D1D] mt-1 leading-relaxed">
-                        {errorMessage}
-                      </p>
-                      {currentFile && (
-                        <button
-                          type="button"
-                          onClick={() => handleDiagnose(currentFile)}
-                          className="btn-primary !bg-[#B91C1C] hover:!bg-[#991B1B] text-xs py-1.5 px-4 mt-3"
-                        >
-                          {t.retry_button}
-                        </button>
-                      )}
+                {/* Error State if Backend fails */}
+                {errorMessage && (
+                  <div className="bg-[#FEF2F2] border border-[#FCA5A5] rounded-xl p-4 sm:p-5 text-left" role="alert">
+                    <div className="flex items-start space-x-3">
+                      <AlertOctagon className="w-5 h-5 text-[#B91C1C] flex-shrink-0 mt-0.5" aria-hidden="true" />
+                      <div>
+                        <h4 className="text-sm font-bold text-[#991B1B]">
+                          {t.network_error_title}
+                        </h4>
+                        <p className="text-xs sm:text-sm text-[#7F1D1D] mt-1 leading-relaxed">
+                          {errorMessage}
+                        </p>
+                        {currentFile && (
+                          <button
+                            type="button"
+                            onClick={() => handleDiagnose(currentFile)}
+                            className="btn-primary !bg-[#B91C1C] hover:!bg-[#991B1B] text-xs py-1.5 px-4 mt-3"
+                          >
+                            {t.retry_button}
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* Conditional Content States */}
-              {predictionResult ? (
-                predictionResult.is_confident ? (
-                  /* High Confidence Result Card with XAI Heatmap Inspector */
-                  <ResultCard
-                    result={predictionResult}
-                    onReset={handleReset}
-                    lang={lang}
-                  />
-                ) : (
-                  /* Low Confidence Retake Guidance */
-                  <RetakeGuidance
-                    result={predictionResult}
-                    onRetake={handleReset}
-                    lang={lang}
-                  />
-                )
-              ) : !previewUrl ? (
-                /* Empty State Guide (Before Upload) */
-                <EmptyState lang={lang} />
-              ) : null}
+                {/* Conditional Content States */}
+                {predictionResult ? (
+                  predictionResult.is_confident ? (
+                    /* High Confidence Result Card with XAI Heatmap Inspector */
+                    <ResultCard
+                      result={predictionResult}
+                      onReset={handleReset}
+                      lang={lang}
+                    />
+                  ) : (
+                    /* Low Confidence Retake Guidance */
+                    <RetakeGuidance
+                      result={predictionResult}
+                      onRetake={handleReset}
+                      lang={lang}
+                    />
+                  )
+                ) : !previewUrl ? (
+                  /* Empty State Guide (Before Upload) */
+                  <EmptyState lang={lang} />
+                ) : null}
+              </div>
+
+              {/* Companion Right Column: Visual Disease Pathology Gallery & Field Inspection Guide */}
+              <div className="hidden lg:block lg:col-span-5 xl:col-span-5 sticky top-6">
+                <DesktopSidebar lang={lang} onSelectSample={handleSelectSample} />
+              </div>
+
             </div>
           )}
 

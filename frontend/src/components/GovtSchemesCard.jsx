@@ -67,7 +67,7 @@ export default function GovtSchemesCard({ lang }) {
       </div>
 
       {/* Schemes Grid */}
-      <div className="space-y-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {SCHEMES.map((scheme, idx) => (
           <div key={idx} className="p-4 rounded-xl bg-[#FAFDF8] border border-[#BAC8AA] shadow-2xs space-y-2">
             

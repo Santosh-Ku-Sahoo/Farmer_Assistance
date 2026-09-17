@@ -7,7 +7,7 @@ export default function Header({ lang, setLang, backendOnline }) {
 
   return (
     <header className="bg-[#1E4D2B] text-[#FDFCFA] border-b border-[#15381F] shadow-sm">
-      <div className="max-w-2xl w-full mx-auto px-3 sm:px-4 py-3.5 sm:py-4 flex items-center justify-between">
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-3.5 sm:py-4 flex items-center justify-between">
         
         {/* Branding */}
         <div className="flex items-center space-x-3">

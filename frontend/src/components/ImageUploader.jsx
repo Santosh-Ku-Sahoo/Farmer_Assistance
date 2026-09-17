@@ -175,41 +175,68 @@ export default function ImageUploader({
             </button>
           </div>
 
-          {/* Test Sample Quick Buttons - Clean Uniform Grid */}
+          {/* Test Sample Quick Buttons - Rich Visual Grid with Real Leaf Photos */}
           <div className="pt-3.5 border-t border-[#EAF0E6] bg-[#FAFDF8] -mx-5 -mb-5 p-3.5 rounded-b-xl">
             <div className="flex items-center justify-center space-x-1.5 text-xs font-bold text-[#1E4D2B] mb-2.5">
               <Zap className="w-4 h-4 text-[#D97706]" aria-hidden="true" />
               <span>{lang === 'or' ? 'ଶୀଘ୍ର ପରୀକ୍ଷଣ ନମୁନା (1-Click Test Samples):' : 'Instant 1-Click Test Samples:'}</span>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 w-full">
               <button
                 type="button"
                 onClick={() => onSelectSample('rice_blast.jpg')}
-                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B] py-2 px-2 text-xs truncate justify-center"
+                className="group flex items-center space-x-2 p-1.5 rounded-lg bg-[#FFFFFF] border border-[#BAC8AA] hover:border-[#1E4D2B] hover:shadow-sm transition-all text-left cursor-pointer"
               >
-                <span className="truncate">🌾 {lang === 'or' ? 'ଧାନ ମହିଷା' : 'Rice Blast'}</span>
+                <img src="/samples/rice_blast.jpg" alt="" className="w-9 h-9 rounded-md object-cover flex-shrink-0 border border-[#BAC8AA]/60" />
+                <div className="min-w-0">
+                  <span className="block text-xs font-bold text-[#1E4D2B] truncate group-hover:underline">
+                    {lang === 'or' ? 'ଧାନ ମହିଷା' : 'Rice Blast'}
+                  </span>
+                  <span className="block text-[10px] text-[#7A6E62] truncate">🌾 {lang === 'or' ? 'ଧାନ ଫସଲ' : 'Paddy leaf'}</span>
+                </div>
               </button>
+
               <button
                 type="button"
                 onClick={() => onSelectSample('tomato_early_blight.jpg')}
-                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B] py-2 px-2 text-xs truncate justify-center"
+                className="group flex items-center space-x-2 p-1.5 rounded-lg bg-[#FFFFFF] border border-[#BAC8AA] hover:border-[#1E4D2B] hover:shadow-sm transition-all text-left cursor-pointer"
               >
-                <span className="truncate">🍅 {lang === 'or' ? 'ଟମାଟୋ ଝାଉଁଳା' : 'Tomato Blight'}</span>
+                <img src="/samples/tomato_early_blight.jpg" alt="" className="w-9 h-9 rounded-md object-cover flex-shrink-0 border border-[#BAC8AA]/60" />
+                <div className="min-w-0">
+                  <span className="block text-xs font-bold text-[#1E4D2B] truncate group-hover:underline">
+                    {lang === 'or' ? 'ଟମାଟୋ ଝାଉଁଳା' : 'Tomato Blight'}
+                  </span>
+                  <span className="block text-[10px] text-[#7A6E62] truncate">🍅 {lang === 'or' ? 'ବାଇଗଣ ପତ୍ର' : 'Early blight'}</span>
+                </div>
               </button>
+
               <button
                 type="button"
                 onClick={() => onSelectSample('potato_late_blight.jpg')}
-                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B] py-2 px-2 text-xs truncate justify-center"
+                className="group flex items-center space-x-2 p-1.5 rounded-lg bg-[#FFFFFF] border border-[#BAC8AA] hover:border-[#1E4D2B] hover:shadow-sm transition-all text-left cursor-pointer"
               >
-                <span className="truncate">🥔 {lang === 'or' ? 'ଆଳୁ ମଡ଼କ' : 'Potato Blight'}</span>
+                <img src="/samples/potato_late_blight.jpg" alt="" className="w-9 h-9 rounded-md object-cover flex-shrink-0 border border-[#BAC8AA]/60" />
+                <div className="min-w-0">
+                  <span className="block text-xs font-bold text-[#1E4D2B] truncate group-hover:underline">
+                    {lang === 'or' ? 'ଆଳୁ ମଡ଼କ' : 'Potato Blight'}
+                  </span>
+                  <span className="block text-[10px] text-[#7A6E62] truncate">🥔 {lang === 'or' ? 'ପଛୁଆ ମଡ଼କ' : 'Late blight'}</span>
+                </div>
               </button>
+
               <button
                 type="button"
                 onClick={() => onSelectSample('unclear_photo.jpg')}
-                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B] py-2 px-2 text-xs truncate justify-center"
+                className="group flex items-center space-x-2 p-1.5 rounded-lg bg-[#FFFFFF] border border-[#BAC8AA] hover:border-[#1E4D2B] hover:shadow-sm transition-all text-left cursor-pointer"
                 title="Test low-confidence retake guidance"
               >
-                <span className="truncate">📷 {lang === 'or' ? 'ଅସ୍ପଷ୍ଟ ନମୁନା' : 'Blurry Sample'}</span>
+                <img src="/samples/unclear_photo.jpg" alt="" className="w-9 h-9 rounded-md object-cover flex-shrink-0 border border-[#BAC8AA]/60" />
+                <div className="min-w-0">
+                  <span className="block text-xs font-bold text-[#D97706] truncate group-hover:underline">
+                    {lang === 'or' ? 'ଅସ୍ପଷ୍ଟ ନମୁନା' : 'Blurry Sample'}
+                  </span>
+                  <span className="block text-[10px] text-[#7A6E62] truncate">📷 {lang === 'or' ? 'ଗାଇଡ୍ ଟେଷ୍ଟ' : 'XAI test'}</span>
+                </div>
               </button>
             </div>
           </div>

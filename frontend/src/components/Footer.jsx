@@ -11,7 +11,7 @@ export default function Footer({ lang }) {
       </h2>
 
       {/* Main Footer Grid */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-8 pb-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {/* Column 1: About */}
@@ -165,7 +165,7 @@ export default function Footer({ lang }) {
 
       {/* Bottom Bar */}
       <div className="border-t border-[#2C6E3B]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-[#BAC8AA]">
             © {currentYear}{' '}
             {lang === 'or' ? 'କୃଷକ ସହାୟକ — ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ' : 'AI Farmer Assistant — All rights reserved'}
