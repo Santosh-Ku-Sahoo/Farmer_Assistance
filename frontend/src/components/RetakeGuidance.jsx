@@ -89,9 +89,35 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
                 </p>
               </div>
             </div>
-
           </div>
-        </div>
+
+          {/* Real Leaf Diagnostic Quality Comparison */}
+          <div className="mt-4 pt-3.5 border-t border-[#E2EAD6]">
+              <h5 className="text-[11px] font-bold text-[#92400E] uppercase tracking-wider mb-2">
+                {lang === 'or' ? 'ଫଟୋ ଗୁଣବତ୍ତା ତୁଳନା' : 'Diagnostic Photo Quality Comparison'}
+              </h5>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <div className="rounded-lg border border-[#86EFAC] bg-[#F0FDF4] p-2 flex items-center space-x-2.5">
+                  <div className="relative w-14 h-14 rounded overflow-hidden flex-shrink-0 border border-[#86EFAC]">
+                    <img src="/samples/rice_blast.jpg" alt="Good" className="w-full h-full object-cover" />
+                    <span className="absolute bottom-0 inset-x-0 bg-[#166534] text-white text-[8px] font-bold text-center">✓ {lang === 'or' ? 'ଠିକ୍' : 'Good'}</span>
+                  </div>
+                  <span className="text-[11px] text-[#166534] font-medium leading-tight">
+                    {lang === 'or' ? 'ପତ୍ରର ଦାଗ ସ୍ପଷ୍ଟ ଓ ଫୋକସରେ' : 'Sharp leaf lesion in focus with daylight'}
+                  </span>
+                </div>
+                <div className="rounded-lg border border-[#FCA5A5] bg-[#FEF2F2] p-2 flex items-center space-x-2.5">
+                  <div className="relative w-14 h-14 rounded overflow-hidden flex-shrink-0 border border-[#FCA5A5]">
+                    <img src="/samples/unclear_photo.jpg" alt="Blurry" className="w-full h-full object-cover" />
+                    <span className="absolute bottom-0 inset-x-0 bg-[#991B1B] text-white text-[8px] font-bold text-center">✗ {lang === 'or' ? 'ଭୁଲ୍' : 'Avoid'}</span>
+                  </div>
+                  <span className="text-[11px] text-[#991B1B] font-medium leading-tight">
+                    {lang === 'or' ? 'କ୍ୟାମେରା ହଲିଯିବା ବା ଛାଇ ପଡ଼ିବା' : 'Blurry, distant, or shadowed capture'}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
 
         {/* Primary Action Button */}
         <div className="pt-2">

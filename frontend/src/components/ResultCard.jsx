@@ -6,6 +6,17 @@ import PrescriptionModal from './PrescriptionModal';
 import RecoveryTimeline from './RecoveryTimeline';
 import LesionHeatmapInspector from './LesionHeatmapInspector';
 
+const DISEASE_SPECIMENS = {
+  'Rice___Leaf_Blast': '/samples/rice_blast.jpg',
+  'Rice___Brown_Spot': '/samples/rice_brown_spot.jpg',
+  'Rice___Healthy': '/samples/rice_healthy.jpg',
+  'Tomato___Early_Blight': '/samples/tomato_early_blight.jpg',
+  'Tomato___Yellow_Leaf_Curl_Virus': '/samples/tomato_yellow_curl.jpg',
+  'Tomato___Healthy': '/samples/tomato_healthy.jpg',
+  'Potato___Late_Blight': '/samples/potato_late_blight.jpg',
+  'Potato___Healthy': '/samples/potato_healthy.jpg'
+};
+
 export default function ResultCard({ result, onReset, lang }) {
   const t = translations[lang];
   const rec = result.recommendation;
@@ -146,15 +157,31 @@ export default function ResultCard({ result, onReset, lang }) {
 
       <div className="p-4 sm:p-6 space-y-5">
         
-        {/* Symptoms Section */}
+        {/* Symptoms Section with Real Field Botanical Specimen Photo */}
         {rec && (
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#7A6E62] mb-1.5 flex items-center space-x-1.5">
-              <span>{t.symptoms_title}</span>
-            </h4>
-            <p className="text-sm text-[#382E28] leading-relaxed bg-[#F8FAF5] p-3 rounded-lg border border-[#E2EAD6]">
-              {lang === 'or' ? rec.symptoms_or : rec.symptoms_en}
-            </p>
+          <div className="bg-[#F8FAF5] p-3.5 sm:p-4 rounded-xl border border-[#E2EAD6]">
+            <div className="flex flex-col sm:flex-row gap-3.5 items-start">
+              {DISEASE_SPECIMENS[result.disease_class] && (
+                <div className="relative w-full sm:w-36 sm:h-28 aspect-video sm:aspect-auto rounded-lg overflow-hidden flex-shrink-0 border border-[#BAC8AA] bg-[#1E4D2B]/10 shadow-2xs">
+                  <img
+                    src={DISEASE_SPECIMENS[result.disease_class]}
+                    alt={rec.disease_name}
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute bottom-1 right-1 text-[9px] font-bold bg-black/75 text-white px-1.5 py-0.5 rounded backdrop-blur-xs">
+                    {lang === 'or' ? 'ପ୍ରମାଣିତ ପତ୍ର ନମୁନା' : 'Reference Leaf'}
+                  </span>
+                </div>
+              )}
+              <div className="flex-1 min-w-0">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-[#1E4D2B] mb-1.5 flex items-center space-x-1.5">
+                  <span>{t.symptoms_title}</span>
+                </h4>
+                <p className="text-xs sm:text-sm text-[#382E28] leading-relaxed">
+                  {lang === 'or' ? rec.symptoms_or : rec.symptoms_en}
+                </p>
+              </div>
+            </div>
           </div>
         )}
 
