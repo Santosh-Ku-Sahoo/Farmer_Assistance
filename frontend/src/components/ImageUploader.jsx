@@ -202,10 +202,10 @@ export default function ImageUploader({
               <button
                 type="button"
                 onClick={() => onSelectSample('unclear_photo.jpg')}
-                className="btn-tab bg-[#FEF3C7] border border-[#FCD34D] text-[#92400E] hover:bg-[#FDE68A]"
+                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B]"
                 title="Test low-confidence retake guidance"
               >
-                <span>⚠️ {lang === 'or' ? 'ଅସ୍ପଷ୍ଟ ଫଟୋ (Retake State)' : 'Unclear Photo'}</span>
+                <span>📷 {lang === 'or' ? 'ଅସ୍ପଷ୍ଟ ନମୁନା (Blurry Sample)' : 'Blurry Leaf Sample'}</span>
               </button>
             </div>
           </div>
