@@ -91,6 +91,12 @@ export default function ChatAssistant({ lang, isInline = false }) {
   const messagesEndRef = useRef(null);
   const recognitionRef = useRef(null);
 
+  // Draggable FAB state
+  const [fabPos, setFabPos] = useState({ x: 24, y: 96 }); // distance from right, bottom edges
+  const isDraggingRef = useRef(false);
+  const dragStartRef = useRef({ sx: 0, sy: 0, ox: 0, oy: 0 });
+  const hasDraggedRef = useRef(false); // true if moved beyond tap threshold
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -112,6 +118,62 @@ export default function ChatAssistant({ lang, isInline = false }) {
       }
     };
   }, []);
+
+  // --- Drag handlers for FAB ---
+  const clampPos = (x, y) => {
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const btnW = 56, btnH = 44; // approximate FAB size
+    return {
+      x: Math.max(4, Math.min(x, vw - btnW - 4)),
+      y: Math.max(4, Math.min(y, vh - btnH - 4)),
+    };
+  };
+
+  const onDragStart = (clientX, clientY) => {
+    isDraggingRef.current = true;
+    hasDraggedRef.current = false;
+    dragStartRef.current = { sx: clientX, sy: clientY, ox: fabPos.x, oy: fabPos.y };
+  };
+
+  const onDragMove = (clientX, clientY) => {
+    if (!isDraggingRef.current) return;
+    const dx = dragStartRef.current.sx - clientX;
+    const dy = dragStartRef.current.sy - clientY;
+    // Only flag as dragged after 8px movement (tap vs drag threshold)
+    if (Math.abs(dx) > 8 || Math.abs(dy) > 8) hasDraggedRef.current = true;
+    if (!hasDraggedRef.current) return;
+    const raw = clampPos(dragStartRef.current.ox + dx, dragStartRef.current.oy + dy);
+    setFabPos(raw);
+  };
+
+  const onDragEnd = () => {
+    isDraggingRef.current = false;
+    if (hasDraggedRef.current) {
+      // Snap to nearest horizontal edge
+      const vw = window.innerWidth;
+      setFabPos((prev) => ({ ...prev, x: prev.x > vw / 2 - 28 ? vw - 60 : 4 }));
+    }
+  };
+
+  // Attach window-level move/end listeners while dragging
+  useEffect(() => {
+    const moveHandler = (e) => {
+      const t = e.touches ? e.touches[0] : e;
+      onDragMove(t.clientX, t.clientY);
+    };
+    const endHandler = () => onDragEnd();
+    window.addEventListener('mousemove', moveHandler);
+    window.addEventListener('mouseup', endHandler);
+    window.addEventListener('touchmove', moveHandler, { passive: true });
+    window.addEventListener('touchend', endHandler);
+    return () => {
+      window.removeEventListener('mousemove', moveHandler);
+      window.removeEventListener('mouseup', endHandler);
+      window.removeEventListener('touchmove', moveHandler);
+      window.removeEventListener('touchend', endHandler);
+    };
+  });
 
   // Voice-to-text speech recognition
   const handleToggleListening = () => {
@@ -260,13 +322,16 @@ export default function ChatAssistant({ lang, isInline = false }) {
 
   return (
     <>
-      {/* Floating Action Button (FAB) */}
+      {/* Draggable Floating Action Button (FAB) */}
       {!isInline && !isOpen && (
         <button
           type="button"
-          onClick={() => setIsOpen(true)}
-          className="fixed bottom-24 sm:bottom-6 right-4 sm:right-6 z-40 bg-[#1E4D2B] text-white py-2.5 px-3.5 sm:px-4 rounded-full shadow-lg hover:bg-[#163B21] hover:scale-105 transition-all flex items-center space-x-2 border border-[#86EFAC]/30 cursor-pointer tap-active group"
-          title="Open Krishi AI Assistant"
+          onClick={() => { if (!hasDraggedRef.current) setIsOpen(true); }}
+          onMouseDown={(e) => { e.preventDefault(); onDragStart(e.clientX, e.clientY); }}
+          onTouchStart={(e) => { const t = e.touches[0]; onDragStart(t.clientX, t.clientY); }}
+          style={{ right: fabPos.x, bottom: fabPos.y, touchAction: 'none' }}
+          className="fixed z-40 bg-[#1E4D2B] text-white py-2.5 px-3.5 sm:px-4 rounded-full shadow-lg hover:bg-[#163B21] transition-colors flex items-center space-x-2 border border-[#86EFAC]/30 cursor-grab active:cursor-grabbing tap-active group select-none"
+          title="Drag to reposition · Tap to open"
         >
           <Bot className="w-4 h-4 text-[#86EFAC]" />
           <span className="text-xs font-semibold hidden sm:inline-block pr-0.5">
