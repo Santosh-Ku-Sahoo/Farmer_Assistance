@@ -22,9 +22,7 @@ import GrainStorageGuide from './GrainStorageGuide';
 import FertilizerCalculator from './FertilizerCalculator';
 import PestBeneficialGuide from './PestBeneficialGuide';
 import FarmKhataDiary from './FarmKhataDiary';
-import HelplineDirectory from './HelplineDirectory';
 import CropRotationPlanner from './CropRotationPlanner';
-import GovtSchemesCard from './GovtSchemesCard';
 
 const CATEGORIES = [
   {
@@ -76,19 +74,17 @@ const CATEGORIES = [
   },
   {
     id: 'income_livestock',
-    title_en: 'Income & Support',
-    title_or: 'ଆୟ ଓ ସହାୟତା',
-    desc_en: 'Farm diary, cattle feed, grain storage, helplines & govt schemes',
-    desc_or: 'କୃଷି ଖାତା, ପଶୁ ଖାଦ୍ୟ, ଶସ୍ୟ ସାଇତିବା, ହେଲ୍ପଲାଇନ୍ ଓ ଯୋଜନା',
+    title_en: 'Income & Livestock',
+    title_or: 'ଆୟ ଓ ପଶୁପାଳନ',
+    desc_en: 'Farm diary, cattle feed, vermicompost & safe grain storage',
+    desc_or: 'କୃଷି ଖାତା, ପଶୁ ଖାଦ୍ୟ, ଜିଆ ଖତ ଓ ଶସ୍ୟ ସାଇତିବା',
     icon: Landmark,
     accent: 'bg-violet-100 text-violet-600',
     services: [
       { id: 'khata', icon: '📒', title_en: 'Farm Khata Diary', title_or: 'କୃଷି ଖାତା ଡାଏରୀ', desc_en: 'Track expenses & calculate ROI', desc_or: 'ଖର୍ଚ୍ଚ ଟ୍ରାକ ଓ ଲାଭ ହିସାବ' },
       { id: 'cattle', icon: '🐮', title_en: 'Cattle Feed Planner', title_or: 'ପଶୁ ଖାଦ୍ୟ ହିସାବ', desc_en: 'Balanced dairy cow ration mix', desc_or: 'ଗାଈ ପାଇଁ ସନ୍ତୁଳିତ ଖାଦ୍ୟ ମିଶ୍ରଣ' },
       { id: 'vermicompost', icon: '🪱', title_en: 'Vermicompost Yield', title_or: 'ଜିଆ ଖତ ଉତ୍ପାଦନ', desc_en: 'Pit size, earthworm qty & harvest', desc_or: 'କୁଣ୍ଡ ମାପ, ଜିଆ ପରିମାଣ ଓ ଅମଳ' },
-      { id: 'storage', icon: '📦', title_en: 'Grain Storage Guide', title_or: 'ଶସ୍ୟ ସାଇତିବା', desc_en: 'Moisture limits & safe storage', desc_or: 'ଆର୍ଦ୍ରତା ସୀମା ଓ ସୁରକ୍ଷିତ ସାଇତିବା' },
-      { id: 'helpline', icon: '📞', title_en: 'Emergency Helplines', title_or: 'କୃଷି ହେଲ୍ପଲାଇନ୍', desc_en: 'Toll-free helplines & KVK directory', desc_or: 'ଟୋଲ୍ ଫ୍ରୀ ହେଲ୍ପଲାଇନ୍ ଓ KVK' },
-      { id: 'schemes', icon: '🏛️', title_en: 'Govt Schemes', title_or: 'ସରକାରୀ ଯୋଜନା', desc_en: 'KALIA, PM-KISAN & PMFBY details', desc_or: 'କାଳିଆ, ପିଏମ୍-କିଷାନ ଓ ଫସଲ ବୀମା' }
+      { id: 'storage', icon: '📦', title_en: 'Grain Storage Guide', title_or: 'ଶସ୍ୟ ସାଇତିବା', desc_en: 'Moisture limits & safe storage', desc_or: 'ଆର୍ଦ୍ରତା ସୀମା ଓ ସୁରକ୍ଷିତ ସାଇତିବା' }
     ]
   }
 ];
@@ -112,9 +108,7 @@ const SERVICE_COMPONENTS = {
   khata: FarmKhataDiary,
   cattle: CattleFeedPlanner,
   vermicompost: VermicompostCalculator,
-  storage: GrainStorageGuide,
-  helpline: HelplineDirectory,
-  schemes: GovtSchemesCard
+  storage: GrainStorageGuide
 };
 
 export default function AgriServicesHub({ lang }) {
@@ -155,7 +149,7 @@ export default function AgriServicesHub({ lang }) {
             {lang === 'or' ? '🌾 କୃଷି ସେବା ହବ୍' : '🌾 Agri Services Hub'}
           </h2>
           <p className="text-xs text-[#7A6E62] mt-0.5">
-            {lang === 'or' ? '୨୦+ ବିଶେଷ ଟୁଲ୍ — ଗୋଟିଏ ବର୍ଗ ବାଛନ୍ତୁ' : '20+ specialized tools — pick a category'}
+            {lang === 'or' ? '୧୮ ବିଶେଷ କୃଷି ଟୁଲ୍ — ଗୋଟିଏ ବର୍ଗ ବାଛନ୍ତୁ' : '18 specialized farm tools — pick a category'}
           </p>
         </div>
 

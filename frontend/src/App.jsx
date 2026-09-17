@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import { translations } from './translations';
 import { API_BASE_URL } from './config';
 import { performClientDiagnosis } from './utils/offlineDiagnosis';
-import { AlertOctagon, Leaf, BookOpen, CloudSun, CloudRain, IndianRupee, TrendingUp, Landmark, ScrollText, RefreshCw } from 'lucide-react';
+import { AlertOctagon, Leaf, BookOpen, CloudSun, CloudRain, IndianRupee, TrendingUp, Landmark, ScrollText, RefreshCw, PhoneCall } from 'lucide-react';
 
 // Code splitting: Lazy load secondary tabs and chat assistant to minimize initial payload
 const CropGrowingGuide = lazy(() => import('./components/CropGrowingGuide'));
@@ -17,6 +17,7 @@ const WeatherAdvisoryCard = lazy(() => import('./components/WeatherAdvisoryCard'
 const MarketPricesCard = lazy(() => import('./components/MarketPricesCard'));
 const AgriServicesHub = lazy(() => import('./components/AgriServicesHub'));
 const GovtSchemesCard = lazy(() => import('./components/GovtSchemesCard'));
+const HelplineDirectory = lazy(() => import('./components/HelplineDirectory'));
 const ChatAssistant = lazy(() => import('./components/ChatAssistant'));
 
 // Tab loading placeholder
@@ -172,7 +173,7 @@ export default function App() {
         <div 
           role="tablist" 
           aria-label={lang === 'or' ? "ମୁଖ୍ୟ ନେଭିଗେସନ୍" : "Main Navigation"}
-          className="hidden sm:grid grid-cols-6 gap-1.5 mb-7 p-1.5 bg-[#FFFFFF] shadow-xs rounded-xl border border-[#BAC8AA]"
+          className="hidden sm:grid grid-cols-7 gap-1 mb-7 p-1.5 bg-[#FFFFFF] shadow-xs rounded-xl border border-[#BAC8AA]"
         >
           <button
             type="button"
@@ -181,12 +182,12 @@ export default function App() {
             aria-selected={activeTab === 'diagnosis'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('diagnosis')}
-            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
+            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
               activeTab === 'diagnosis' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Leaf Disease Diagnosis (Primary ML Feature)"
           >
-            <Leaf className="w-4.5 h-4.5 flex-shrink-0" aria-hidden="true" />
+            <Leaf className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
             <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_diagnosis}</span>
           </button>
 
@@ -197,12 +198,12 @@ export default function App() {
             aria-selected={activeTab === 'guide'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('guide')}
-            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
+            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
               activeTab === 'guide' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Crop Cultivation Guide (Static Reference)"
           >
-            <BookOpen className="w-4.5 h-4.5 flex-shrink-0" aria-hidden="true" />
+            <BookOpen className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
             <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_guide}</span>
           </button>
 
@@ -213,12 +214,12 @@ export default function App() {
             aria-selected={activeTab === 'weather'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('weather')}
-            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
+            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
               activeTab === 'weather' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Spray Weather Advisory & Cyclone Alert"
           >
-            <CloudSun className="w-4.5 h-4.5 flex-shrink-0" aria-hidden="true" />
+            <CloudSun className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
             <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_weather}</span>
           </button>
 
@@ -229,12 +230,12 @@ export default function App() {
             aria-selected={activeTab === 'mandi'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('mandi')}
-            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
+            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
               activeTab === 'mandi' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Odisha Mandi Prices"
           >
-            <IndianRupee className="w-4.5 h-4.5 flex-shrink-0" aria-hidden="true" />
+            <IndianRupee className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
             <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_mandi}</span>
           </button>
 
@@ -245,13 +246,29 @@ export default function App() {
             aria-selected={activeTab === 'schemes'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('schemes')}
-            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
+            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
               activeTab === 'schemes' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Govt Schemes & Subsidies"
           >
-            <ScrollText className="w-4.5 h-4.5 flex-shrink-0" aria-hidden="true" />
+            <ScrollText className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
             <span className="whitespace-nowrap sm:whitespace-normal">{lang === 'or' ? 'ଯୋଜନା' : 'Schemes'}</span>
+          </button>
+
+          <button
+            type="button"
+            role="tab"
+            id="tab-btn-helpline"
+            aria-selected={activeTab === 'helpline'}
+            aria-controls="main-tabpanel"
+            onClick={() => handleTabChange('helpline')}
+            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
+              activeTab === 'helpline' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
+            }`}
+            title="Emergency Helplines & KVK Directory"
+          >
+            <PhoneCall className="w-4 h-4 flex-shrink-0 text-[#1E4D2B]" aria-hidden="true" />
+            <span className="whitespace-nowrap sm:whitespace-normal">{lang === 'or' ? 'ହେଲ୍ପଲାଇନ୍' : 'Helpline'}</span>
           </button>
 
           <button
@@ -261,12 +278,12 @@ export default function App() {
             aria-selected={activeTab === 'services'}
             aria-controls="main-tabpanel"
             onClick={() => handleTabChange('services')}
-            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
+            className={`btn-tab py-2.5 px-1.5 text-xs font-bold flex items-center justify-center space-x-1 ${
               activeTab === 'services' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
             }`}
             title="Comprehensive Categorized Agro Services"
           >
-            <Landmark className="w-4.5 h-4.5 flex-shrink-0" aria-hidden="true" />
+            <Landmark className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
             <span className="whitespace-nowrap sm:whitespace-normal">{lang === 'or' ? 'କୃଷି ସେବା' : 'Agri Care'}</span>
           </button>
         </div>
@@ -371,7 +388,14 @@ export default function App() {
             </Suspense>
           )}
 
-          {/* Tab 6: Agri Care Extended Services */}
+          {/* Tab 6: Emergency Helplines & KVK Directory */}
+          {activeTab === 'helpline' && (
+            <Suspense fallback={<TabFallback lang={lang} />}>
+              <HelplineDirectory lang={lang} />
+            </Suspense>
+          )}
+
+          {/* Tab 7: Agri Care Extended Services */}
           {activeTab === 'services' && (
             <Suspense fallback={<TabFallback lang={lang} />}>
               <AgriServicesHub lang={lang} />
@@ -386,7 +410,7 @@ export default function App() {
 
       {/* Mobile Fixed Bottom Navigation Bar (App-like 1-thumb ergonomics) */}
       <nav aria-label={lang === 'or' ? "ମୋବାଇଲ୍ ନେଭିଗେସନ୍" : "Mobile navigation"} className="sm:hidden fixed bottom-0 left-0 right-0 z-30 bg-[#FFFFFF]/95 backdrop-blur-md border-t border-[#BAC8AA] pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
-        <div className="grid grid-cols-6 h-16 max-w-lg mx-auto">
+        <div className="grid grid-cols-7 h-16 max-w-lg mx-auto">
           <button
             type="button"
             aria-current={activeTab === 'diagnosis' ? 'page' : undefined}
@@ -460,6 +484,21 @@ export default function App() {
               <ScrollText className="w-4 h-4" aria-hidden="true" />
             </div>
             <span className="text-[10px] font-medium leading-tight truncate">{lang === 'or' ? 'ଯୋଜନା' : 'Schemes'}</span>
+          </button>
+
+          <button
+            type="button"
+            aria-current={activeTab === 'helpline' ? 'page' : undefined}
+            aria-label={lang === 'or' ? "ଜରୁରୀ କୃଷି ହେଲ୍ପଲାଇନ୍" : "Emergency Helplines"}
+            onClick={() => handleTabChange('helpline')}
+            className={`flex flex-col items-center justify-center space-y-0.5 transition-all tap-active cursor-pointer ${
+              activeTab === 'helpline' ? 'text-[#1E4D2B] font-bold' : 'text-[#7A6E62]'
+            }`}
+          >
+            <div className={`p-1 rounded-full ${activeTab === 'helpline' ? 'bg-[#EAF0E6]' : ''}`}>
+              <PhoneCall className="w-4 h-4" aria-hidden="true" />
+            </div>
+            <span className="text-[10px] font-medium leading-tight truncate">{lang === 'or' ? 'ଫୋନ୍' : 'Helpline'}</span>
           </button>
 
           <button
