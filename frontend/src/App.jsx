@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import { translations } from './translations';
 import { API_BASE_URL } from './config';
 import { performClientDiagnosis } from './utils/offlineDiagnosis';
-import { AlertOctagon, Leaf, BookOpen, CloudSun, IndianRupee, Landmark } from 'lucide-react';
+import { AlertOctagon, Leaf, BookOpen, CloudSun, CloudRain, IndianRupee, TrendingUp, Landmark } from 'lucide-react';
 
 export default function App() {
   const urlParams = new URLSearchParams(window.location.search);
