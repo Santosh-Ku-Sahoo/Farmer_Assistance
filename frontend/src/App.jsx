@@ -10,10 +10,11 @@ import WeatherAdvisoryCard from './components/WeatherAdvisoryCard';
 import MarketPricesCard from './components/MarketPricesCard';
 import AgriServicesHub from './components/AgriServicesHub';
 import ChatAssistant from './components/ChatAssistant';
+import Footer from './components/Footer';
 import { translations } from './translations';
 import { API_BASE_URL } from './config';
 import { performClientDiagnosis } from './utils/offlineDiagnosis';
-import { AlertOctagon, ShieldCheck, Leaf, BookOpen, CloudSun, IndianRupee, Landmark } from 'lucide-react';
+import { AlertOctagon, Leaf, BookOpen, CloudSun, IndianRupee, Landmark } from 'lucide-react';
 
 export default function App() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -291,20 +292,11 @@ export default function App() {
           <AgriServicesHub lang={lang} />
         )}
 
-        {/* Privacy & Ag Extension Note */}
-        <footer className="mt-8 text-center text-xs text-[#7A6E62] border-t border-[#D5DEC9] pt-4 pb-16 sm:pb-6 space-y-1">
-          <p className="flex items-center justify-center space-x-1.5 font-medium">
-            <ShieldCheck className="w-4 h-4 text-[#1E4D2B]" />
-            <span>{t.privacy_note}</span>
-          </p>
-          <p className="text-xs text-[#7A6E62] leading-relaxed">
-            {lang === 'or'
-              ? 'ପ୍ରତିକାର ପରାମର୍ଶ ICAR-NRRI (କଟକ) ଏବଂ OUAT (ଭୁବନେଶ୍ୱର) କୃଷି ମାନକ ଉପରେ ଆଧାରିତ।'
-              : 'Recommendations aligned with ICAR-NRRI (Cuttack) & OUAT (Bhubaneswar) IPM standards.'}
-          </p>
-        </footer>
 
       </main>
+
+      {/* Site Footer — Helplines, Links, Copyright */}
+      <Footer lang={lang} />
 
       {/* Mobile Fixed Bottom Navigation Bar (App-like 1-thumb ergonomics) */}
       <nav className="sm:hidden fixed bottom-0 left-0 right-0 z-30 bg-[#FFFFFF]/95 backdrop-blur-md border-t border-[#BAC8AA] pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
