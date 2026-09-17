@@ -72,15 +72,39 @@ export default function MarketPricesCard({ lang, selectedCrop }) {
   const currentCropInfo = marketData ? marketData[activeCropTab] : DEFAULT_MANDI_DATA[activeCropTab];
 
   return (
-    <div className="bg-[#FDFCFA] border border-[#D5DEC9] rounded-xl p-4 sm:p-5 card-shadow text-left mb-6">
+    <div className="space-y-5 text-left mb-6">
+      {/* Real Photo Banner: Odisha Mandi Market Yard */}
+      <div className="relative rounded-2xl overflow-hidden border border-[#BAC8AA] shadow-sm bg-[#15381F] min-h-[140px] sm:min-h-[160px] flex items-center">
+        <img
+          src="/images/mandi_market.jpg"
+          alt="Odisha Mandi Produce Market"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0C2413]/95 via-[#15381F]/80 to-black/40" />
+        <div className="relative z-10 p-5 sm:p-6 text-white max-w-2xl">
+          <div className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full bg-[#EAF0E6]/20 backdrop-blur-md text-[#86EFAC] text-xs font-semibold mb-2">
+            <Store className="w-3.5 h-3.5 text-[#F59E0B]" />
+            <span>{lang === 'or' ? 'ଓଡ଼ିଶା କୃଷି ମଣ୍ଡି ଦର (OSAMB & Agmarknet)' : 'Agmarknet Daily Market Yard Rates'}</span>
+          </div>
+          <h2 className="font-extrabold text-white text-lg sm:text-2xl drop-shadow-sm">
+            {t.mandi_title}
+          </h2>
+          <p className="text-xs sm:text-sm text-[#D5DEC9] mt-1 leading-relaxed">
+            {lang === 'or' ? 'ବରଗଡ଼, ସମ୍ବଲପୁର, କଟକ ଓ ଭୁବନେଶ୍ୱର ସମେତ ୩୦ ଟି ନିୟନ୍ତ୍ରିତ ବଜାରର ସଦ୍ୟତମ ମଣ୍ଡି ମୂଲ୍ୟ।' : 'Verified real-time commodity pricing across 30 Regulated Market Committees (RMCs) and state mandis.'}
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-[#FDFCFA] border border-[#D5DEC9] rounded-xl p-4 sm:p-5 card-shadow">
       
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-[#EAF0E6]">
         <div>
-          <h2 className="font-bold text-[#2C221E] text-base sm:text-lg flex items-center space-x-2">
+          <h3 className="font-bold text-[#2C221E] text-base sm:text-lg flex items-center space-x-2">
             <IndianRupee className="w-5 h-5 text-[#1E4D2B]" />
             <span>{t.mandi_title}</span>
-          </h2>
+          </h3>
           <p className="text-xs text-[#7A6E62] mt-0.5">
             {t.mandi_subtitle}
           </p>
@@ -172,7 +196,7 @@ export default function MarketPricesCard({ lang, selectedCrop }) {
           );
         })}
       </div>
-
+      </div>
     </div>
   );
 }

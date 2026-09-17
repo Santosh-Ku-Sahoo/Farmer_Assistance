@@ -2,6 +2,36 @@ import React, { useState } from 'react';
 import { BookOpen, Calendar, Clock, ShieldAlert, CheckCircle2, ChevronRight, Sprout, Info, Award, Leaf } from 'lucide-react';
 import { CROP_GROWING_GUIDES } from '../data/cropGrowingGuides';
 
+const STAGE_IMAGES = {
+  Rice: {
+    1: '/images/stage_ploughing.jpg',
+    2: '/images/stage_nursery.jpg',
+    3: '/images/stage_transplanting.jpg',
+    4: '/images/stage_vegetative.jpg',
+    5: '/images/stage_vegetative.jpg',
+    6: '/images/stage_flowering.jpg',
+    7: '/images/stage_harvest.jpg'
+  },
+  Tomato: {
+    1: '/images/stage_nursery.jpg',
+    2: '/images/stage_ploughing.jpg',
+    3: '/images/stage_transplanting.jpg',
+    4: '/images/stage_vegetative.jpg',
+    5: '/images/stage_flowering.jpg',
+    6: '/images/stage_tomato_fruit.jpg',
+    7: '/images/stage_harvest.jpg'
+  },
+  Potato: {
+    1: '/images/stage_potato_tubers.jpg',
+    2: '/images/stage_ploughing.jpg',
+    3: '/images/stage_transplanting.jpg',
+    4: '/images/stage_vegetative.jpg',
+    5: '/images/stage_potato_tubers.jpg',
+    6: '/images/stage_ploughing.jpg',
+    7: '/images/stage_harvest.jpg'
+  }
+};
+
 export default function CropGrowingGuide({ lang }) {
   const [selectedCrop, setSelectedCrop] = useState('Rice');
 
@@ -111,19 +141,30 @@ export default function CropGrowingGuide({ lang }) {
               {stage.stage_num}
             </div>
 
-            {/* Stage Card */}
-            <div className="bg-[#FAFDF8] border border-[#D5DEC9] rounded-xl p-4 sm:p-4.5 shadow-2xs hover:border-[#1E4D2B] transition-colors">
+            {/* Stage Card with Real Field Stage Photo */}
+            <div className="bg-[#FAFDF8] border border-[#D5DEC9] rounded-2xl overflow-hidden shadow-2xs hover:border-[#1E4D2B] transition-all group">
               
-              {/* Perfectly center-aligned header and date label */}
-              <div className="flex flex-wrap items-center justify-between gap-2 mb-3 pb-2.5 border-b border-[#EAF0E6]">
-                <h3 className="text-xs sm:text-sm font-extrabold text-[#2C221E] leading-tight">
-                  {lang === 'or' ? stage.title_or : stage.title_en}
-                </h3>
-                <span className="text-xs font-semibold text-[#1E4D2B] bg-[#EAF0E6] px-2.5 py-1 rounded-md whitespace-nowrap flex items-center space-x-1">
-                  <Calendar className="w-3 h-3 text-[#1E4D2B]" />
-                  <span>{stage.timeframe}</span>
-                </span>
+              {/* Real Agronomic Stage Photo */}
+              <div className="relative h-24 sm:h-32 w-full overflow-hidden bg-[#15381F]">
+                <img
+                  src={STAGE_IMAGES[selectedCrop]?.[stage.stage_num] || '/images/stage_vegetative.jpg'}
+                  alt={lang === 'or' ? stage.title_or : stage.title_en}
+                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                
+                <div className="absolute bottom-2 inset-x-3 flex items-center justify-between text-white">
+                  <span className="text-xs sm:text-sm font-extrabold drop-shadow-sm truncate mr-2">
+                    {lang === 'or' ? `ପର୍ଯ୍ୟାୟ ${stage.stage_num}: ${stage.title_or}` : `Stage ${stage.stage_num}: ${stage.title_en}`}
+                  </span>
+                  <span className="text-[11px] font-bold bg-[#1E4D2B]/90 backdrop-blur-xs px-2 py-0.5 rounded-md border border-white/20 whitespace-nowrap flex-shrink-0">
+                    {stage.timeframe}
+                  </span>
+                </div>
               </div>
+
+              <div className="p-3.5 sm:p-4">
 
               {/* Bulleted Action Points with proper hanging indent */}
               <ul className="space-y-2 text-xs text-[#382E28] leading-relaxed">
@@ -135,6 +176,7 @@ export default function CropGrowingGuide({ lang }) {
                 ))}
               </ul>
 
+              </div>
             </div>
 
           </div>

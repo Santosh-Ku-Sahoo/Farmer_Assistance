@@ -204,15 +204,39 @@ export default function WeatherAdvisoryCard({ lang }) {
   };
 
   return (
-    <div className="bg-[#FDFCFA] border border-[#D5DEC9] rounded-xl p-4 sm:p-5 card-shadow text-left mb-6">
+    <div className="space-y-5 text-left mb-6">
+      {/* Real Photo Banner: Odisha Monsoon & Spray Advisory */}
+      <div className="relative rounded-2xl overflow-hidden border border-[#BAC8AA] shadow-sm bg-[#15381F] min-h-[140px] sm:min-h-[160px] flex items-center">
+        <img
+          src="/images/weather_monsoon.jpg"
+          alt="Odisha Farm Monsoon Weather"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0C2413]/95 via-[#15381F]/80 to-black/40" />
+        <div className="relative z-10 p-5 sm:p-6 text-white max-w-2xl">
+          <div className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full bg-[#EAF0E6]/20 backdrop-blur-md text-[#86EFAC] text-xs font-semibold mb-2">
+            <CloudRain className="w-3.5 h-3.5 text-[#60A5FA]" />
+            <span>{lang === 'or' ? 'ଓଡ଼ିଶା କୃଷି ପାଣିପାଗ ସତର୍କତା' : 'IMD & Hyperlocal Agro-Meteorology'}</span>
+          </div>
+          <h2 className="font-extrabold text-white text-lg sm:text-2xl drop-shadow-sm">
+            {t.weather_title}
+          </h2>
+          <p className="text-xs sm:text-sm text-[#D5DEC9] mt-1 leading-relaxed">
+            {lang === 'or' ? 'ଅଦିନିଆ ବର୍ଷା, ବାତ୍ୟା ସତର୍କତା ଓ ଔଷଧ ସିଞ୍ଚନ ପାଇଁ ଘଣ୍ଟା ଅନୁଯାୟୀ ସଠିକ୍ ପରାମର୍ଶ।' : 'Hourly precipitation forecast, wind drift alerts, and foliar spray safety index across all 30 districts.'}
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-[#FDFCFA] border border-[#D5DEC9] rounded-xl p-4 sm:p-5 card-shadow">
       
       {/* Header & District Dropdown */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-[#EAF0E6]">
         <div>
-          <h2 className="font-bold text-[#2C221E] text-base sm:text-lg flex items-center space-x-2">
+          <h3 className="font-bold text-[#2C221E] text-base sm:text-lg flex items-center space-x-2">
             <CloudRain className="w-5 h-5 text-[#1E4D2B]" />
             <span>{t.weather_title}</span>
-          </h2>
+          </h3>
           <p className="text-xs text-[#7A6E62] mt-0.5">
             {t.weather_subtitle}
           </p>
@@ -385,7 +409,7 @@ export default function WeatherAdvisoryCard({ lang }) {
           {lang === 'or' ? weatherData.advice_or : weatherData.advice_en}
         </p>
       </div>
-
     </div>
+  </div>
   );
 }
