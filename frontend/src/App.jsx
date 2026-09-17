@@ -139,54 +139,64 @@ export default function App() {
       <main className="flex-1 max-w-2xl w-full mx-auto px-3 sm:px-4 pt-3 sm:pt-6 pb-28 sm:pb-8 relative">
         
         {/* Desktop Navigation Tabs (Visible on tablets and PCs) */}
-        <div className="hidden sm:grid grid-cols-5 gap-1 mb-7 p-1 bg-[#D5DEC9]/60 rounded-xl border border-[#BAC8AA]">
+        <div className="hidden sm:grid grid-cols-5 gap-1.5 mb-7 p-1.5 bg-[#FFFFFF] shadow-xs rounded-xl border border-[#BAC8AA]">
           <button
             type="button"
             onClick={() => handleTabChange('diagnosis')}
-            className={`btn-tab ${activeTab === 'diagnosis' ? 'btn-tab-active' : ''}`}
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
+              activeTab === 'diagnosis' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
+            }`}
             title="Leaf Disease Diagnosis (Primary ML Feature)"
           >
-            <Leaf className="w-4 h-4 flex-shrink-0" />
+            <Leaf className="w-4.5 h-4.5 flex-shrink-0" />
             <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_diagnosis}</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleTabChange('guide')}
-            className={`btn-tab ${activeTab === 'guide' ? 'btn-tab-active' : ''}`}
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
+              activeTab === 'guide' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
+            }`}
             title="Crop Cultivation Guide (Static Reference)"
           >
-            <BookOpen className="w-4 h-4 flex-shrink-0" />
+            <BookOpen className="w-4.5 h-4.5 flex-shrink-0" />
             <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_guide}</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleTabChange('weather')}
-            className={`btn-tab ${activeTab === 'weather' ? 'btn-tab-active' : ''}`}
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
+              activeTab === 'weather' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
+            }`}
             title="Spray Weather Advisory & Cyclone Alert"
           >
-            <CloudSun className="w-4 h-4 flex-shrink-0" />
+            <CloudSun className="w-4.5 h-4.5 flex-shrink-0" />
             <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_weather}</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleTabChange('mandi')}
-            className={`btn-tab ${activeTab === 'mandi' ? 'btn-tab-active' : ''}`}
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
+              activeTab === 'mandi' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
+            }`}
             title="Odisha Mandi Prices"
           >
-            <IndianRupee className="w-4 h-4 flex-shrink-0" />
+            <IndianRupee className="w-4.5 h-4.5 flex-shrink-0" />
             <span className="whitespace-nowrap sm:whitespace-normal">{t.tab_mandi}</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleTabChange('services')}
-            className={`btn-tab ${activeTab === 'services' ? 'btn-tab-active' : ''}`}
+            className={`btn-tab py-2.5 px-2 text-xs font-bold flex items-center justify-center space-x-1.5 ${
+              activeTab === 'services' ? 'btn-tab-active shadow-xs' : 'text-[#4A3E38] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
+            }`}
             title="Comprehensive Categorized Agro Services"
           >
-            <Landmark className="w-4 h-4 flex-shrink-0 text-[#D97706]" />
+            <Landmark className="w-4.5 h-4.5 flex-shrink-0 text-[#D97706]" />
             <span className="whitespace-nowrap sm:whitespace-normal">{lang === 'or' ? 'କୃଷି ସେବା' : 'Agri Care'}</span>
           </button>
         </div>

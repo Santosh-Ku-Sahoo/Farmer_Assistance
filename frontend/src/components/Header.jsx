@@ -7,7 +7,7 @@ export default function Header({ lang, setLang, backendOnline }) {
 
   return (
     <header className="bg-[#1E4D2B] text-[#FDFCFA] border-b border-[#15381F] shadow-sm">
-      <div className="max-w-4xl mx-auto px-4 py-3.5 sm:py-4 flex items-center justify-between">
+      <div className="max-w-2xl w-full mx-auto px-3 sm:px-4 py-3.5 sm:py-4 flex items-center justify-between">
         
         {/* Branding */}
         <div className="flex items-center space-x-3">
@@ -18,7 +18,7 @@ export default function Header({ lang, setLang, backendOnline }) {
             <h1 className="text-lg sm:text-xl font-bold tracking-tight text-white leading-tight">
               {t.app_title}
             </h1>
-            <p className="text-xs text-[#D5DEC9] hidden sm:block">
+            <p className="text-xs text-[#D5DEC9] hidden sm:block normal-case tracking-normal">
               {t.app_subtitle}
             </p>
           </div>

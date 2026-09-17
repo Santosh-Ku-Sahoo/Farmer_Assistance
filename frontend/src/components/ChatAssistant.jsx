@@ -265,7 +265,7 @@ export default function ChatAssistant({ lang, isInline = false }) {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-20 sm:bottom-5 right-4 sm:right-5 z-30 bg-[#1E4D2B] text-white py-2.5 px-3.5 sm:px-4 rounded-full shadow-lg hover:bg-[#163B21] transition-all flex items-center space-x-2 border border-[#86EFAC]/30 cursor-pointer tap-active group"
+          className="fixed bottom-20 sm:bottom-6 right-4 sm:right-[max(1.25rem,calc(50%-21rem))] z-30 bg-[#1E4D2B] text-white py-2.5 px-3.5 sm:px-4 rounded-full shadow-lg hover:bg-[#163B21] transition-all flex items-center space-x-2 border border-[#86EFAC]/30 cursor-pointer tap-active group"
           title="Open Krishi AI Assistant"
         >
           <Bot className="w-4 h-4 text-[#86EFAC]" />
@@ -277,7 +277,7 @@ export default function ChatAssistant({ lang, isInline = false }) {
 
       {/* Chat Window Modal */}
       {(isOpen || isInline) && (
-        <div className={isInline ? "w-full" : "fixed inset-x-0 bottom-0 sm:inset-auto sm:bottom-5 sm:right-5 z-50 w-full sm:w-[440px] h-[92dvh] sm:h-[620px] bg-[#FDFCFA] rounded-t-3xl sm:rounded-2xl shadow-2xl border-t-2 sm:border-2 border-[#1E4D2B] flex flex-col overflow-hidden animate-in slide-in-from-bottom duration-200 pb-safe"}>
+        <div className={isInline ? "w-full" : "fixed inset-x-0 bottom-0 sm:inset-auto sm:bottom-6 sm:right-[max(1.25rem,calc(50%-21rem))] z-50 w-full sm:w-[440px] h-[92dvh] sm:h-[620px] bg-[#FDFCFA] rounded-t-3xl sm:rounded-2xl shadow-2xl border-t-2 sm:border-2 border-[#1E4D2B] flex flex-col overflow-hidden animate-in slide-in-from-bottom duration-200 pb-safe"}>
           
           {/* Header */}
           <div className="bg-[#1E4D2B] text-white p-3.5 flex items-center justify-between shadow-xs flex-shrink-0">
