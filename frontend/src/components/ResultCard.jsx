@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AlertTriangle, CheckCircle2, ShieldAlert, Sprout, RotateCcw, Clock, Volume2, VolumeX, FileText, Calculator, Calendar, Scan } from 'lucide-react';
 import { translations } from '../translations';
 import DosageCalculator from './DosageCalculator';
@@ -17,7 +17,7 @@ export default function ResultCard({ result, onReset, lang }) {
   const [activeSubTab, setActiveSubTab] = useState('treatment'); // 'treatment' | 'calculator' | 'timeline' | 'heatmap'
 
   // Stop any active speech on unmount
-  React.useEffect(() => {
+  useEffect(() => {
     return () => {
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
@@ -30,7 +30,7 @@ export default function ResultCard({ result, onReset, lang }) {
     if (isHealthy) {
       return (
         <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#EAF0E6] text-[#1E4D2B] border border-[#2C6E3B]">
-          <CheckCircle2 className="w-3.5 h-3.5" />
+          <CheckCircle2 className="w-3.5 h-3.5" aria-hidden="true" />
           <span>{t.severity_none}</span>
         </span>
       );
@@ -38,14 +38,14 @@ export default function ResultCard({ result, onReset, lang }) {
     if (rec?.severity === 'High') {
       return (
         <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#FEE2E2] text-[#991B1B] border border-[#F87171]">
-          <ShieldAlert className="w-3.5 h-3.5" />
+          <ShieldAlert className="w-3.5 h-3.5" aria-hidden="true" />
           <span>{t.severity_high}</span>
         </span>
       );
     }
     return (
       <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#FEF3C7] text-[#92400E] border border-[#FBBF24]">
-        <AlertTriangle className="w-3.5 h-3.5" />
+        <AlertTriangle className="w-3.5 h-3.5" aria-hidden="true" />
         <span>{t.severity_medium}</span>
       </span>
     );
@@ -89,7 +89,7 @@ export default function ResultCard({ result, onReset, lang }) {
       <div className={`p-4 sm:p-5 border-b ${isHealthy ? 'bg-[#F2F7ED] border-[#D5DEC9]' : 'bg-[#FAF4EF] border-[#EADACF]'}`}>
         <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
           <div className="flex items-center space-x-2">
-            <Sprout className="w-5 h-5 text-[#1E4D2B]" />
+            <Sprout className="w-5 h-5 text-[#1E4D2B]" aria-hidden="true" />
             <span className="text-xs uppercase font-bold tracking-wider text-[#5A4D41]">
               {lang === 'or' ? rec?.crop_odia : result.crop}
             </span>
@@ -100,6 +100,8 @@ export default function ResultCard({ result, onReset, lang }) {
             <button
               type="button"
               onClick={handleToggleVoice}
+              aria-pressed={isSpeaking}
+              aria-label={isSpeaking ? (lang === 'or' ? 'ଅଡିଓ ବନ୍ଦ କରନ୍ତୁ' : 'Stop voice narration') : (lang === 'or' ? 'ଓଡ଼ିଆରେ ଶୁଣନ୍ତୁ' : 'Listen aloud')}
               className={`p-1.5 rounded-full border transition-all cursor-pointer flex items-center space-x-1 text-xs font-semibold px-2.5 ${
                 isSpeaking
                   ? 'bg-[#8B3A2B] text-white border-[#8B3A2B] animate-pulse'
@@ -107,7 +109,7 @@ export default function ResultCard({ result, onReset, lang }) {
               }`}
               title="Listen aloud in native audio"
             >
-              {isSpeaking ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
+              {isSpeaking ? <VolumeX className="w-3.5 h-3.5" aria-hidden="true" /> : <Volume2 className="w-3.5 h-3.5" aria-hidden="true" />}
               <span>{isSpeaking ? (lang === 'or' ? 'ବନ୍ଦ' : 'Stop') : (lang === 'or' ? 'ଶୁଣନ୍ତୁ' : 'Listen')}</span>
             </button>
 
@@ -121,7 +123,14 @@ export default function ResultCard({ result, onReset, lang }) {
         
         {/* Confidence Meter */}
         <div className="mt-3 flex items-center space-x-3">
-          <div className="flex-1 bg-[#E2EAD6] h-2.5 rounded-full overflow-hidden">
+          <div 
+            className="flex-1 bg-[#E2EAD6] h-2.5 rounded-full overflow-hidden"
+            role="progressbar"
+            aria-valuenow={confidencePercent}
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-label={t.confidence_label}
+          >
             <div
               className={`h-full rounded-full ${
                 confidencePercent >= 80 ? 'bg-[#1E4D2B]' : 'bg-[#D97706]'
@@ -183,9 +192,10 @@ export default function ResultCard({ result, onReset, lang }) {
             <button
               type="button"
               onClick={() => setShowPrescription(true)}
+              aria-haspopup="dialog"
               className="w-full sm:w-auto inline-flex items-center justify-center space-x-1.5 px-4 py-2 rounded-lg bg-[#D97706] text-white text-xs font-bold hover:bg-[#B45309] transition-colors shadow-xs cursor-pointer flex-shrink-0"
             >
-              <FileText className="w-4 h-4" />
+              <FileText className="w-4 h-4" aria-hidden="true" />
               <span>{lang === 'or' ? 'ପ୍ରେସକ୍ରିପସନ୍ ଖୋଲନ୍ତୁ' : 'Open Prescription'}</span>
             </button>
           </div>
@@ -194,9 +204,13 @@ export default function ResultCard({ result, onReset, lang }) {
         {/* Sub-Tabs: Treatment Steps | Dosage Calculator | Recovery Timeline */}
         {!isHealthy && rec && (
           <div className="pt-2">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 mb-3 p-1 bg-[#EAF0E6] rounded-xl border border-[#C8D4BA]">
+            <div role="tablist" aria-label={lang === 'or' ? "ଚିକିତ୍ସା ବିକଳ୍ପ" : "Treatment options"} className="grid grid-cols-2 sm:grid-cols-4 gap-1 mb-3 p-1 bg-[#EAF0E6] rounded-xl border border-[#C8D4BA]">
               <button
                 type="button"
+                role="tab"
+                id="tab-treatment"
+                aria-selected={activeSubTab === 'treatment'}
+                aria-controls="panel-treatment"
                 onClick={() => setActiveSubTab('treatment')}
                 className={`py-1.5 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1 transition-all cursor-pointer ${
                   activeSubTab === 'treatment'
@@ -209,6 +223,10 @@ export default function ResultCard({ result, onReset, lang }) {
 
               <button
                 type="button"
+                role="tab"
+                id="tab-calculator"
+                aria-selected={activeSubTab === 'calculator'}
+                aria-controls="panel-calculator"
                 onClick={() => setActiveSubTab('calculator')}
                 className={`py-1.5 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1 transition-all cursor-pointer ${
                   activeSubTab === 'calculator'
@@ -216,12 +234,16 @@ export default function ResultCard({ result, onReset, lang }) {
                     : 'text-[#5A4D41] hover:text-[#1E4D2B]'
                 }`}
               >
-                <Calculator className="w-3.5 h-3.5" />
+                <Calculator className="w-3.5 h-3.5" aria-hidden="true" />
                 <span>{lang === 'or' ? 'ଟାଙ୍କି ହିସାବ' : 'Calculator'}</span>
               </button>
 
               <button
                 type="button"
+                role="tab"
+                id="tab-timeline"
+                aria-selected={activeSubTab === 'timeline'}
+                aria-controls="panel-timeline"
                 onClick={() => setActiveSubTab('timeline')}
                 className={`py-1.5 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1 transition-all cursor-pointer ${
                   activeSubTab === 'timeline'
@@ -229,12 +251,16 @@ export default function ResultCard({ result, onReset, lang }) {
                     : 'text-[#5A4D41] hover:text-[#1E4D2B]'
                 }`}
               >
-                <Calendar className="w-3.5 h-3.5" />
+                <Calendar className="w-3.5 h-3.5" aria-hidden="true" />
                 <span>{lang === 'or' ? '୭-ଦିନ କ୍ୟାଲେଣ୍ଡର' : 'Timeline'}</span>
               </button>
 
               <button
                 type="button"
+                role="tab"
+                id="tab-heatmap"
+                aria-selected={activeSubTab === 'heatmap'}
+                aria-controls="panel-heatmap"
                 onClick={() => setActiveSubTab('heatmap')}
                 className={`py-1.5 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1 transition-all cursor-pointer ${
                   activeSubTab === 'heatmap'
@@ -242,46 +268,52 @@ export default function ResultCard({ result, onReset, lang }) {
                     : 'text-[#5A4D41] hover:text-[#1E4D2B]'
                 }`}
               >
-                <Scan className="w-3.5 h-3.5 text-[#D97706]" />
+                <Scan className="w-3.5 h-3.5 text-[#D97706]" aria-hidden="true" />
                 <span>{lang === 'or' ? 'ଦାଗ ହିଟମ୍ୟାପ୍' : 'Heatmap'}</span>
               </button>
             </div>
 
             {/* Sub-Tab 1: Standard IPM Management Steps */}
             {activeSubTab === 'treatment' && (
-              <div>
+              <div role="tabpanel" id="panel-treatment" aria-labelledby="tab-treatment">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-[#1E4D2B] mb-2">
                   {t.treatment_title} (ICAR-NRRI & OUAT Guidelines)
                 </h4>
-                <div className="space-y-2">
+                <ol className="space-y-2 list-none p-0 m-0">
                   {(lang === 'or' ? rec.management_or : rec.management_en).map((step, idx) => (
-                    <div 
-                      key={idx} 
+                    <li 
+                      key={`step-${idx}-${step.slice(0, 12)}`} 
                       className="flex items-start space-x-3 p-3 rounded-lg bg-[#FAFDF8] border border-[#E2EAD6] text-sm text-[#2C221E]"
                     >
-                      <span className="w-5 h-5 rounded-full bg-[#1E4D2B] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="w-5 h-5 rounded-full bg-[#1E4D2B] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
                         {idx + 1}
                       </span>
                       <span className="leading-relaxed">{step}</span>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ol>
               </div>
             )}
 
             {/* Sub-Tab 2: Dosage & Spray Tank Calculator */}
             {activeSubTab === 'calculator' && (
-              <DosageCalculator rec={rec} lang={lang} />
+              <div role="tabpanel" id="panel-calculator" aria-labelledby="tab-calculator">
+                <DosageCalculator rec={rec} lang={lang} />
+              </div>
             )}
 
             {/* Sub-Tab 3: 7-Day Disease Recovery Timeline */}
             {activeSubTab === 'timeline' && (
-              <RecoveryTimeline rec={rec} lang={lang} />
+              <div role="tabpanel" id="panel-timeline" aria-labelledby="tab-timeline">
+                <RecoveryTimeline rec={rec} lang={lang} />
+              </div>
             )}
 
             {/* Sub-Tab 4: Explainable AI Lesion Heatmap Inspector */}
             {activeSubTab === 'heatmap' && (
-              <LesionHeatmapInspector result={result} lang={lang} />
+              <div role="tabpanel" id="panel-heatmap" aria-labelledby="tab-heatmap">
+                <LesionHeatmapInspector result={result} lang={lang} />
+              </div>
             )}
           </div>
         )}
@@ -292,19 +324,19 @@ export default function ResultCard({ result, onReset, lang }) {
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#1E4D2B] mb-2">
               {t.treatment_title}
             </h4>
-            <div className="space-y-2">
+            <ol className="space-y-2 list-none p-0 m-0">
               {(lang === 'or' ? rec.management_or : rec.management_en).map((step, idx) => (
-                <div 
-                  key={idx} 
+                <li 
+                  key={`healthy-step-${idx}-${step.slice(0, 12)}`} 
                   className="flex items-start space-x-3 p-3 rounded-lg bg-[#FAFDF8] border border-[#E2EAD6] text-sm text-[#2C221E]"
                 >
-                  <span className="w-5 h-5 rounded-full bg-[#1E4D2B] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="w-5 h-5 rounded-full bg-[#1E4D2B] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
                     {idx + 1}
                   </span>
                   <span className="leading-relaxed">{step}</span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         )}
 
@@ -319,9 +351,9 @@ export default function ResultCard({ result, onReset, lang }) {
           <button
             type="button"
             onClick={onReset}
-            className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-lg bg-[#1E4D2B] text-white text-sm font-semibold hover:bg-[#163B21] transition-colors shadow-sm cursor-pointer"
+            className="btn-primary w-full sm:w-auto text-sm"
           >
-            <RotateCcw className="w-4 h-4" />
+            <RotateCcw className="w-4 h-4" aria-hidden="true" />
             <span>{t.retake_photo}</span>
           </button>
         </div>

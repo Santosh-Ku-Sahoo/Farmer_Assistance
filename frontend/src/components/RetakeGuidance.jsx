@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertCircle, Camera, Sun, Focus, Layers, RotateCcw } from 'lucide-react';
+import { AlertCircle, Camera, Sun, Focus, Layers } from 'lucide-react';
 import { translations } from '../translations';
 
 export default function RetakeGuidance({ result, onRetake, lang }) {
@@ -12,7 +12,7 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
       {/* Header Warning Banner */}
       <div className="bg-[#FFFBEB] p-4 sm:p-5 border-b border-[#FDE68A]">
         <div className="flex items-center space-x-2.5 mb-1.5">
-          <div className="p-1.5 bg-[#FEF3C7] rounded-lg text-[#B45309]">
+          <div className="p-1.5 bg-[#FEF3C7] rounded-lg text-[#B45309]" aria-hidden="true">
             <AlertCircle className="w-5 h-5" />
           </div>
           <div>
@@ -43,7 +43,7 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
             
             <div className="flex items-start space-x-3 p-3 rounded-lg bg-[#FAFDF8] border border-[#E2EAD6]">
-              <Focus className="w-4 h-4 text-[#1E4D2B] mt-0.5 flex-shrink-0" />
+              <Focus className="w-4 h-4 text-[#1E4D2B] mt-0.5 flex-shrink-0" aria-hidden="true" />
               <div>
                 <strong className="block text-xs text-[#1E4D2B] mb-0.5">
                   {lang === 'or' ? 'ଦୂରତା' : 'Proper Distance'}
@@ -55,7 +55,7 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
             </div>
 
             <div className="flex items-start space-x-3 p-3 rounded-lg bg-[#FAFDF8] border border-[#E2EAD6]">
-              <Sun className="w-4 h-4 text-[#D97706] mt-0.5 flex-shrink-0" />
+              <Sun className="w-4 h-4 text-[#D97706] mt-0.5 flex-shrink-0" aria-hidden="true" />
               <div>
                 <strong className="block text-xs text-[#D97706] mb-0.5">
                   {lang === 'or' ? 'ଆଲୋକ' : 'Adequate Light'}
@@ -67,7 +67,7 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
             </div>
 
             <div className="flex items-start space-x-3 p-3 rounded-lg bg-[#FAFDF8] border border-[#E2EAD6]">
-              <Camera className="w-4 h-4 text-[#1E4D2B] mt-0.5 flex-shrink-0" />
+              <Camera className="w-4 h-4 text-[#1E4D2B] mt-0.5 flex-shrink-0" aria-hidden="true" />
               <div>
                 <strong className="block text-xs text-[#1E4D2B] mb-0.5">
                   {lang === 'or' ? 'ଫୋକସ୍' : 'Tap to Focus'}
@@ -79,7 +79,7 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
             </div>
 
             <div className="flex items-start space-x-3 p-3 rounded-lg bg-[#FAFDF8] border border-[#E2EAD6]">
-              <Layers className="w-4 h-4 text-[#8B3A2B] mt-0.5 flex-shrink-0" />
+              <Layers className="w-4 h-4 text-[#8B3A2B] mt-0.5 flex-shrink-0" aria-hidden="true" />
               <div>
                 <strong className="block text-xs text-[#8B3A2B] mb-0.5">
                   {lang === 'or' ? 'ଏକକ ପତ୍ର' : 'Single Leaf'}
@@ -98,9 +98,9 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
           <button
             type="button"
             onClick={onRetake}
-            className="w-full inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-[#1E4D2B] text-white text-sm sm:text-base font-bold hover:bg-[#163B21] transition-colors shadow-sm cursor-pointer"
+            className="btn-primary w-full py-3.5 text-sm sm:text-base font-bold min-h-[48px]"
           >
-            <Camera className="w-5 h-5" />
+            <Camera className="w-5 h-5" aria-hidden="true" />
             <span>{t.retake_now_button}</span>
           </button>
         </div>

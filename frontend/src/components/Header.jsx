@@ -1,5 +1,5 @@
 import React from 'react';
-import { Leaf, Globe, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Leaf } from 'lucide-react';
 import { translations } from '../translations';
 
 export default function Header({ lang, setLang, backendOnline }) {
@@ -11,7 +11,7 @@ export default function Header({ lang, setLang, backendOnline }) {
         
         {/* Branding */}
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-lg bg-[#2C6E3B] flex items-center justify-center text-white shadow-inner flex-shrink-0">
+          <div className="w-10 h-10 rounded-lg bg-[#2C6E3B] flex items-center justify-center text-white shadow-inner flex-shrink-0" aria-hidden="true">
             <Leaf className="w-5 h-5" />
           </div>
           <div>
@@ -29,20 +29,23 @@ export default function Header({ lang, setLang, backendOnline }) {
           
           {/* Server Connection Badge */}
           <div 
-            className={`hidden xs:flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-xs font-medium border ${
+            role="status"
+            className={`hidden sm:flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-xs font-medium border ${
               backendOnline 
                 ? 'bg-[#15381F] text-[#86EFAC] border-[#2C6E3B]' 
                 : 'bg-[#451A1A] text-[#FCA5A5] border-[#7F1D1D]'
             }`}
-            title={backendOnline ? "FastAPI backend running on :8000" : "Cannot reach backend"}
+            title={backendOnline ? "FastAPI backend connected" : "Backend offline - offline mode active"}
           >
-            <span className={`w-2 h-2 rounded-full ${backendOnline ? 'bg-[#22C55E]' : 'bg-[#EF4444]'}`}></span>
+            <span className={`w-2 h-2 rounded-full ${backendOnline ? 'bg-[#22C55E]' : 'bg-[#EF4444]'}`} aria-hidden="true"></span>
             <span>{backendOnline ? t.online_badge : t.offline_badge}</span>
           </div>
 
           {/* Language Switcher */}
-          <div className="inline-flex rounded-lg border border-[#2C6E3B] bg-[#15381F] p-0.5">
+          <div className="inline-flex rounded-lg border border-[#2C6E3B] bg-[#15381F] p-0.5" role="group" aria-label={lang === 'or' ? "ଭାଷା ପରିବର୍ତ୍ତନ" : "Select language"}>
             <button
+              type="button"
+              aria-pressed={lang === 'or'}
               onClick={() => setLang('or')}
               className={`btn-tab ${
                 lang === 'or'
@@ -53,6 +56,8 @@ export default function Header({ lang, setLang, backendOnline }) {
               ଓଡ଼ିଆ
             </button>
             <button
+              type="button"
+              aria-pressed={lang === 'en'}
               onClick={() => setLang('en')}
               className={`btn-tab ${
                 lang === 'en'

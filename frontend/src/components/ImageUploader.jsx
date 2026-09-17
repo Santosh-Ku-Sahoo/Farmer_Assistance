@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Camera, Upload, RefreshCw, Sparkles, Image as ImageIcon, CheckCircle, Zap } from 'lucide-react';
+import { Camera, Upload, RefreshCw, Image as ImageIcon, Zap } from 'lucide-react';
 import { translations } from '../translations';
 
 export default function ImageUploader({ 
@@ -114,6 +114,7 @@ export default function ImageUploader({
         accept="image/*"
         capture="environment"
         className="hidden"
+        aria-label={lang === 'or' ? "କ୍ୟାମେରା ଦ୍ୱାରା ଫଟୋ ଉଠାନ୍ତୁ" : "Take leaf photo with camera"}
         onChange={handleFileChange}
       />
       <input
@@ -121,12 +122,15 @@ export default function ImageUploader({
         type="file"
         accept="image/*"
         className="hidden"
+        aria-label={lang === 'or' ? "ଡିଭାଇସରୁ ଫଟୋ ଅପଲୋଡ୍ କରନ୍ତୁ" : "Upload photo from device"}
         onChange={handleFileChange}
       />
 
       {/* Upload Box / Image Preview */}
       {!previewUrl ? (
         <div
+          role="region"
+          aria-label={lang === 'or' ? "ଫଟୋ ଅପଲୋଡ୍ କ୍ଷେତ୍ର" : "Photo dropzone"}
           onDragEnter={handleDrag}
           onDragOver={handleDrag}
           onDragLeave={handleDrag}
@@ -137,7 +141,7 @@ export default function ImageUploader({
               : 'border-[#C8D4BA] bg-[#FBFDF9] hover:border-[#1E4D2B]'
           }`}
         >
-          <div className="mx-auto w-12 h-12 rounded-full bg-[#EAF0E6] flex items-center justify-center text-[#1E4D2B] mb-2.5 shadow-2xs">
+          <div className="mx-auto w-12 h-12 rounded-full bg-[#EAF0E6] flex items-center justify-center text-[#1E4D2B] mb-2.5 shadow-2xs" aria-hidden="true">
             <Camera className="w-6 h-6" />
           </div>
 
@@ -157,7 +161,7 @@ export default function ImageUploader({
               onClick={() => cameraInputRef.current?.click()}
               className="btn-primary w-full sm:w-auto py-3.5 px-6 sm:px-8 text-sm sm:text-base font-extrabold shadow-md min-h-[48px]"
             >
-              <Camera className="w-5 h-5" />
+              <Camera className="w-5 h-5" aria-hidden="true" />
               <span>{t.take_photo}</span>
             </button>
 
@@ -166,7 +170,7 @@ export default function ImageUploader({
               onClick={() => fileInputRef.current?.click()}
               className="btn-secondary w-full sm:w-auto py-3.5 px-6 text-sm sm:text-base font-bold min-h-[48px]"
             >
-              <Upload className="w-5 h-5 text-[#5A4D41]" />
+              <Upload className="w-5 h-5 text-[#5A4D41]" aria-hidden="true" />
               <span>{t.upload_photo}</span>
             </button>
           </div>
@@ -174,7 +178,7 @@ export default function ImageUploader({
           {/* Test Sample Quick Buttons - Clean Uniform Grid */}
           <div className="pt-3.5 border-t border-[#EAF0E6] bg-[#FAFDF8] -mx-5 -mb-5 p-3.5 rounded-b-xl">
             <div className="flex items-center justify-center space-x-1.5 text-xs font-bold text-[#1E4D2B] mb-2.5">
-              <Zap className="w-4 h-4 text-[#D97706]" />
+              <Zap className="w-4 h-4 text-[#D97706]" aria-hidden="true" />
               <span>{lang === 'or' ? 'ଶୀଘ୍ର ପରୀକ୍ଷଣ ନମୁନା (1-Click Test Samples):' : 'Instant 1-Click Test Samples:'}</span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full">
@@ -217,19 +221,19 @@ export default function ImageUploader({
           <div className="aspect-square sm:aspect-video w-full max-h-80 relative flex items-center justify-center overflow-hidden bg-black/40">
             <img
               src={previewUrl}
-              alt="Leaf capture preview"
+              alt={lang === 'or' ? "ପତ୍ରର ଫଟୋ ନମୁନା" : "Leaf capture preview"}
               className="object-contain w-full h-full max-h-80"
             />
             
             {/* Visual crop viewfinder reticle */}
-            <div className="absolute inset-4 border-2 border-white/40 rounded-lg pointer-events-none flex items-center justify-center">
+            <div className="absolute inset-4 border-2 border-white/40 rounded-lg pointer-events-none flex items-center justify-center" aria-hidden="true">
               <div className="w-10 h-10 border border-white/60 rounded-full"></div>
             </div>
 
             {/* Loading Overlay */}
             {isLoading && (
-              <div className="absolute inset-0 bg-[#2C221E]/80 backdrop-blur-xs flex flex-col items-center justify-center text-white p-4 text-center">
-                <RefreshCw className="w-8 h-8 animate-spin text-[#86EFAC] mb-2" />
+              <div role="status" aria-live="polite" className="absolute inset-0 bg-[#2C221E]/80 backdrop-blur-xs flex flex-col items-center justify-center text-white p-4 text-center">
+                <RefreshCw className="w-8 h-8 animate-spin text-[#86EFAC] mb-2" aria-hidden="true" />
                 <p className="text-sm font-semibold text-white">
                   {t.analyzing}
                 </p>
@@ -244,7 +248,7 @@ export default function ImageUploader({
           {!isLoading && (
             <div className="p-3 bg-[#FDFCFA] border-t border-[#D5DEC9] flex items-center justify-between">
               <span className="text-xs text-[#5A4D41] flex items-center space-x-1">
-                <ImageIcon className="w-3.5 h-3.5 text-[#1E4D2B]" />
+                <ImageIcon className="w-3.5 h-3.5 text-[#1E4D2B]" aria-hidden="true" />
                 <span>{lang === 'or' ? 'ନିଆଯାଇଥିବା ଫଟୋ' : 'Current photo loaded'}</span>
               </span>
               <button

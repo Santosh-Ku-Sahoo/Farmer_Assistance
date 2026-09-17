@@ -22,13 +22,14 @@ export default function CropSelectorFilter({ selectedCrop, onSelectCrop, lang })
         </span>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2" role="group" aria-label={t.select_crop_hint}>
         {crops.map((crop) => {
           const isSelected = selectedCrop === crop.id;
           return (
             <button
               key={crop.id}
               type="button"
+              aria-pressed={isSelected}
               onClick={() => onSelectCrop(crop.id)}
               className={`btn-tab border ${
                 isSelected
