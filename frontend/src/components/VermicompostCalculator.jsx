@@ -36,9 +36,9 @@ export default function VermicompostCalculator({ lang }) {
             <Layers className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ଜିଆ ଖତ କୁଣ୍ଡ ଉତ୍ପାଦନ ଓ ଲାଭ କ୍ୟାଲକୁଲେଟର' : 'Vermicompost Pit & Earthworm Bio-Yield Calculator'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'କୁଣ୍ଡ ଆକାର ଅନୁସାରେ ଗୋବର, ଜିଆ ପରିମାଣ ଓ ଖତ ଉତ୍ପାଦନ ହିସାବ' : 'Compute cow dung capacity, Eisenia Fetida worm kg & monthly organic compost revenue'}
             </p>
@@ -54,7 +54,7 @@ export default function VermicompostCalculator({ lang }) {
 
         <div className="grid grid-cols-3 gap-2.5 text-xs">
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ଲମ୍ବ (Length ft):' : 'Length (ft):'}
             </label>
             <input
@@ -68,7 +68,7 @@ export default function VermicompostCalculator({ lang }) {
           </div>
 
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ଓସାର (Width ft):' : 'Width (ft):'}
             </label>
             <input
@@ -82,7 +82,7 @@ export default function VermicompostCalculator({ lang }) {
           </div>
 
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ଉଚ୍ଚତା (Depth ft):' : 'Depth/Height (ft):'}
             </label>
             <input
@@ -103,39 +103,39 @@ export default function VermicompostCalculator({ lang }) {
         
         {/* Raw Biomass */}
         <div className="p-3.5 rounded-xl bg-[#FAFDF8] border border-[#BAC8AA] shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#7A6E62] block mb-0.5">
+          <span className="text-xs font-bold text-[#7A6E62] block mb-0.5">
             {lang === 'or' ? 'ଦରକାରୀ ଗୋବର ଓ ନଡ଼ା (Biomass)' : 'Raw Dung & Biomass Capacity'}
           </span>
           <p className="text-xl font-extrabold text-[#2C221E]">
             {rawBiomassKg} <span className="text-xs font-normal">kg</span>
           </p>
-          <span className="text-[11px] text-[#5A4D41] mt-0.5 block">
+          <span className="text-xs text-[#5A4D41] mt-0.5 block">
             ≈ {(rawBiomassKg / 100).toFixed(1)} {lang === 'or' ? 'କୁଇଣ୍ଟାଲ' : 'Quintals'}
           </span>
         </div>
 
         {/* Earthworms needed */}
         <div className="p-3.5 rounded-xl bg-[#FAFDF8] border border-[#D97706]/40 shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#D97706] block mb-0.5">
+          <span className="text-xs font-bold text-[#D97706] block mb-0.5">
             {lang === 'or' ? 'ଦରକାରୀ ଜିଆ (Eisenia Fetida)' : 'Earthworms Required'}
           </span>
           <p className="text-xl font-extrabold text-[#D97706]">
             {wormKgNeeded} <span className="text-xs font-normal text-[#2C221E]">kg</span>
           </p>
-          <span className="text-[11px] text-[#92400E] font-semibold mt-0.5 block">
+          <span className="text-xs text-[#92400E] font-semibold mt-0.5 block">
             ≈ {wormKgNeeded * 1000} {lang === 'or' ? 'ଜିଆ ସଂଖ୍ୟା' : 'Worms'}
           </span>
         </div>
 
         {/* 45-Day Harvest */}
         <div className="p-3.5 rounded-xl bg-[#EAF0E6] border border-[#2C6E3B] shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#1E4D2B] block mb-0.5">
+          <span className="text-xs font-bold text-[#1E4D2B] block mb-0.5">
             {lang === 'or' ? '୪୫-୬୦ ଦିନରେ ଅମଳ (Harvest)' : 'Harvest (Every 45-60 Days)'}
           </span>
           <p className="text-xl font-extrabold text-[#1E4D2B]">
             {harvestKg} <span className="text-xs font-normal">kg</span>
           </p>
-          <span className="text-[11px] font-bold text-[#1E4D2B] mt-0.5 block">
+          <span className="text-xs font-bold text-[#1E4D2B] mt-0.5 block">
             📦 ≈ {bags50kg} {lang === 'or' ? 'ବସ୍ତା (୫୦ କେଜି)' : 'Bags (50kg)'}
           </span>
         </div>

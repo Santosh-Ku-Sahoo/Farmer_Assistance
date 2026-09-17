@@ -130,7 +130,7 @@ export default function AgriServicesHub({ lang }) {
                 <div className={`p-2 rounded-lg ${isSelected ? 'bg-[#2C6E3B] text-white' : 'bg-[#EAF0E6] text-[#1E4D2B]'}`}>
                   <IconComponent className="w-4 h-4" />
                 </div>
-                <span className={`text-[10px] font-extrabold px-1.5 py-0.5 rounded-full ${
+                <span className={`text-xs font-extrabold px-1.5 py-0.5 rounded-full ${
                   isSelected ? 'bg-white/20 text-white' : 'bg-[#EAF0E6] text-[#1E4D2B]'
                 }`}>
                   {cat.services.length} Tools
@@ -141,7 +141,7 @@ export default function AgriServicesHub({ lang }) {
                 <h4 className="font-extrabold text-xs sm:text-sm leading-tight">
                   {lang === 'or' ? cat.title_or : cat.title_en}
                 </h4>
-                <p className={`text-[10px] mt-1 line-clamp-2 leading-relaxed ${isSelected ? 'text-[#D5DEC9]' : 'text-[#7A6E62]'}`}>
+                <p className={`text-xs mt-1 line-clamp-2 leading-relaxed ${isSelected ? 'text-[#D5DEC9]' : 'text-[#7A6E62]'}`}>
                   {lang === 'or' ? cat.subtitle_or : cat.subtitle_en}
                 </p>
               </div>

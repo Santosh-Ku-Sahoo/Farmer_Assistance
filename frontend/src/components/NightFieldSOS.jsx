@@ -89,9 +89,9 @@ export default function NightFieldSOS({ lang }) {
             <ShieldAlert className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-base sm:text-lg">
+            <h2 className="font-bold text-base sm:text-lg">
               {lang === 'or' ? 'ରାତ୍ରି କ୍ଷେତ ସୁରକ୍ଷା ଓ ବିପଦ ଆଲାର୍ମ (Night SOS)' : 'Night Field SOS & Wildlife Acoustic Alarm'}
-            </h3>
+            </h2>
             <p className="text-xs opacity-80">
               {lang === 'or' ? 'ସାପ ଓ ବନ୍ୟଜନ୍ତୁ ତଡ଼ିବା ଆଲାର୍ମ ଏବଂ ଜରୁରୀକାଳୀନ ହେଲ୍ପଲାଇନ୍' : 'Emergency acoustic repeller siren & forest wildlife helplines'}
             </p>
@@ -155,7 +155,7 @@ export default function NightFieldSOS({ lang }) {
               <strong className="block font-bold">
                 {lang === 'or' ? 'ଓଡ଼ିଶା ବନ ବିଭାଗ (Elephant & Wildlife):' : 'Odisha Forest & Wildlife Help:'}
               </strong>
-              <span className="text-[11px] opacity-80">1800-345-6789 (Toll Free)</span>
+              <span className="text-xs opacity-80">1800-345-6789 (Toll Free)</span>
             </div>
             <PhoneCall className="w-4 h-4 text-[#16A34A]" />
           </a>
@@ -168,7 +168,7 @@ export default function NightFieldSOS({ lang }) {
               <strong className="block font-bold">
                 {lang === 'or' ? 'ଆମ୍ବୁଲାନ୍ସ / ସର୍ପାଘାତ ଜରୁରୀ ଚିକିତ୍ସା:' : 'Ambulance / Snake Bite 108:'}
               </strong>
-              <span className="text-[11px] opacity-80">108 / 112 (Emergency Medical)</span>
+              <span className="text-xs opacity-80">108 / 112 (Emergency Medical)</span>
             </div>
             <PhoneCall className="w-4 h-4 text-[#DC2626]" />
           </a>

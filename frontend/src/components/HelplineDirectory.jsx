@@ -94,9 +94,9 @@ export default function HelplineDirectory({ lang }) {
             <PhoneCall className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ଜରୁରୀ କୃଷି ହେଲ୍ପଲାଇନ୍ ଓ କେଭିକେ ଡାଇରେକ୍ଟରୀ' : 'Emergency Krishi Helplines & KVK Directory'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଓଡ଼ିଶା ସରକାର ଓ କୃଷି ବୈଜ୍ଞାନିକଙ୍କ ସହିତ ସିଧାସଳଖ ଫୋନରେ କଥା ହୁଅନ୍ତୁ' : '1-Tap direct dialing to Odisha agricultural scientists & official helplines'}
             </p>
@@ -113,7 +113,7 @@ export default function HelplineDirectory({ lang }) {
                 <strong className="text-xs sm:text-sm text-[#1E4D2B] leading-tight">
                   {lang === 'or' ? h.name_or : h.name_en}
                 </strong>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#EAF0E6] text-[#1E4D2B] whitespace-nowrap">
+                <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-[#EAF0E6] text-[#1E4D2B] whitespace-nowrap">
                   {h.type}
                 </span>
               </div>
@@ -122,8 +122,8 @@ export default function HelplineDirectory({ lang }) {
                 {lang === 'or' ? h.desc_or : h.desc_en}
               </p>
 
-              <div className="flex items-center space-x-1 text-[11px] text-[#7A6E62] mt-2">
-                <Clock className="w-3 h-3 text-[#D97706]" />
+              <div className="flex items-center space-x-1 text-xs text-[#7A6E62] mt-2">
+                <Clock className="w-3.5 h-3.5 text-[#D97706]" />
                 <span>{lang === 'or' ? h.timing_or : h.timing_en}</span>
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function HelplineDirectory({ lang }) {
                   <MapPin className="w-3.5 h-3.5 text-[#8B3A2B] flex-shrink-0" />
                   <span>{lang === 'or' ? k.district_or : k.district_en}</span>
                 </div>
-                <p className="text-[11px] text-[#7A6E62] mt-0.5 ml-5">
+                <p className="text-xs text-[#7A6E62] mt-0.5 ml-5">
                   {lang === 'or' ? k.address_or : k.address_en}
                 </p>
               </div>

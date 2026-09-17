@@ -41,9 +41,9 @@ export default function CattleFeedPlanner({ lang }) {
             <Milk className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ପଶୁ ଖାଦ୍ୟ ଓ ଦୁଗ୍ଧ ବୃଦ୍ଧି ହିସାବ (Pashu Poshan Ration)' : 'Dairy Cattle Feed & Milk Production Ration Planner'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଗାଈ ଓ ମଇଁଷିର ଦୈନିକ ସୁଷମ ଖାଦ୍ୟ, ସବୁଜ ଘାସ, ଖଳି ଓ ଧାତୁସାର ହିସାବ' : 'Compute daily balanced green fodder, dry straw, concentrate & mineral mixture'}
             </p>
@@ -104,52 +104,52 @@ export default function CattleFeedPlanner({ lang }) {
         
         {/* Concentrates */}
         <div className="p-3.5 rounded-xl bg-[#FAFDF8] border-2 border-[#D97706]/40 shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#D97706] block mb-0.5">
+          <span className="text-xs font-bold text-[#D97706] block mb-0.5">
             🌾 {lang === 'or' ? 'ଦାନା / ଖଳି / ଚୁନା' : 'Concentrate (Danadar)'}
           </span>
           <p className="text-xl font-extrabold text-[#2C221E]">
             {totalDanadarKg} <span className="text-xs font-normal">kg/day</span>
           </p>
-          <span className="text-[10px] text-[#7A6E62] block mt-0.5">
+          <span className="text-xs text-[#7A6E62] block mt-0.5">
             {lang === 'or' ? 'ରାଶି/ସୋରିଷ ଖଳି + କୁଣ୍ଡା' : 'Mustard cake + Bran mix'}
           </span>
         </div>
 
         {/* Green Fodder */}
         <div className="p-3.5 rounded-xl bg-[#FAFDF8] border-2 border-[#1E4D2B]/40 shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#1E4D2B] block mb-0.5">
+          <span className="text-xs font-bold text-[#1E4D2B] block mb-0.5">
             🌱 {lang === 'or' ? 'ସବୁଜ ଘାସ (Green Fodder)' : 'Green Fodder'}
           </span>
           <p className="text-xl font-extrabold text-[#1E4D2B]">
             {greenFodderKg} <span className="text-xs font-normal text-[#2C221E]">kg/day</span>
           </p>
-          <span className="text-[10px] text-[#7A6E62] block mt-0.5">
+          <span className="text-xs text-[#7A6E62] block mt-0.5">
             {lang === 'or' ? 'ହାଇବ୍ରିଡ୍ ନାପିଅର୍ / ମକା' : 'Hybrid Napier / Maize'}
           </span>
         </div>
 
         {/* Dry Straw */}
         <div className="p-3.5 rounded-xl bg-[#FAFDF8] border border-[#BAC8AA] shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#7A6E62] block mb-0.5">
+          <span className="text-xs font-bold text-[#7A6E62] block mb-0.5">
             🌾 {lang === 'or' ? 'ଶୁଖିଲା ନଡ଼ା (Dry Straw)' : 'Dry Paddy Straw'}
           </span>
           <p className="text-xl font-extrabold text-[#2C221E]">
             {dryStrawKg} <span className="text-xs font-normal">kg/day</span>
           </p>
-          <span className="text-[10px] text-[#7A6E62] block mt-0.5">
+          <span className="text-xs text-[#7A6E62] block mt-0.5">
             {lang === 'or' ? 'ଛୋଟ ଖଣ୍ଡ କଟା ନଡ଼ା' : 'Chaffed paddy straw'}
           </span>
         </div>
 
         {/* Mineral Mixture & Salt */}
         <div className="p-3.5 rounded-xl bg-[#FAFDF8] border border-[#BAC8AA] shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#7A6E62] block mb-0.5">
+          <span className="text-xs font-bold text-[#7A6E62] block mb-0.5">
             🧪 {lang === 'or' ? 'ଧାତୁସାର + ଲୁଣ' : 'Mineral & Salt'}
           </span>
           <p className="text-xl font-extrabold text-[#2C221E]">
             {mineralGrams}g <span className="text-xs font-normal">+ {saltGrams}g</span>
           </p>
-          <span className="text-[10px] text-[#7A6E62] block mt-0.5">
+          <span className="text-xs text-[#7A6E62] block mt-0.5">
             {lang === 'or' ? 'ପ୍ରତିଦିନ ଦାନାରେ ମିଶାନ୍ତୁ' : 'Daily mix with feed'}
           </span>
         </div>

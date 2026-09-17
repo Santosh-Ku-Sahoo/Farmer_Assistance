@@ -89,9 +89,9 @@ export default function FarmKhataDiary({ lang }) {
             <BookMarked className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'କୃଷକ ଖର୍ଚ୍ଚ ଓ ଲାଭ ଡାଏରୀ (Krishi Khata Logbook)' : 'Farmer Profit & Field Expense Diary'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଚାଷ ଖର୍ଚ୍ଚ, ଅମଳ ବିକ୍ରି ଓ ନିଟ୍ ଲାଭ ହିସାବ ଡାଏରୀ' : 'Track crop production costs vs mandi revenue & calculate net ROI'}
             </p>
@@ -154,7 +154,7 @@ export default function FarmKhataDiary({ lang }) {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs">
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ବିହନ ଖର୍ଚ୍ଚ (Seed):' : 'Seed Cost:'}
             </label>
             <input
@@ -166,7 +166,7 @@ export default function FarmKhataDiary({ lang }) {
           </div>
 
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ଟ୍ରାକ୍ଟର / ଚାଷ (Tillage):' : 'Tractor/Plough:'}
             </label>
             <input
@@ -178,7 +178,7 @@ export default function FarmKhataDiary({ lang }) {
           </div>
 
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ଖତସାର (Fertilizer):' : 'Fertilizers:'}
             </label>
             <input
@@ -190,7 +190,7 @@ export default function FarmKhataDiary({ lang }) {
           </div>
 
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'କୀଟନାଶକ (Pesticide):' : 'Pesticides:'}
             </label>
             <input
@@ -202,7 +202,7 @@ export default function FarmKhataDiary({ lang }) {
           </div>
 
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ମୂଲିଆ / ମଜୁରୀ (Labor):' : 'Labor & Weeding:'}
             </label>
             <input
@@ -214,7 +214,7 @@ export default function FarmKhataDiary({ lang }) {
           </div>
 
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ଅନ୍ୟାନ୍ୟ (Harvest/Misc):' : 'Harvest / Misc:'}
             </label>
             <input
@@ -235,7 +235,7 @@ export default function FarmKhataDiary({ lang }) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ଅନୁମାନିତ ଅମଳ (କୁଇଣ୍ଟାଲ/ଏକର):' : 'Expected Yield (Quintals/Acre):'}
             </label>
             <input
@@ -247,7 +247,7 @@ export default function FarmKhataDiary({ lang }) {
           </div>
 
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ବିକ୍ରି ଦର (ଟଙ୍କା / କୁଇଣ୍ଟାଲ):' : 'Sale Price (₹ / Quintal):'}
             </label>
             <input
@@ -264,7 +264,7 @@ export default function FarmKhataDiary({ lang }) {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
         
         <div className="p-3.5 bg-[#FAFDF8] border border-[#BAC8AA] rounded-xl text-xs shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#7A6E62] block mb-0.5">
+          <span className="text-xs font-bold text-[#7A6E62] block mb-0.5">
             {lang === 'or' ? 'ମୋଟ ଖର୍ଚ୍ଚ (Total Cost)' : 'Total Investment'}
           </span>
           <p className="text-base sm:text-lg font-extrabold text-[#8B3A2B]">
@@ -273,7 +273,7 @@ export default function FarmKhataDiary({ lang }) {
         </div>
 
         <div className="p-3.5 bg-[#FAFDF8] border border-[#BAC8AA] rounded-xl text-xs shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#7A6E62] block mb-0.5">
+          <span className="text-xs font-bold text-[#7A6E62] block mb-0.5">
             {lang === 'or' ? 'ମୋଟ ଆୟ (Total Sale)' : 'Gross Revenue'}
           </span>
           <p className="text-base sm:text-lg font-extrabold text-[#1E4D2B]">
@@ -286,14 +286,14 @@ export default function FarmKhataDiary({ lang }) {
             ? 'bg-[#EAF0E6] border-[#2C6E3B] text-[#1E4D2B]'
             : 'bg-[#FEE2E2] border-[#EF4444] text-[#991B1B]'
         }`}>
-          <span className="text-[10px] uppercase font-extrabold block mb-0.5">
+          <span className="text-xs font-extrabold block mb-0.5">
             {netProfit >= 0 ? (lang === 'or' ? 'ନିଟ୍ ଲାଭ (Net Profit)' : 'Net Profit') : (lang === 'or' ? 'କ୍ଷତି (Net Loss)' : 'Net Loss')}
           </span>
           <p className="text-base sm:text-lg font-extrabold flex items-center space-x-1">
             {netProfit >= 0 ? <TrendingUp className="w-4 h-4 text-[#1E4D2B]" /> : <TrendingDown className="w-4 h-4 text-[#991B1B]" />}
             <span>₹ {Math.abs(netProfit).toLocaleString('en-IN')}</span>
           </p>
-          <span className="text-[11px] font-bold mt-0.5 block">
+          <span className="text-xs font-bold mt-0.5 block">
             ROI: {roiPct}%
           </span>
         </div>

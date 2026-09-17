@@ -41,7 +41,7 @@ export default function DosageCalculator({ rec, lang }) {
             <h4 className="text-xs sm:text-sm font-bold text-[#1E4D2B] uppercase tracking-wide">
               {lang === 'or' ? 'ସ୍ପ୍ରେ ଟାଙ୍କି ଓ ସାର-ଔଷଧ କାଲକୁଲେଟର' : 'Spray Tank & Dosage Calculator'}
             </h4>
-            <p className="text-[11px] text-[#7A6E62]">
+            <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଆପଣଙ୍କ ଜମି ଓ ସ୍ପ୍ରେୟାର ଅନୁସାରେ ସଠିକ୍ ପରିମାଣ' : 'Exact measurement for your land and knapsack pump'}
             </p>
           </div>
@@ -104,39 +104,39 @@ export default function DosageCalculator({ rec, lang }) {
         
         {/* Chemical per tank */}
         <div className="text-center p-2 bg-[#FDFCFA] rounded-lg border border-[#BAC8AA]">
-          <span className="text-[10px] sm:text-[11px] font-semibold text-[#7A6E62] block leading-tight">
+          <span className="text-xs font-semibold text-[#7A6E62] block leading-tight">
             {lang === 'or' ? 'ପ୍ରତି ଟାଙ୍କିରେ ଔଷଧ' : 'Per Full Tank'}
           </span>
           <p className="text-sm sm:text-base font-extrabold text-[#1E4D2B] mt-0.5">
             {chemicalPerTank} <span className="text-xs font-semibold">{unit}</span>
           </p>
-          <span className="text-[9px] text-[#8C8074]">
+          <span className="text-xs text-[#8C8074] block mt-0.5">
             {lang === 'or' ? `(~${scoopsCount} ଚାମଚ)` : `(~${scoopsCount} scoops)`}
           </span>
         </div>
 
         {/* Number of Tanks */}
         <div className="text-center p-2 bg-[#FDFCFA] rounded-lg border border-[#BAC8AA]">
-          <span className="text-[10px] sm:text-[11px] font-semibold text-[#7A6E62] block leading-tight">
+          <span className="text-xs font-semibold text-[#7A6E62] block leading-tight">
             {lang === 'or' ? 'ସମୁଦାୟ ଟାଙ୍କି' : 'Total Refills'}
           </span>
           <p className="text-sm sm:text-base font-extrabold text-[#D97706] mt-0.5">
             {numTanks} <span className="text-xs font-semibold">{lang === 'or' ? 'ଟାଙ୍କି' : 'Tanks'}</span>
           </p>
-          <span className="text-[9px] text-[#8C8074]">
+          <span className="text-xs text-[#8C8074] block mt-0.5">
             {totalWaterLiters} L {lang === 'or' ? 'ପାଣି' : 'Water'}
           </span>
         </div>
 
         {/* Total Chemical Needed */}
         <div className="text-center p-2 bg-[#FDFCFA] rounded-lg border border-[#BAC8AA]">
-          <span className="text-[10px] sm:text-[11px] font-semibold text-[#7A6E62] block leading-tight">
+          <span className="text-xs font-semibold text-[#7A6E62] block leading-tight">
             {lang === 'or' ? 'ଜମି ପାଇଁ ମୋଟ' : 'Total Needed'}
           </span>
           <p className="text-sm sm:text-base font-extrabold text-[#8B3A2B] mt-0.5">
             {totalChemical} <span className="text-xs font-semibold">{unit}</span>
           </p>
-          <span className="text-[9px] text-[#8C8074]">
+          <span className="text-xs text-[#8C8074] block mt-0.5">
             {lang === 'or' ? 'ଦୋକାନରୁ ଆଣିବେ' : 'To buy'}
           </span>
         </div>

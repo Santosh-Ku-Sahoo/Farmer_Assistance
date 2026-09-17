@@ -15,9 +15,9 @@ export default function StressRecoveryPackage({ lang }) {
             <HeartHandshake className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ପ୍ରାକୃତିକ ବିପର୍ଯ୍ୟୟ (ବନ୍ୟା / ମରୁଡ଼ି) ଫସଲ ପୁନରୁଦ୍ଧାର ପ୍ୟାକେଜ୍' : 'Drought & Flood Stress Crop Recovery Package'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଜଳବନ୍ଦୀ, ବାତ୍ୟା କାଦୁଅ କିମ୍ବା ଟାଣ ଖରାରୁ ଛିଡ଼ା ଫସଲକୁ ପୁନର୍ଜୀବିତ କରିବାର ବୈଜ୍ଞାନିକ ଉପାୟ' : 'OUAT & ICAR emergency revival spray protocols for submerged or drought-hit crops'}
             </p>

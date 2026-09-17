@@ -41,9 +41,9 @@ export default function FarmPondCalculator({ lang }) {
             <Waves className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ଫାର୍ମ ପଣ୍ଡ (ଜଳ ସଂରକ୍ଷଣ ପୋଖରୀ) ମାପ ଓ ଜଳସେଚନ କ୍ଷମତା' : 'Farm Pond (Mo Pokhari) Rainwater Sizing Calculator'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ବର୍ଷା ଜଳ ସଂରକ୍ଷଣ, ଜରୁରୀକାଳୀନ ରବି ଜଳସେଚନ ଓ ମାଛ ଚାଷ କ୍ଷମତା ହିସାବ' : 'Compute water volume (Liters), diesel pump hours & fish fingerling stocking density'}
             </p>
@@ -59,7 +59,7 @@ export default function FarmPondCalculator({ lang }) {
 
         <div className="grid grid-cols-3 gap-2.5 text-xs">
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ଲମ୍ବ (Length ft):' : 'Length (ft):'}
             </label>
             <input
@@ -73,7 +73,7 @@ export default function FarmPondCalculator({ lang }) {
           </div>
 
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ଓସାର (Width ft):' : 'Width (ft):'}
             </label>
             <input
@@ -87,7 +87,7 @@ export default function FarmPondCalculator({ lang }) {
           </div>
 
           <div>
-            <label className="text-[11px] font-semibold text-[#7A6E62] block mb-0.5">
+            <label className="text-xs font-semibold text-[#7A6E62] block mb-0.5">
               {lang === 'or' ? 'ଗଭୀରତା (Depth ft):' : 'Depth (ft):'}
             </label>
             <input
@@ -108,39 +108,39 @@ export default function FarmPondCalculator({ lang }) {
         
         {/* Total Liters */}
         <div className="p-3.5 rounded-xl bg-[#F0F9FF] border border-[#BAE6FD] shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#0369A1] block mb-0.5">
+          <span className="text-xs font-bold text-[#0369A1] block mb-0.5">
             💧 {lang === 'or' ? 'ମୋଟ ଜଳ ସଂରକ୍ଷଣ (Water Capacity)' : 'Total Stored Rainwater'}
           </span>
           <p className="text-xl font-extrabold text-[#0C4A6E]">
             {volumeLiters.toLocaleString('en-IN')} <span className="text-xs font-normal">Liters</span>
           </p>
-          <span className="text-[10px] text-[#0284C7] block mt-0.5 font-semibold">
+          <span className="text-xs text-[#0284C7] block mt-0.5 font-semibold">
             ≈ {volumeCuMeters} m³ (ଘନ ମିଟର)
           </span>
         </div>
 
         {/* Pump Irrigation Hours */}
         <div className="p-3.5 rounded-xl bg-[#FAFDF8] border border-[#BAC8AA] shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#1E4D2B] block mb-0.5">
+          <span className="text-xs font-bold text-[#1E4D2B] block mb-0.5">
             ⛽ {lang === 'or' ? 'ଡିଜେଲ ପମ୍ପ ଚାଲିବା ସମୟ' : 'Emergency Pump Hours'}
           </span>
           <p className="text-xl font-extrabold text-[#1E4D2B]">
             ≈ {pumpHoursAvailable} <span className="text-xs font-normal text-[#2C221E]">Hours</span>
           </p>
-          <span className="text-[10px] text-[#5A4D41] block mt-0.5 font-semibold">
+          <span className="text-xs text-[#5A4D41] block mt-0.5 font-semibold">
             {lang === 'or' ? '୨ ଏକର ଜମିରେ ୩-୪ ଥର ଜରୁରୀ ପାଣି' : 'Provides 3-4 life-saving irrigations'}
           </span>
         </div>
 
         {/* Fish Fingerlings */}
         <div className="p-3.5 rounded-xl bg-[#FAFDF8] border border-[#D97706]/40 shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#D97706] block mb-0.5">
+          <span className="text-xs font-bold text-[#D97706] block mb-0.5">
             🐟 {lang === 'or' ? 'ମାଛ ଯାଆଁଳ ଧାରଣ କ୍ଷମତା' : 'Fish Fingerling Capacity'}
           </span>
           <p className="text-xl font-extrabold text-[#D97706]">
             ≈ {fishFingerlingsCount} <span className="text-xs font-normal text-[#2C221E]">Fingerlings</span>
           </p>
-          <span className="text-[10px] text-[#92400E] block mt-0.5 font-semibold">
+          <span className="text-xs text-[#92400E] block mt-0.5 font-semibold">
             {lang === 'or' ? 'ଭାକୁର + ରୋହି + ମିରିକାଳି' : 'Catla, Rohu & Mrigal mix'}
           </span>
         </div>

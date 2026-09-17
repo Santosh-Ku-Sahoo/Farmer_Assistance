@@ -85,9 +85,9 @@ export default function FertilizerCalculator({ lang }) {
             <Scale className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ମୃତ୍ତିକା ସ୍ୱାସ୍ଥ୍ୟ ଓ ସାର ବସ୍ତା ହିସାବ (Fertilizer Bag Calculator)' : 'Soil Health & Fertilizer Bag Calculator'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଜମି ପରିମାଣ ଅନୁଯାୟୀ ୟୁରିଆ, ଡିଏପି ଓ ପଟାସ୍ ବସ୍ତା ହିସାବ' : 'Convert NPK recommendations into exact commercial 45kg/50kg bags'}
             </p>
@@ -211,7 +211,7 @@ export default function FertilizerCalculator({ lang }) {
                   {lang === 'or' ? s.desc_or : s.desc_en}
                 </strong>
               </div>
-              <div className="flex items-center space-x-2 text-[11px] font-semibold text-[#5A4D41]">
+              <div className="flex items-center space-x-2 text-xs font-semibold text-[#5A4D41]">
                 {s.n_pct > 0 && <span className="px-1.5 py-0.5 rounded bg-[#EAF0E6] text-[#1E4D2B]">Urea: {(ureaKg * s.n_pct).toFixed(1)}kg</span>}
                 {s.p_pct > 0 && <span className="px-1.5 py-0.5 rounded bg-[#FEF3C7] text-[#92400E]">DAP: {(dapKg * s.p_pct).toFixed(1)}kg</span>}
                 {s.k_pct > 0 && <span className="px-1.5 py-0.5 rounded bg-[#FEE2E2] text-[#8B3A2B]">MOP: {(mopKg * s.k_pct).toFixed(1)}kg</span>}

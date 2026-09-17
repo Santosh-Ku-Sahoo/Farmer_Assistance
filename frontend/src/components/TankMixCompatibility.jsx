@@ -108,9 +108,9 @@ export default function TankMixCompatibility({ lang }) {
             <FlaskConical className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'କୀଟନାଶକ ମିଶ୍ରଣ ଓ ଟାଙ୍କି ଫାଟିବା ପରୀକ୍ଷା (Tank-Mix Compatibility)' : 'Tank-Mix Chemical Incompatibility & Jar Test'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଦୁଇଟି ଔଷଧ ଏକାଠି ମିଶାଇଲେ ଟାଙ୍କିରେ ଘୋଳ ଫାଟିବା ବା ପତ୍ର ପୋଡ଼ିବା ଆଶଙ୍କା ଯାଞ୍ଚ କରନ୍ତୁ' : 'Check if 2 agrochemicals can be safely mixed in your knapsack sprayer'}
             </p>

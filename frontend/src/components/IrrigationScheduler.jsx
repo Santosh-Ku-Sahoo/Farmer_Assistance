@@ -108,9 +108,9 @@ export default function IrrigationScheduler({ lang }) {
             <Droplets className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ଜଳସେଚନ ଓ ପାଣି ଆବଶ୍ୟକତା କ୍ୟାଲେଣ୍ଡର' : 'Smart Irrigation & Water Scheduler'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଅତିରିକ୍ତ ପାଣିରୁ ରୋଗ ରୋକନ୍ତୁ ଓ ଠିକ୍ ସମୟରେ ଜଳସେଚନ କରନ୍ତୁ' : 'Crop growth stage water requirements & disease prevention drainage rules'}
             </p>
@@ -169,7 +169,7 @@ export default function IrrigationScheduler({ lang }) {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div className="p-3 bg-[#F0F9FF] rounded-lg border border-[#BAE6FD]">
-            <span className="text-[10px] font-bold text-[#0369A1] uppercase tracking-wider block mb-1">
+            <span className="text-xs font-bold text-[#0369A1] block mb-1">
               🌊 {lang === 'or' ? 'ପାଣି ଗଭୀରତା ଓ ପଦ୍ଧତି:' : 'Recommended Water Depth & Method:'}
             </span>
             <p className="text-xs sm:text-sm font-extrabold text-[#0C4A6E]">
@@ -178,7 +178,7 @@ export default function IrrigationScheduler({ lang }) {
           </div>
 
           <div className="p-3 bg-[#F0FDF4] rounded-lg border border-[#BBF7D0]">
-            <span className="text-[10px] font-bold text-[#15803D] uppercase tracking-wider block mb-1">
+            <span className="text-xs font-bold text-[#15803D] block mb-1">
               ⏱️ {lang === 'or' ? 'ଜଳସେଚନ ବ୍ୟବଧାନ (Interval):' : 'Irrigation Frequency:'}
             </span>
             <p className="text-xs sm:text-sm font-extrabold text-[#14532D]">

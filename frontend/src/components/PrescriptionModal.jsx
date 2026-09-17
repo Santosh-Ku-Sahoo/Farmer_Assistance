@@ -59,7 +59,7 @@ export default function PrescriptionModal({ result, onClose, lang }) {
               <h3 className="font-bold text-sm sm:text-base leading-tight">
                 {lang === 'or' ? 'କୀଟନାଶକ ଦୋକାନ ପ୍ରେସକ୍ରିପସନ୍ ପର୍ଚ୍ଚା' : 'Agro-Shop Prescription Slip'}
               </h3>
-              <p className="text-[11px] text-[#D5DEC9]">
+              <p className="text-xs text-[#D5DEC9]">
                 ICAR-NRRI & OUAT Verified Prescription
               </p>
             </div>
@@ -80,7 +80,7 @@ export default function PrescriptionModal({ result, onClose, lang }) {
           {/* Note to Dealer */}
           <div className="bg-[#FFFBEB] p-3 rounded-lg border border-[#FDE68A] flex items-start space-x-2 text-[#78350F]">
             <Store className="w-4 h-4 text-[#D97706] flex-shrink-0 mt-0.5" />
-            <p className="text-[11px] sm:text-xs leading-relaxed">
+            <p className="text-xs leading-relaxed">
               <strong>{lang === 'or' ? 'ଦୋକାନୀଙ୍କ ପାଇଁ ସୂଚନା:' : 'Notice for Retailer:'}</strong>{' '}
               {lang === 'or' 
                 ? 'ଦୟାକରି କେବଳ ନିମ୍ନଲିଖିତ ଜେନେରିକ୍ ଫର୍ମୁଲା ବା ସମତୁଲ୍ୟ ଅନୁମୋଦିତ ବ୍ରାଣ୍ଡ ପ୍ରଦାନ କରନ୍ତୁ।'
@@ -91,7 +91,7 @@ export default function PrescriptionModal({ result, onClose, lang }) {
           {/* Diagnosed Crop & Disease */}
           <div className="grid grid-cols-2 gap-2 bg-[#F8FAF5] p-3 rounded-lg border border-[#E2EAD6]">
             <div>
-              <span className="text-[10px] uppercase font-bold text-[#7A6E62] block">
+              <span className="text-xs font-bold text-[#7A6E62] block">
                 {t.crop_label}
               </span>
               <strong className="text-xs sm:text-sm text-[#2C221E]">
@@ -99,7 +99,7 @@ export default function PrescriptionModal({ result, onClose, lang }) {
               </strong>
             </div>
             <div>
-              <span className="text-[10px] uppercase font-bold text-[#7A6E62] block">
+              <span className="text-xs font-bold text-[#7A6E62] block">
                 {t.disease_label}
               </span>
               <strong className="text-xs sm:text-sm text-[#B91C1C]">
@@ -110,7 +110,7 @@ export default function PrescriptionModal({ result, onClose, lang }) {
 
           {/* Prescribed Active Ingredient Formulation */}
           <div className="p-3.5 bg-[#EAF0E6]/60 rounded-xl border border-[#2C6E3B]/40">
-            <span className="text-[10px] uppercase font-extrabold text-[#1E4D2B] tracking-wider block mb-1">
+            <span className="text-xs font-extrabold text-[#1E4D2B] tracking-wider block mb-1">
               {lang === 'or' ? 'ଅନୁମୋଦିତ ରାସାୟନିକ ଫର୍ମୁଲା (Active Ingredient)' : 'Prescribed Generic Formulation:'}
             </span>
             <p className="text-sm sm:text-base font-extrabold text-[#1E4D2B]">
@@ -125,7 +125,7 @@ export default function PrescriptionModal({ result, onClose, lang }) {
           {/* Common Market Brands (Odisha Dealers) */}
           {rec.common_market_names && rec.common_market_names.length > 0 && (
             <div>
-              <span className="text-[10px] uppercase font-bold text-[#7A6E62] block mb-1.5">
+              <span className="text-xs font-bold text-[#7A6E62] block mb-1.5">
                 {lang === 'or' ? 'ଓଡ଼ିଶା ବଜାରରେ ଉପଲବ୍ଧ ପ୍ରମୁଖ ବ୍ରାଣ୍ଡ (Market Trade Names):' : 'Common Brand Names in Odisha Mandis:'}
               </span>
               <div className="flex flex-wrap gap-1.5">
@@ -142,7 +142,7 @@ export default function PrescriptionModal({ result, onClose, lang }) {
           )}
 
           {/* Adjuvant instruction */}
-          <div className="bg-[#FAFDF8] p-2.5 rounded-lg border border-[#E2EAD6] text-[11px] text-[#4A3E38]">
+          <div className="bg-[#FAFDF8] p-2.5 rounded-lg border border-[#E2EAD6] text-xs text-[#4A3E38]">
             <p>
               💡 <strong>{lang === 'or' ? 'ବିଶେଷ ପରାମର୍ଶ:' : 'Adjuvant Note:'}</strong>{' '}
               {lang === 'or' 

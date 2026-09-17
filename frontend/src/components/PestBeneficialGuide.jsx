@@ -75,9 +75,9 @@ export default function PestBeneficialGuide({ lang }) {
             <Bug className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ମିତ୍ର କୀଟ ଓ ଶତ୍ରୁ ପୋକ ଚିହ୍ନଟ (Pest vs Friend Insects)' : 'Beneficial Friend Insects vs Harmful Pests'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଅଯଥା ଔଷଧ ସ୍ପ୍ରେ ନକରି ମିତ୍ର କୀଟଙ୍କ ଦ୍ୱାରା ପ୍ରାକୃତିକ କୀଟ ଦମନ କରନ୍ତୁ' : 'Identify beneficial predators & eco-friendly bio-control measures'}
             </p>
@@ -130,7 +130,7 @@ export default function PestBeneficialGuide({ lang }) {
                 <strong className="text-sm font-extrabold text-[#1E4D2B]">
                   {lang === 'or' ? insect.name_or : insect.name_en}
                 </strong>
-                <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-[#EAF0E6] text-[#1E4D2B] border border-[#BAC8AA]">
+                <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-[#EAF0E6] text-[#1E4D2B] border border-[#BAC8AA]">
                   🛡️ {lang === 'or' ? 'ମିତ୍ର ଶିକାରୀ' : 'Friend Predator'}
                 </span>
               </div>
@@ -143,7 +143,7 @@ export default function PestBeneficialGuide({ lang }) {
                 ⚡ {lang === 'or' ? insect.impact_or : insect.impact_en}
               </div>
 
-              <p className="text-[11px] text-[#7A6E62]">
+              <p className="text-xs text-[#7A6E62]">
                 🔍 <strong>{lang === 'or' ? 'ଚିହ୍ନିବା ଉପାୟ:' : 'How to Identify:'}</strong> {lang === 'or' ? insect.identification_or : insect.identification_en}
               </p>
             </div>
@@ -160,7 +160,7 @@ export default function PestBeneficialGuide({ lang }) {
                 <strong className="text-sm font-extrabold text-[#8B3A2B]">
                   {lang === 'or' ? pest.name_or : pest.name_en}
                 </strong>
-                <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-[#FEE2E2] text-[#991B1B] border border-[#FCA5A5]">
+                <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-[#FEE2E2] text-[#991B1B] border border-[#FCA5A5]">
                   ⚠️ {lang === 'or' ? 'ଶତ୍ରୁ ପୋକ' : 'Target Pest'}
                 </span>
               </div>

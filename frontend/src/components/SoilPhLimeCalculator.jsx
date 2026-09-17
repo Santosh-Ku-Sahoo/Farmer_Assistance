@@ -61,9 +61,9 @@ export default function SoilPhLimeCalculator({ lang }) {
             <TestTube2 className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ମାଟିର ଅମ୍ଳତା (pH) ଓ କୃଷି ଚୂନ ହିସାବ' : 'Soil pH & Agricultural Lime Calculator'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଓଡ଼ିଶାର ଅମ୍ଳିଆ ମାଟି ସଂଶୋଧନ କରି ସାରର ଶତକଡ଼ା ୧୦୦% ଫଳ ପାଆନ୍ତୁ' : 'Reclaim acid soils with Agricultural Lime (Dolomite) to unlock fixed nutrients'}
             </p>
@@ -86,7 +86,7 @@ export default function SoilPhLimeCalculator({ lang }) {
             onChange={(e) => setSoilPh(parseFloat(e.target.value))}
             className="w-full accent-[#1E4D2B] cursor-pointer mt-1"
           />
-          <div className="flex justify-between text-[10px] font-bold text-[#7A6E62] mt-0.5">
+          <div className="flex justify-between text-xs font-bold text-[#7A6E62] mt-0.5">
             <span className="text-red-700">4.0 (Acid)</span>
             <span className="text-green-700">6.5 (Ideal)</span>
             <span className="text-blue-700">8.5 (Alkali)</span>
@@ -138,7 +138,7 @@ export default function SoilPhLimeCalculator({ lang }) {
         {limePerAcreKg > 0 ? (
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white/60 p-3 rounded-lg border border-black/5">
             <div>
-              <span className="text-[10px] uppercase font-bold text-[#7A6E62] block">
+              <span className="text-xs font-bold text-[#7A6E62] block">
                 {lang === 'or' ? 'ଦରକାରୀ କୃଷି ଚୂନ / ଡୋଲୋମାଇଟ୍ (Agricultural Lime):' : 'Required Agricultural Lime (Dolomite):'}
               </span>
               <p className="text-2xl font-extrabold text-[#1E4D2B]">
@@ -158,7 +158,7 @@ export default function SoilPhLimeCalculator({ lang }) {
           </p>
         )}
 
-        <div className="text-[11px] text-[#4A3E38] leading-relaxed pt-1">
+        <div className="text-xs text-[#4A3E38] leading-relaxed pt-1">
           💡 <strong>{lang === 'or' ? 'ପ୍ରୟୋଗ ବିଧି:' : 'Application Guideline:'}</strong>{' '}
           {lang === 'or' 
             ? 'ଶେଷ କାଦୁଅ ଚାଷ ବା ରୁଆ/ବୁଣିବାର ୧୫-୨୦ ଦିନ ପୂର୍ବରୁ କୃଷି ଚୂନକୁ ମାଟିରେ ଭଲ ଭାବେ ଗୁଣ୍ଡ କରି ମିଶାନ୍ତୁ। ଚୂନ ଦେବା ଦିନ ରାସାୟନିକ ସାର ଦିଅନ୍ତୁ ନାହିଁ।' 

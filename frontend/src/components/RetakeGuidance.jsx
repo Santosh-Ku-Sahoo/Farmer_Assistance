@@ -16,9 +16,9 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
             <AlertCircle className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-lg sm:text-xl font-bold text-[#92400E]">
+            <h2 className="text-lg sm:text-xl font-bold text-[#92400E]">
               {t.uncertain_title}
-            </h3>
+            </h2>
             <span className="inline-block mt-0.5 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#FDE68A] text-[#78350F]">
               {t.uncertain_badge} (Score: {confidencePercent}%)
             </span>
@@ -45,7 +45,7 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
             <div className="flex items-start space-x-3 p-3 rounded-lg bg-[#FAFDF8] border border-[#E2EAD6]">
               <Focus className="w-4 h-4 text-[#1E4D2B] mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="block text-xs text-[#1E4D2B] uppercase mb-0.5">
+                <strong className="block text-xs text-[#1E4D2B] mb-0.5">
                   {lang === 'or' ? 'ଦୂରତା' : 'Proper Distance'}
                 </strong>
                 <p className="text-xs sm:text-sm text-[#4A3E38]">
@@ -57,7 +57,7 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
             <div className="flex items-start space-x-3 p-3 rounded-lg bg-[#FAFDF8] border border-[#E2EAD6]">
               <Sun className="w-4 h-4 text-[#D97706] mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="block text-xs text-[#D97706] uppercase mb-0.5">
+                <strong className="block text-xs text-[#D97706] mb-0.5">
                   {lang === 'or' ? 'ଆଲୋକ' : 'Adequate Light'}
                 </strong>
                 <p className="text-xs sm:text-sm text-[#4A3E38]">
@@ -69,7 +69,7 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
             <div className="flex items-start space-x-3 p-3 rounded-lg bg-[#FAFDF8] border border-[#E2EAD6]">
               <Camera className="w-4 h-4 text-[#1E4D2B] mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="block text-xs text-[#1E4D2B] uppercase mb-0.5">
+                <strong className="block text-xs text-[#1E4D2B] mb-0.5">
                   {lang === 'or' ? 'ଫୋକସ୍' : 'Tap to Focus'}
                 </strong>
                 <p className="text-xs sm:text-sm text-[#4A3E38]">
@@ -81,7 +81,7 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
             <div className="flex items-start space-x-3 p-3 rounded-lg bg-[#FAFDF8] border border-[#E2EAD6]">
               <Layers className="w-4 h-4 text-[#8B3A2B] mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="block text-xs text-[#8B3A2B] uppercase mb-0.5">
+                <strong className="block text-xs text-[#8B3A2B] mb-0.5">
                   {lang === 'or' ? 'ଏକକ ପତ୍ର' : 'Single Leaf'}
                 </strong>
                 <p className="text-xs sm:text-sm text-[#4A3E38]">
@@ -98,7 +98,7 @@ export default function RetakeGuidance({ result, onRetake, lang }) {
           <button
             type="button"
             onClick={onRetake}
-            className="w-full inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-[#D97706] text-white text-sm sm:text-base font-bold hover:bg-[#B45309] transition-colors shadow-sm cursor-pointer"
+            className="w-full inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-[#1E4D2B] text-white text-sm sm:text-base font-bold hover:bg-[#163B21] transition-colors shadow-sm cursor-pointer"
           >
             <Camera className="w-5 h-5" />
             <span>{t.retake_now_button}</span>

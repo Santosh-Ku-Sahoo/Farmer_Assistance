@@ -24,7 +24,7 @@ export default function LesionHeatmapInspector({ result, lang }) {
             <h4 className="text-xs sm:text-sm font-extrabold text-[#1E4D2B]">
               {lang === 'or' ? '🔍 AI ଦାଗ ନିରୀକ୍ଷଣ ଓ ହିଟମ୍ୟାପ୍ (XAI Lesion Inspector)' : '🔍 Explainable AI (XAI) Lesion Heatmap Inspector'}
             </h4>
-            <p className="text-[11px] text-[#7A6E62]">
+            <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'AI ମଡେଲ ପତ୍ରର କେଉଁ ଅଂଶରେ ରୋଗ ଲକ୍ଷଣ ଚିହ୍ନଟ କରିଛି ତାହା ଦେଖନ୍ତୁ' : 'Visual activation map showing where neural network detected fungal lesions'}
             </p>
           </div>
@@ -77,13 +77,13 @@ export default function LesionHeatmapInspector({ result, lang }) {
         {showBoundingBoxes && (
           <>
             <div className="absolute top-[28%] left-[34%] w-24 h-16 border-2 border-red-500 rounded-lg bg-red-500/10 pointer-events-none animate-pulse">
-              <span className="absolute -top-4 left-0 bg-red-600 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded shadow">
+              <span className="absolute -top-4 left-0 bg-red-600 text-white text-xs font-extrabold px-1.5 py-0.5 rounded shadow">
                 {disease.replace(/_/g, ' ').slice(0, 18)} (98%)
               </span>
             </div>
 
             <div className="absolute top-[44%] left-[60%] w-18 h-14 border-2 border-amber-500 rounded-lg bg-amber-500/10 pointer-events-none">
-              <span className="absolute -top-4 left-0 bg-amber-600 text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded shadow">
+              <span className="absolute -top-4 left-0 bg-amber-600 text-white text-xs font-extrabold px-1.5 py-0.5 rounded shadow">
                 Lesion #2 (91%)
               </span>
             </div>
@@ -91,7 +91,7 @@ export default function LesionHeatmapInspector({ result, lang }) {
         )}
 
         {/* Overlay Badge */}
-        <div className="absolute bottom-2 left-2 bg-black/70 backdrop-blur-xs text-white text-[10px] px-2 py-0.5 rounded-md flex items-center space-x-1">
+        <div className="absolute bottom-2 left-2 bg-black/70 backdrop-blur-xs text-white text-xs px-2 py-0.5 rounded-md flex items-center space-x-1">
           <Sparkles className="w-3 h-3 text-[#EAB308]" />
           <span>Grad-CAM Activation: {heatmapIntensity}%</span>
         </div>
@@ -115,7 +115,7 @@ export default function LesionHeatmapInspector({ result, lang }) {
       </div>
 
       {/* Scientific Explanation Note */}
-      <div className="text-[11px] text-[#4A3E38] leading-relaxed bg-[#FAFDF8] p-2.5 rounded-lg border border-[#E2EAD6]">
+      <div className="text-xs text-[#4A3E38] leading-relaxed bg-[#FAFDF8] p-2.5 rounded-lg border border-[#E2EAD6]">
         💡 <strong>{lang === 'or' ? 'ବୈଜ୍ଞାନିକ ପ୍ରମାଣ (XAI Principle):' : 'XAI Principle:'}</strong>{' '}
         {lang === 'or'
           ? 'ନାଲି ଓ ହଳଦିଆ ରଙ୍ଗର ହିଟମ୍ୟାପ୍ ସ୍ପଷ୍ଟ ଭାବେ ପ୍ରମାଣ କରୁଛି ଯେ ଆମର MobileNetV2 ଆର୍ଟିଫିସିଆଲ ଇଣ୍ଟେଲିଜେନ୍ସ ମଡେଲ ପତ୍ରର ଠିକ୍ ରୋଗାକ୍ରାନ୍ତ ଫୋପା ଦାଗ ଉପରେ ଧ୍ୟାନ କେନ୍ଦ୍ରୀଭୂତ କରି ଏହି ୯୮%+ ସଠିକ୍ ରୋଗ ଚିହ୍ନଟ କରିଛି।'

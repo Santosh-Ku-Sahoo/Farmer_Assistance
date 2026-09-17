@@ -75,9 +75,9 @@ export default function BioFertilizerGuide({ lang }) {
             <Sprout className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ଜୈବିକ ଖତ ଓ ଜୀବାଣୁ ବିହନ ଶୋଧନ ମାର୍ଗଦର୍ଶିକା' : 'Bio-Fertilizer Inoculation & Seed Treatment Guide'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଆଜୋସ୍ପାଇରିଲମ୍, ରାଇଜୋବିୟମ୍, ପିଏସବି ଓ ଟ୍ରାଇକୋଡର୍ମା ପ୍ରୟୋଗ ବିଧି' : 'Nitrogen fixers, Phosphate solubilizers & Mycorrhiza root boosters'}
             </p>
@@ -142,7 +142,7 @@ export default function BioFertilizerGuide({ lang }) {
           <strong className="block font-bold text-[#1E4D2B]">
             🥣 {lang === 'or' ? 'ଗୁଡ଼ ପାଣିରେ ବିହନ ଶୋଧନ ପଦ୍ଧତି (Jaggery Slurry Recipe):' : 'Step-by-Step Seed Coating Procedure:'}
           </strong>
-          <ol className="list-decimal list-inside space-y-1 text-[11px] text-[#5A4D41] leading-relaxed">
+          <ol className="list-decimal list-inside space-y-1 text-xs text-[#5A4D41] leading-relaxed">
             <li>{lang === 'or' ? '୫୦ ଗ୍ରାମ୍ ଗୁଡ଼କୁ ୨୫୦ ମିଲି ପାଣିରେ ଫୁଟାଇ ଥଣ୍ଡା କରନ୍ତୁ।' : 'Boil 50g jaggery in 250ml water for 5 mins and cool down to room temp.'}</li>
             <li>{lang === 'or' ? 'ଥଣ୍ଡା ଗୁଡ଼ ପାଣିରେ ୨୦୦ ଗ୍ରାମ୍ ଜୀବାଣୁ ପାଉଡର ମିଶାଇ ଘୋଳ ତିଆରି କରନ୍ତୁ।' : 'Mix 200g bio-fertilizer powder into the cool slurry.'}</li>
             <li>{lang === 'or' ? 'ବିହନ ଉପରେ ଏହି ଘୋଳ ଛିଞ୍ଚି ଧୀରେ ଧୀରେ ଗୋଳାନ୍ତୁ ଯେପରି ପ୍ରତି ବିହନରେ ପତଳା ଆସ୍ତରଣ ବସିବ।' : 'Sprinkle over seeds and gently coat until a uniform film forms.'}</li>

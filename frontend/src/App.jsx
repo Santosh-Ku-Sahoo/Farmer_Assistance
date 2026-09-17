@@ -319,59 +319,51 @@ export default function App() {
             <div className={`p-1.5 rounded-full ${activeTab === 'diagnosis' ? 'bg-[#EAF0E6]' : ''}`}>
               <Leaf className="w-4 h-4" />
             </div>
-            <span className="text-[10px] leading-tight truncate">{lang === 'or' ? 'ପତ୍ର ଯାଞ୍ଚ' : 'Diagnosis'}</span>
+            <span className="text-xs font-medium leading-tight truncate">{lang === 'or' ? 'ପତ୍ର ଯାଞ୍ଚ' : 'Diagnosis'}</span>
           </button>
 
           <button
             type="button"
-            onClick={() => handleTabChange('guide')}
-            className={`flex flex-col items-center justify-center space-y-0.5 transition-all tap-active cursor-pointer ${
+            onClick={() => setActiveTab('guide')}
+            className={`flex-1 py-2 px-1 flex flex-col items-center justify-center space-y-1 transition-colors cursor-pointer ${
               activeTab === 'guide' ? 'text-[#1E4D2B] font-bold' : 'text-[#7A6E62]'
             }`}
           >
-            <div className={`p-1.5 rounded-full ${activeTab === 'guide' ? 'bg-[#EAF0E6]' : ''}`}>
-              <BookOpen className="w-4 h-4" />
-            </div>
-            <span className="text-[10px] leading-tight truncate">{lang === 'or' ? 'ଚାଷ ବିଧି' : 'Guide'}</span>
+            <BookOpen className="w-5 h-5 flex-shrink-0" />
+            <span className="text-xs font-medium leading-tight truncate">{lang === 'or' ? 'ଚାଷ ବିଧି' : 'Guide'}</span>
           </button>
 
           <button
             type="button"
-            onClick={() => handleTabChange('weather')}
-            className={`flex flex-col items-center justify-center space-y-0.5 transition-all tap-active cursor-pointer ${
+            onClick={() => setActiveTab('weather')}
+            className={`flex-1 py-2 px-1 flex flex-col items-center justify-center space-y-1 transition-colors cursor-pointer ${
               activeTab === 'weather' ? 'text-[#1E4D2B] font-bold' : 'text-[#7A6E62]'
             }`}
           >
-            <div className={`p-1.5 rounded-full ${activeTab === 'weather' ? 'bg-[#EAF0E6]' : ''}`}>
-              <CloudSun className="w-4 h-4" />
-            </div>
-            <span className="text-[10px] leading-tight truncate">{lang === 'or' ? 'ସ୍ପ୍ରେ ପାଗ' : 'Weather'}</span>
+            <CloudRain className="w-5 h-5 flex-shrink-0" />
+            <span className="text-xs font-medium leading-tight truncate">{lang === 'or' ? 'ସ୍ପ୍ରେ ପାଗ' : 'Weather'}</span>
           </button>
 
           <button
             type="button"
-            onClick={() => handleTabChange('mandi')}
-            className={`flex flex-col items-center justify-center space-y-0.5 transition-all tap-active cursor-pointer ${
+            onClick={() => setActiveTab('mandi')}
+            className={`flex-1 py-2 px-1 flex flex-col items-center justify-center space-y-1 transition-colors cursor-pointer ${
               activeTab === 'mandi' ? 'text-[#1E4D2B] font-bold' : 'text-[#7A6E62]'
             }`}
           >
-            <div className={`p-1.5 rounded-full ${activeTab === 'mandi' ? 'bg-[#EAF0E6]' : ''}`}>
-              <IndianRupee className="w-4 h-4" />
-            </div>
-            <span className="text-[10px] leading-tight truncate">{lang === 'or' ? 'ମଣ୍ଡି ଦର' : 'Mandi'}</span>
+            <TrendingUp className="w-5 h-5 flex-shrink-0" />
+            <span className="text-xs font-medium leading-tight truncate">{lang === 'or' ? 'ମଣ୍ଡି ଦର' : 'Mandi'}</span>
           </button>
 
           <button
             type="button"
-            onClick={() => handleTabChange('services')}
-            className={`flex flex-col items-center justify-center space-y-0.5 transition-all tap-active cursor-pointer ${
+            onClick={() => setActiveTab('services')}
+            className={`flex-1 py-2 px-1 flex flex-col items-center justify-center space-y-1 transition-colors cursor-pointer ${
               activeTab === 'services' ? 'text-[#1E4D2B] font-bold' : 'text-[#7A6E62]'
             }`}
           >
-            <div className={`p-1.5 rounded-full ${activeTab === 'services' ? 'bg-[#EAF0E6]' : ''}`}>
-              <Landmark className="w-4 h-4 text-[#D97706]" />
-            </div>
-            <span className="text-[10px] leading-tight truncate">{lang === 'or' ? 'କୃଷି ସେବା' : 'Agri Care'}</span>
+            <Landmark className="w-4 h-4 text-[#D97706]" />
+            <span className="text-xs font-medium leading-tight truncate">{lang === 'or' ? 'କୃଷି ସେବା' : 'Agri Care'}</span>
           </button>
         </div>
       </nav>

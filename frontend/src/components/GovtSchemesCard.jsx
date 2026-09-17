@@ -56,9 +56,9 @@ export default function GovtSchemesCard({ lang }) {
             <Landmark className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'କୃଷକ ସରକାରୀ ଯୋଜନା ଓ ସହାୟତା ମାର୍ଗଦର୍ଶିକା' : 'Odisha Govt Farmer Schemes & Subsidies'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ସରକାରୀ ଆର୍ଥିକ ସହାୟତା, ବିହନ ରିହାତି ଏବଂ ସୋଲାର ପମ୍ପ ଯୋଜନା' : 'Official direct benefit transfers, certified seed subsidies & solar irrigation grants'}
             </p>
@@ -75,14 +75,14 @@ export default function GovtSchemesCard({ lang }) {
               <strong className="text-xs sm:text-sm text-[#1E4D2B] font-extrabold">
                 {lang === 'or' ? scheme.name_or : scheme.name_en}
               </strong>
-              <span className="text-[11px] font-extrabold px-2.5 py-0.5 rounded-full bg-[#EAF0E6] text-[#1E4D2B] border border-[#BAC8AA]">
+              <span className="text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-[#EAF0E6] text-[#1E4D2B] border border-[#BAC8AA]">
                 {lang === 'or' ? scheme.benefit_or : scheme.benefit_en}
               </span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1">
               <div className="bg-[#FDFCFA] p-2 rounded-lg border border-[#E2EAD6]">
-                <span className="text-[10px] font-bold text-[#7A6E62] block uppercase">
+                <span className="text-xs font-bold text-[#7A6E62] block">
                   {lang === 'or' ? 'ଯୋଗ୍ୟତା (Eligibility):' : 'Eligibility:'}
                 </span>
                 <p className="text-[#382E28] mt-0.5">
@@ -91,7 +91,7 @@ export default function GovtSchemesCard({ lang }) {
               </div>
 
               <div className="bg-[#FDFCFA] p-2 rounded-lg border border-[#E2EAD6]">
-                <span className="text-[10px] font-bold text-[#7A6E62] block uppercase">
+                <span className="text-xs font-bold text-[#7A6E62] block">
                   {lang === 'or' ? 'ଦରକାରୀ କାଗଜପତ୍ର (Documents):' : 'Required Documents:'}
                 </span>
                 <p className="text-[#382E28] mt-0.5">

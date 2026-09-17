@@ -19,9 +19,9 @@ export default function SeedGerminationTester({ lang }) {
             <Sprout className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ବିହନ ଗଜା ପରୀକ୍ଷା ଓ ଅଙ୍କୁରୋଦ୍ଗମ ମାନ ନିର୍ଦ୍ଧାରଣ' : '100-Seed Germination Rate % Quality Tester'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ବୁଣିବା ପୂର୍ବରୁ ଓଦା କପଡ଼ାରେ ବିହନ ଗଜା ପରୀକ୍ଷା କରି କ୍ଷତିରୁ ବଞ୍ଚନ୍ତୁ' : 'Rag doll seed testing method & seed rate adjustment advisor'}
             </p>
@@ -36,19 +36,19 @@ export default function SeedGerminationTester({ lang }) {
         </h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#382E28]">
           <div className="p-2 bg-[#FAFDF8] rounded-lg border border-[#E2EAD6] flex items-start space-x-2">
-            <span className="w-4 h-4 rounded-full bg-[#1E4D2B] text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+            <span className="w-5 h-5 rounded-full bg-[#1E4D2B] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
             <span>{lang === 'or' ? 'ବିହନ ବସ୍ତାରୁ ଅନ୍ଧାଧୁନିଆ ଭାବେ ୧୦୦ ଟି ଗୋଟା ବିହନ ବାଛନ୍ତୁ।' : 'Count exactly 100 random seeds from the seed bag.'}</span>
           </div>
           <div className="p-2 bg-[#FAFDF8] rounded-lg border border-[#E2EAD6] flex items-start space-x-2">
-            <span className="w-4 h-4 rounded-full bg-[#1E4D2B] text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+            <span className="w-5 h-5 rounded-full bg-[#1E4D2B] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
             <span>{lang === 'or' ? 'ଏକ ଓଦା ସୂତା କପଡ଼ା ବା ଖବରକାଗଜ ଉପରେ ସମାନ ଦୂରତାରେ ସଜାନ୍ତୁ।' : 'Place seeds evenly on a moist cotton cloth / paper towel.'}</span>
           </div>
           <div className="p-2 bg-[#FAFDF8] rounded-lg border border-[#E2EAD6] flex items-start space-x-2">
-            <span className="w-4 h-4 rounded-full bg-[#1E4D2B] text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+            <span className="w-5 h-5 rounded-full bg-[#1E4D2B] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
             <span>{lang === 'or' ? 'କପଡ଼ାକୁ ଗୁଡ଼ାଇ ଛାଇ ଜାଗାରେ ରଖି ପ୍ରତିଦିନ ପାଣି ଛିଞ୍ଚନ୍ତୁ।' : 'Roll the cloth gently and keep in shade for 4-5 days with daily water moistening.'}</span>
           </div>
           <div className="p-2 bg-[#FAFDF8] rounded-lg border border-[#E2EAD6] flex items-start space-x-2">
-            <span className="w-4 h-4 rounded-full bg-[#1E4D2B] text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span>
+            <span className="w-5 h-5 rounded-full bg-[#1E4D2B] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span>
             <span>{lang === 'or' ? '୫ମ ଦିନରେ କପଡ଼ା ଖୋଲି ସୁସ୍ଥ ଗଜା ବାହାରିଥିବା ବିହନ ଗଣନ୍ତୁ।' : 'Open on Day 5 and count all healthy sprouted seedlings.'}</span>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function SeedGerminationTester({ lang }) {
       }`}>
         <div className="flex flex-wrap items-center justify-between gap-1.5">
           <div>
-            <span className="text-[10px] uppercase font-bold text-[#5A4D41] block">
+            <span className="text-xs font-bold text-[#5A4D41] block">
               {lang === 'or' ? 'ଅଙ୍କୁରୋଦ୍ଗମ ହାର (Germination Rate):' : 'Calculated Germination %:'}
             </span>
             <p className="text-2xl font-extrabold text-[#2C221E]">

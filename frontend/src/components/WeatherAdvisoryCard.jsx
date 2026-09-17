@@ -209,10 +209,10 @@ export default function WeatherAdvisoryCard({ lang }) {
       {/* Header & District Dropdown */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-[#EAF0E6]">
         <div>
-          <h3 className="font-bold text-[#2C221E] text-base sm:text-lg flex items-center space-x-2">
+          <h2 className="font-bold text-[#2C221E] text-base sm:text-lg flex items-center space-x-2">
             <CloudRain className="w-5 h-5 text-[#1E4D2B]" />
             <span>{t.weather_title}</span>
-          </h3>
+          </h2>
           <p className="text-xs text-[#7A6E62] mt-0.5">
             {t.weather_subtitle}
           </p>
@@ -319,7 +319,7 @@ export default function WeatherAdvisoryCard({ lang }) {
           <p className="text-lg sm:text-xl font-extrabold text-[#2C221E]">
             {weatherData.temperature_c}°C
           </p>
-          <span className="text-[10px] text-[#7A6E62]">
+          <span className="text-xs text-[#7A6E62] block mt-0.5">
             {weatherData.temperature_c > 35 
               ? (lang === 'or' ? 'ଅତ୍ୟଧିକ ଗରମ' : 'High Evaporation') 
               : (lang === 'or' ? 'ଉପଯୁକ୍ତ' : 'Optimal')}
@@ -335,7 +335,7 @@ export default function WeatherAdvisoryCard({ lang }) {
           <p className="text-lg sm:text-xl font-extrabold text-[#2C221E]">
             {weatherData.humidity_percent}%
           </p>
-          <span className="text-[10px] text-[#7A6E62]">
+          <span className="text-xs text-[#7A6E62] block mt-0.5">
             {weatherData.humidity_percent > 85 
               ? (lang === 'or' ? 'ଫଙ୍ଗସ୍ ଅନୁକୂଳ' : 'Fungal Risk') 
               : (lang === 'or' ? 'ସ୍ୱାଭାବିକ' : 'Normal')}
@@ -351,7 +351,7 @@ export default function WeatherAdvisoryCard({ lang }) {
           <p className="text-lg sm:text-xl font-extrabold text-[#2C221E]">
             {weatherData.wind_speed_kmh} <span className="text-xs font-semibold">km/h</span>
           </p>
-          <span className="text-[10px] text-[#7A6E62]">
+          <span className="text-xs text-[#7A6E62] block mt-0.5">
             {weatherData.wind_speed_kmh > 15 
               ? (lang === 'or' ? 'ଉଡ଼ିଯିବା ଆଶଙ୍କା' : 'High Drift') 
               : (lang === 'or' ? 'ସ୍ଥିର ପବନ' : 'Low Drift')}
@@ -367,7 +367,7 @@ export default function WeatherAdvisoryCard({ lang }) {
           <p className="text-lg sm:text-xl font-extrabold text-[#2C221E]">
             {weatherData.rain_probability_percent}%
           </p>
-          <span className="text-[10px] text-[#7A6E62]">
+          <span className="text-xs text-[#7A6E62] block mt-0.5">
             {weatherData.rain_probability_percent > 50 
               ? (lang === 'or' ? 'ଧୋଇଯିବା ଭୟ' : 'Wash-Off Risk') 
               : (lang === 'or' ? 'ଶୁଖିଲା ପାଗ' : 'Dry Forecast')}

@@ -50,9 +50,9 @@ export default function GrainStorageGuide({ lang }) {
             <Archive className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ଶସ୍ୟ ସାଇତିବା ଓ ଗୋଦାମ ସୁରକ୍ଷା ମାର୍ଗଦର୍ଶିକା' : 'Safe Grain & Tuber Storage Guide'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଧାନରେ ଘୁଣ ପୋକ ଓ ଆଳୁ ସଢ଼ାରୁ ରକ୍ଷା ପାଇବା ପାଇଁ ବୈଜ୍ଞାନିକ ଉପାୟ' : 'Prevent post-harvest storage losses, weevils, and moisture damage'}
             </p>

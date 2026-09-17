@@ -158,9 +158,9 @@ export default function OrganicBioPesticides({ lang }) {
             <Leaf className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ଘରୋଇ ଜୈବିକ କୀଟନାଶକ ଓ କାଢ଼ା ପ୍ରସ୍ତୁତି' : 'Traditional Bio-Pesticide & Kashayam Recipes'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ବିନା ଖର୍ଚ୍ଚରେ ନିମାସ୍ତ୍ର, ବ୍ରହ୍ମାସ୍ତ୍ର ଓ ଜୀବାମୃତ ପ୍ରସ୍ତୁତି ପ୍ରଣାଳୀ' : 'Zero-cost home preparations for pest & disease management'}
             </p>
@@ -198,7 +198,7 @@ export default function OrganicBioPesticides({ lang }) {
               🎯 {lang === 'or' ? `ଦମନ କରେ: ${recipe.target_or}` : `Target: ${recipe.target_en}`}
             </p>
           </div>
-          <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-[#EAF0E6] text-[#1E4D2B] border border-[#BAC8AA]">
+          <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-[#EAF0E6] text-[#1E4D2B] border border-[#BAC8AA]">
             ⏳ {lang === 'or' ? recipe.shelf_life_or : recipe.shelf_life_en}
           </span>
         </div>
@@ -226,7 +226,7 @@ export default function OrganicBioPesticides({ lang }) {
           <div className="space-y-2 text-xs text-[#382E28]">
             {(lang === 'or' ? recipe.procedure_or : recipe.procedure_en).map((step, sIdx) => (
               <div key={sIdx} className="flex items-start space-x-2 bg-[#FDFCFA] p-2.5 rounded-lg border border-[#E2EAD6]">
-                <span className="w-4 h-4 rounded-full bg-[#EAF0E6] text-[#1E4D2B] font-bold text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="w-5 h-5 rounded-full bg-[#EAF0E6] text-[#1E4D2B] font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                   {sIdx + 1}
                 </span>
                 <p className="leading-relaxed">{step}</p>

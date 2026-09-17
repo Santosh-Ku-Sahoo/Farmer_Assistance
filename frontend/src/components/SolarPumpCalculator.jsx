@@ -58,9 +58,9 @@ export default function SolarPumpCalculator({ lang }) {
             <Sun className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ସୌର ଜଳନିଧି ପମ୍ପ ଓ ସବସିଡି ହିସାବ (Soura Jalanidhi)' : 'Solar Water Pump Sizing & Odisha Subsidy Estimator'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଓଡ଼ିଶା ସରକାରଙ୍କ ୭୦% ରୁ ୯୦% ରିହାତିରେ ସୌର ପମ୍ପ ପାଇବା ପାଇଁ ମାପ ଓ ଖର୍ଚ୍ଚ' : 'Calculate recommended Pump HP, Solar Panels (Watts) & Government Subsidy'}
             </p>
@@ -135,39 +135,39 @@ export default function SolarPumpCalculator({ lang }) {
         
         {/* Pump HP */}
         <div className="p-3.5 rounded-xl bg-[#FAFDF8] border-2 border-[#D97706]/40 shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#D97706] block mb-0.5">
+          <span className="text-xs font-bold text-[#D97706] block mb-0.5">
             ⚡ {lang === 'or' ? 'ସୁପାରିଶ ପମ୍ପ କ୍ଷମତା' : 'Recommended Pump'}
           </span>
           <p className="text-2xl font-extrabold text-[#2C221E]">
             {pumpHp} HP <span className="text-xs font-semibold text-[#7A6E62]">{waterSource === 'river' ? 'Surface DC' : 'Submersible DC'}</span>
           </p>
-          <span className="text-[11px] text-[#92400E] font-bold block mt-0.5">
+          <span className="text-xs text-[#92400E] font-bold block mt-0.5">
             ☀️ {pvWattage} Wp {lang === 'or' ? 'ସୋଲାର ପ୍ୟାନେଲ୍' : 'Solar PV Panels'}
           </span>
         </div>
 
         {/* Daily Water */}
         <div className="p-3.5 rounded-xl bg-[#F0F9FF] border border-[#BAE6FD] shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#0369A1] block mb-0.5">
+          <span className="text-xs font-bold text-[#0369A1] block mb-0.5">
             💧 {lang === 'or' ? 'ଦୈନିକ ପାଣି ନିଷ୍କାସନ' : 'Daily Water Discharge'}
           </span>
           <p className="text-xl font-extrabold text-[#0C4A6E]">
             ≈ {dailyDischargeLiters.toLocaleString('en-IN')} <span className="text-xs font-normal">Liters/day</span>
           </p>
-          <span className="text-[10px] text-[#0284C7] block mt-0.5 font-semibold">
+          <span className="text-xs text-[#0284C7] block mt-0.5 font-semibold">
             {lang === 'or' ? '୬-୭ ଘଣ୍ଟା ସୂର୍ଯ୍ୟ କିରଣରେ' : 'During 6-7 sunny peak hours'}
           </span>
         </div>
 
         {/* Financial Breakdown */}
         <div className="p-3.5 rounded-xl bg-[#EAF0E6] border border-[#2C6E3B] shadow-2xs">
-          <span className="text-[10px] uppercase font-bold text-[#1E4D2B] block mb-0.5">
+          <span className="text-xs font-bold text-[#1E4D2B] block mb-0.5">
             💰 {lang === 'or' ? 'ଚାଷୀଙ୍କ ନିଜ ଖର୍ଚ୍ଚ (Farmer Share)' : 'Farmer Net Share Cost'}
           </span>
           <p className="text-2xl font-extrabold text-[#1E4D2B]">
             ₹ {farmerShare.toLocaleString('en-IN')}
           </p>
-          <span className="text-[10px] text-[#166534] font-bold block mt-0.5">
+          <span className="text-xs text-[#166534] font-bold block mt-0.5">
             🎉 {lang === 'or' ? `ସରକାରୀ ସବସିଡି (${subsidyPercent}%): ₹ ${subsidyAmount.toLocaleString('en-IN')}` : `Govt Subsidy (${subsidyPercent}%): ₹ ${subsidyAmount.toLocaleString('en-IN')}`}
           </span>
         </div>
@@ -179,7 +179,7 @@ export default function SolarPumpCalculator({ lang }) {
         <strong className="block font-bold text-[#1E4D2B]">
           📋 {lang === 'or' ? 'ସୌର ଜଳନିଧି ଯୋଜନାରେ ଆବେଦନ ପାଇଁ ଆବଶ୍ୟକୀୟ କାଗଜପତ୍ର:' : 'Required Documents for Soura Jalanidhi II (agrnet.odisha.gov.in):'}
         </strong>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px] text-[#5A4D41]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-[#5A4D41]">
           <div className="flex items-center space-x-1.5">
             <CheckCircle2 className="w-3.5 h-3.5 text-[#1E4D2B]" />
             <span>{lang === 'or' ? 'ଜମି ପଟ୍ଟା (Land RoR Record)' : 'Land RoR / Patta Passbook'}</span>

@@ -290,7 +290,7 @@ export default function ChatAssistant({ lang, isInline = false }) {
                   <span>{lang === 'or' ? 'କୃଷି AI ସହାୟକ' : 'Krishi AI Agronomist'}</span>
                   <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse"></span>
                 </h3>
-                <p className="text-[10px] text-[#D5DEC9]">
+                <p className="text-xs text-[#D5DEC9]">
                   ICAR-NRRI & OUAT Verified • 20+ Topics
                 </p>
               </div>
@@ -333,7 +333,7 @@ export default function ChatAssistant({ lang, isInline = false }) {
               {showQueryDrawer ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
             </button>
 
-            <span className="text-[10px] text-[#7A6E62] font-semibold">
+            <span className="text-xs text-[#7A6E62] font-semibold">
               {lang === 'or' ? 'ପ୍ରଶ୍ନ ବାଛି କ୍ଲିକ୍ କରନ୍ତୁ' : 'Tap any query'}
             </span>
           </div>
@@ -349,7 +349,7 @@ export default function ChatAssistant({ lang, isInline = false }) {
                     key={cat.category_id}
                     type="button"
                     onClick={() => setSelectedCatFilter(cat.category_id)}
-                    className={`py-1 px-2 text-[11px] font-bold rounded-lg whitespace-nowrap transition-all cursor-pointer ${
+                    className={`py-1 px-2 text-xs font-bold rounded-lg whitespace-nowrap transition-all cursor-pointer ${
                       selectedCatFilter === cat.category_id
                         ? 'bg-[#1E4D2B] text-white shadow-xs'
                         : 'bg-[#F0F5EC] text-[#5A4D41] border border-[#BAC8AA] hover:bg-[#E2EAD6]'
@@ -400,28 +400,28 @@ export default function ChatAssistant({ lang, isInline = false }) {
                     <button
                       type="button"
                       onClick={() => handleToggleSpeak(msg.id, msg.text)}
-                      className={`inline-flex items-center space-x-1 text-[11px] font-bold px-2 py-0.5 rounded-full border transition-colors cursor-pointer ${
+                      className={`inline-flex items-center space-x-1 text-xs font-bold px-2 py-0.5 rounded-full border transition-colors cursor-pointer ${
                         speakingMsgId === msg.id
                           ? 'bg-[#8B3A2B] text-white border-[#8B3A2B] animate-pulse'
                           : 'bg-[#FAFDF8] text-[#1E4D2B] border-[#BAC8AA] hover:bg-[#EAF0E6]'
                       }`}
                     >
-                      {speakingMsgId === msg.id ? <VolumeX className="w-3 h-3" /> : <Volume2 className="w-3 h-3" />}
+                      {speakingMsgId === msg.id ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
                       <span>{speakingMsgId === msg.id ? (lang === 'or' ? 'ବନ୍ଦ' : 'Stop') : (lang === 'or' ? 'ଶୁଣନ୍ତୁ' : 'Listen')}</span>
                     </button>
 
                     <button
                       type="button"
                       onClick={() => handleShareWhatsApp(msg.text)}
-                      className="inline-flex items-center space-x-1 text-[11px] font-bold px-2 py-0.5 rounded-full bg-[#25D366]/15 text-[#15803D] border border-[#25D366]/40 hover:bg-[#25D366]/25 transition-colors cursor-pointer"
+                      className="inline-flex items-center space-x-1 text-xs font-bold px-2 py-0.5 rounded-full bg-[#25D366]/15 text-[#15803D] border border-[#25D366]/40 hover:bg-[#25D366]/25 transition-colors cursor-pointer"
                       title="Share advice on WhatsApp"
                     >
-                      <Share2 className="w-3 h-3" />
+                      <Share2 className="w-3.5 h-3.5" />
                       <span>WhatsApp</span>
                     </button>
 
                     {msg.source && (
-                      <span className="text-[10px] text-[#7A6E62] ml-1">
+                      <span className="text-xs text-[#7A6E62] ml-1">
                         • {msg.source}
                       </span>
                     )}
@@ -448,7 +448,7 @@ export default function ChatAssistant({ lang, isInline = false }) {
                   key={idx}
                   type="button"
                   onClick={() => handleSend(lang === 'or' ? q.text_or : q.text_en)}
-                  className="text-[11px] font-semibold bg-[#FAFDF8] border border-[#BAC8AA] text-[#2C221E] px-2.5 py-1 rounded-full whitespace-nowrap hover:bg-[#1E4D2B] hover:text-white transition-colors cursor-pointer flex-shrink-0"
+                  className="text-xs font-semibold bg-[#FAFDF8] border border-[#BAC8AA] text-[#2C221E] px-2.5 py-1 rounded-full whitespace-nowrap hover:bg-[#1E4D2B] hover:text-white transition-colors cursor-pointer flex-shrink-0"
                 >
                   {lang === 'or' ? q.text_or : q.text_en}
                 </button>

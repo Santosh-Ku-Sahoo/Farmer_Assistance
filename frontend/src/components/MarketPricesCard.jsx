@@ -77,10 +77,10 @@ export default function MarketPricesCard({ lang, selectedCrop }) {
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-[#EAF0E6]">
         <div>
-          <h3 className="font-bold text-[#2C221E] text-base sm:text-lg flex items-center space-x-2">
+          <h2 className="font-bold text-[#2C221E] text-base sm:text-lg flex items-center space-x-2">
             <IndianRupee className="w-5 h-5 text-[#1E4D2B]" />
             <span>{t.mandi_title}</span>
-          </h3>
+          </h2>
           <p className="text-xs text-[#7A6E62] mt-0.5">
             {t.mandi_subtitle}
           </p>
@@ -111,7 +111,7 @@ export default function MarketPricesCard({ lang, selectedCrop }) {
           <h4 className="font-bold text-sm text-[#1E4D2B]">
             {lang === 'or' ? currentCropInfo.crop_or : currentCropInfo.crop_en}
           </h4>
-          <p className="text-[11px] text-[#5A4D41]">
+          <p className="text-xs text-[#5A4D41]">
             {lang === 'or' ? `ମାପକ: ${currentCropInfo.unit_or}` : `Unit: ${currentCropInfo.unit}`}
           </p>
         </div>
@@ -122,7 +122,7 @@ export default function MarketPricesCard({ lang, selectedCrop }) {
             <span className="text-[#86EFAC] text-sm">₹{currentCropInfo.msp}</span> / Qtl
           </div>
         ) : (
-          <div className="text-[11px] font-semibold text-[#8C8074] bg-[#FFFFFF] px-2.5 py-1 rounded border border-[#BAC8AA]">
+          <div className="text-xs font-semibold text-[#8C8074] bg-[#FFFFFF] px-2.5 py-1 rounded border border-[#BAC8AA]">
             {lang === 'or' ? 'ଖୋଲା ବଜାର ମୂଲ୍ୟ ନିର୍ଦ୍ଧାରଣ' : 'Open Market Pricing'}
           </div>
         )}
@@ -144,7 +144,7 @@ export default function MarketPricesCard({ lang, selectedCrop }) {
                   <span>{lang === 'or' ? m.mandi_or : m.mandi_en}</span>
                 </span>
                 
-                <span className={`inline-flex items-center space-x-1 text-[11px] font-bold px-2 py-0.5 rounded-full ${
+                <span className={`inline-flex items-center space-x-1 text-xs font-bold px-2 py-0.5 rounded-full ${
                   isUp 
                     ? 'bg-[#DEF7EC] text-[#03543F]' 
                     : isDown 
@@ -160,11 +160,11 @@ export default function MarketPricesCard({ lang, selectedCrop }) {
 
               {/* Price Row */}
               <div className="flex items-baseline justify-between pt-1 border-t border-[#F1F6EC]">
-                <div className="text-[11px] text-[#7A6E62]">
+                <div className="text-xs text-[#7A6E62]">
                   <span>{t.mandi_modal}: </span>
                   <span className="text-base font-extrabold text-[#1E4D2B]">₹{m.modal_price}</span>
                 </div>
-                <div className="text-[11px] text-[#7A6E62]">
+                <div className="text-xs text-[#7A6E62]">
                   <span>{m.min_price} - {m.max_price} ₹/Qtl</span>
                 </div>
               </div>

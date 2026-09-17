@@ -72,9 +72,9 @@ export default function CropRotationPlanner({ lang }) {
             <RefreshCcw className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ଫସଲ ପର୍ଯ୍ୟାୟ ଓ ମାଟି ଉର୍ବରତା ଯୋଜନା' : 'Crop Rotation & Soil Health Planner'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ଅମଳ ପରେ ଡାଲି ଜାତୀୟ ଫସଲ ଲଗାଇ ସାର ଖର୍ଚ୍ଚ କମାନ୍ତୁ ଓ ରୋଗ ଦୂର କରନ୍ତୁ' : 'Scientific post-harvest rotation to fix atmospheric N2 and starve disease pathogens'}
             </p>
@@ -119,7 +119,7 @@ export default function CropRotationPlanner({ lang }) {
         
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#E2EAD6] pb-2.5">
           <div>
-            <span className="text-[10px] uppercase font-bold text-[#7A6E62] block">
+            <span className="text-xs font-bold text-[#7A6E62] block">
               {lang === 'or' ? 'ସର୍ବୋତ୍ତମ ପର୍ଯ୍ୟାୟ ଫସଲ (Best Rotation Crop)' : 'Recommended Rotation Crop'}
             </span>
             <h4 className="text-base sm:text-lg font-extrabold text-[#1E4D2B]">
@@ -136,8 +136,8 @@ export default function CropRotationPlanner({ lang }) {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
           
           <div className="p-2.5 bg-[#FDFCFA] rounded-lg border border-[#E2EAD6]">
-            <span className="text-[10px] font-bold text-[#1E4D2B] flex items-center space-x-1 mb-0.5">
-              <Sparkles className="w-3 h-3 text-[#D97706]" />
+            <span className="text-xs font-bold text-[#1E4D2B] flex items-center space-x-1 mb-0.5">
+              <Sparkles className="w-3.5 h-3.5 text-[#D97706]" />
               <span>{lang === 'or' ? 'ପ୍ରାକୃତିକ ଯବକ୍ଷାରଜାନ' : 'Nitrogen Fixed'}</span>
             </span>
             <p className="font-extrabold text-[#2C221E] text-xs sm:text-sm">
@@ -146,8 +146,8 @@ export default function CropRotationPlanner({ lang }) {
           </div>
 
           <div className="p-2.5 bg-[#FDFCFA] rounded-lg border border-[#E2EAD6]">
-            <span className="text-[10px] font-bold text-[#1E4D2B] flex items-center space-x-1 mb-0.5">
-              <TrendingUp className="w-3 h-3 text-[#1E4D2B]" />
+            <span className="text-xs font-bold text-[#1E4D2B] flex items-center space-x-1 mb-0.5">
+              <TrendingUp className="w-3.5 h-3.5 text-[#1E4D2B]" />
               <span>{lang === 'or' ? 'ସାର ଖର୍ଚ୍ଚ ସଞ୍ଚୟ' : 'Fertilizer Saving'}</span>
             </span>
             <p className="font-semibold text-[#2C221E] text-xs">
@@ -156,8 +156,8 @@ export default function CropRotationPlanner({ lang }) {
           </div>
 
           <div className="p-2.5 bg-[#FDFCFA] rounded-lg border border-[#E2EAD6]">
-            <span className="text-[10px] font-bold text-[#1E4D2B] flex items-center space-x-1 mb-0.5">
-              <CheckCircle className="w-3 h-3 text-[#0284C7]" />
+            <span className="text-xs font-bold text-[#1E4D2B] flex items-center space-x-1 mb-0.5">
+              <CheckCircle className="w-3.5 h-3.5 text-[#0284C7]" />
               <span>{lang === 'or' ? 'ଅନୁମାନିତ ଆୟ' : 'Est. Income/Value'}</span>
             </span>
             <p className="font-bold text-[#0284C7] text-xs">

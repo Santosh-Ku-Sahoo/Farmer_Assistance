@@ -53,9 +53,9 @@ export default function WeedHerbicideGuide({ lang }) {
             <Shovel className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="font-bold text-[#2C221E] text-base sm:text-lg">
+            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
               {lang === 'or' ? 'ତୃଣକ (ଘାସ) ଦମନ ଓ ତୃଣକନାଶକ ମାର୍ଗଦର୍ଶିକା' : 'Weed Identification & Herbicide Selector'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#7A6E62]">
               {lang === 'or' ? 'ପ୍ରାରମ୍ଭିକ ୨୫ ଦିନରେ ଘାସ ଦମନ କରି ଫସଲର ୩୦% ସାର ଅପଚୟ ରୋକନ୍ତୁ' : 'Pre-emergence & post-emergence herbicide recommendations and water management'}
             </p>
@@ -98,7 +98,7 @@ export default function WeedHerbicideGuide({ lang }) {
           
           {/* Pre-emergence */}
           <div className="p-3 bg-[#F0FDF4] rounded-lg border border-[#BBF7D0]">
-            <span className="text-[10px] font-bold text-[#15803D] uppercase tracking-wider block mb-1">
+            <span className="text-xs font-bold text-[#15803D] block mb-1">
               🌱 1. {lang === 'or' ? 'ଗଜା ହେବା ପୂର୍ବରୁ (Pre-Emergence Herbicide — ରୁଆର ୨-୫ ଦିନ):' : 'Pre-Emergence (2-5 Days after transplanting):'}
             </span>
             <p className="text-[#14532D] font-bold leading-relaxed">
@@ -108,7 +108,7 @@ export default function WeedHerbicideGuide({ lang }) {
 
           {/* Post-emergence */}
           <div className="p-3 bg-[#FEF3C7]/70 rounded-lg border border-[#FDE68A]">
-            <span className="text-[10px] font-bold text-[#92400E] uppercase tracking-wider block mb-1">
+            <span className="text-xs font-bold text-[#92400E] block mb-1">
               🌾 2. {lang === 'or' ? 'ଘାସ ଉଠିବା ପରେ (Post-Emergence Herbicide — ରୁଆର ୧୫-୨୫ ଦିନ):' : 'Post-Emergence (15-25 Days after transplanting):'}
             </span>
             <p className="text-[#78350F] font-bold leading-relaxed">
@@ -119,7 +119,7 @@ export default function WeedHerbicideGuide({ lang }) {
         </div>
 
         {/* Strict Water Management Rule */}
-        <div className="bg-[#FEF2F2] p-2.5 rounded-lg border border-[#FCA5A5] text-[11px] text-[#991B1B] flex items-start space-x-2">
+        <div className="bg-[#FEF2F2] p-2.5 rounded-lg border border-[#FCA5A5] text-xs text-[#991B1B] flex items-start space-x-2">
           <AlertTriangle className="w-4 h-4 text-[#DC2626] flex-shrink-0 mt-0.5" />
           <p>
             <strong>{lang === 'or' ? 'ଜରୁରୀ ନିୟମ:' : 'Golden Spray Rule:'}</strong>{' '}
