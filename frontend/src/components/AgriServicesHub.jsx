@@ -32,7 +32,8 @@ const CATEGORIES = [
     desc_en: 'NPK calculator, soil pH, bio-fertilizers & seed germination',
     desc_or: 'ସାର ହିସାବ, ମାଟି pH, ଜୈବିକ ଖତ ଓ ବିହନ ଗଜା ପରୀକ୍ଷା',
     icon: Sprout,
-    accent: 'bg-emerald-100 text-emerald-600',
+    image: '/images/cat_soil_seeds.jpg',
+    accent: 'bg-emerald-100 text-emerald-700',
     services: [
       { id: 'fertilizer', icon: '⚖️', title_en: 'Fertilizer Bag Calculator', title_or: 'ସାର ବସ୍ତା ହିସାବ', desc_en: '45kg bag count for your field size', desc_or: 'ଆପଣଙ୍କ ଜମି ପାଇଁ ସାର ବସ୍ତା ସଂଖ୍ୟା' },
       { id: 'soilph', icon: '🧪', title_en: 'Soil pH & Lime Dose', title_or: 'ମାଟି pH ଓ ଚୂନ ହିସାବ', desc_en: 'Lime requirement for acidic soil', desc_or: 'ଅମ୍ଳିଆ ମାଟି ପାଇଁ ଚୂନ ମାତ୍ରା' },
@@ -43,12 +44,13 @@ const CATEGORIES = [
   },
   {
     id: 'crop_protect',
-    title_en: 'Crop Protection',
-    title_or: 'ଫସଲ ସୁରକ୍ଷା',
+    title_en: 'Crop Protection & Health',
+    title_or: 'ଫସଲ ସୁରକ୍ଷା ଓ ସ୍ୱାସ୍ଥ୍ୟ',
     desc_en: 'Tank-mix safety, bio-pesticides, weed control & flood recovery',
     desc_or: 'ଔଷଧ ମିଶ୍ରଣ, ଜୈବିକ କାଢ଼ା, ଘାସ ଦମନ ଓ ବିପର୍ଯ୍ୟୟ ସଞ୍ଜୀବନୀ',
     icon: ShieldAlert,
-    accent: 'bg-amber-100 text-amber-600',
+    image: '/images/cat_crop_protection.jpg',
+    accent: 'bg-amber-100 text-amber-700',
     services: [
       { id: 'tankmix', icon: '🧲', title_en: 'Tank-Mix Jar Test', title_or: 'ଔଷଧ ମିଶ୍ରଣ ଯାଞ୍ଚ', desc_en: 'Check chemical compatibility before mixing', desc_or: 'ମିଶ୍ରଣ ପୂର୍ବରୁ ସୁରକ୍ଷା ଯାଞ୍ଚ' },
       { id: 'organic', icon: '🌿', title_en: 'Bio-Pesticides', title_or: 'ଜୈବିକ କାଢ଼ା', desc_en: 'Neemastra, Jeevamrut & Brahmastra', desc_or: 'ନିମାସ୍ତ୍ର, ଜୀବାମୃତ ଓ ବ୍ରହ୍ମାସ୍ତ୍ର' },
@@ -59,12 +61,13 @@ const CATEGORIES = [
   },
   {
     id: 'water_energy',
-    title_en: 'Water & Solar',
-    title_or: 'ଜଳ ଓ ସୌର ଶକ୍ତି',
+    title_en: 'Water, Solar & Irrigation',
+    title_or: 'ଜଳ, ସୌର ଶକ୍ତି ଓ ସେଚନ',
     desc_en: 'Solar pump subsidy, irrigation scheduling & farm pond sizing',
     desc_or: 'ସୌର ପମ୍ପ ସବସିଡି, ଜଳସେଚନ ସମୟସାରଣୀ ଓ ପୋଖରୀ ମାପ',
     icon: Droplets,
-    accent: 'bg-sky-100 text-sky-600',
+    image: '/images/cat_water_solar.jpg',
+    accent: 'bg-sky-100 text-sky-700',
     services: [
       { id: 'solarpump', icon: '☀️', title_en: 'Solar Pump Subsidy', title_or: 'ସୌର ଜଳନିଧି ପମ୍ପ', desc_en: 'HP sizing & 90% subsidy documents', desc_or: 'ପମ୍ପ HP ଓ ୯୦% ସବସିଡି ଡକୁମେଣ୍ଟ' },
       { id: 'irrigation', icon: '💧', title_en: 'Smart Irrigation', title_or: 'ଜଳସେଚନ କ୍ୟାଲେଣ୍ଡର', desc_en: 'AWD water-saving irrigation schedule', desc_or: 'AWD ଜଳ ସଞ୍ଚୟ ସେଚନ ସମୟସାରଣୀ' },
@@ -74,12 +77,13 @@ const CATEGORIES = [
   },
   {
     id: 'income_livestock',
-    title_en: 'Income & Livestock',
-    title_or: 'ଆୟ ଓ ପଶୁପାଳନ',
+    title_en: 'Income, Diary & Livestock',
+    title_or: 'ଆୟ, କୃଷି ଖାତା ଓ ପଶୁପାଳନ',
     desc_en: 'Farm diary, cattle feed, vermicompost & safe grain storage',
     desc_or: 'କୃଷି ଖାତା, ପଶୁ ଖାଦ୍ୟ, ଜିଆ ଖତ ଓ ଶସ୍ୟ ସାଇତିବା',
     icon: Landmark,
-    accent: 'bg-violet-100 text-violet-600',
+    image: '/images/cat_income_livestock.jpg',
+    accent: 'bg-violet-100 text-violet-700',
     services: [
       { id: 'khata', icon: '📒', title_en: 'Farm Khata Diary', title_or: 'କୃଷି ଖାତା ଡାଏରୀ', desc_en: 'Track expenses & calculate ROI', desc_or: 'ଖର୍ଚ୍ଚ ଟ୍ରାକ ଓ ଲାଭ ହିସାବ' },
       { id: 'cattle', icon: '🐮', title_en: 'Cattle Feed Planner', title_or: 'ପଶୁ ଖାଦ୍ୟ ହିସାବ', desc_en: 'Balanced dairy cow ration mix', desc_or: 'ଗାଈ ପାଇଁ ସନ୍ତୁଳିତ ଖାଦ୍ୟ ମିଶ୍ରଣ' },
@@ -153,7 +157,7 @@ export default function AgriServicesHub({ lang }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {CATEGORIES.map((cat) => {
             const IconComp = cat.icon;
             return (
@@ -161,24 +165,43 @@ export default function AgriServicesHub({ lang }) {
                 key={cat.id}
                 type="button"
                 onClick={() => openCategory(cat)}
-                className="bg-[#FDFCFA] border border-[#D5DEC9] rounded-xl p-4 text-left cursor-pointer hover:border-[#1E4D2B] hover:shadow-md transition-all group"
+                className="bg-[#FDFCFA] border border-[#D5DEC9] rounded-2xl overflow-hidden text-left cursor-pointer hover:border-[#1E4D2B] hover:shadow-lg transition-all group flex flex-col"
               >
-                <div className="flex items-start gap-3">
-                  <div className={`p-2.5 rounded-xl flex-shrink-0 ${cat.accent}`}>
-                    <IconComp className="w-5 h-5" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-sm text-[#2C221E] group-hover:text-[#1E4D2B] transition-colors">
-                      {lang === 'or' ? cat.title_or : cat.title_en}
-                    </h3>
-                    <p className="text-xs text-[#7A6E62] mt-1 leading-relaxed">
-                      {lang === 'or' ? cat.desc_or : cat.desc_en}
-                    </p>
-                    <span className="inline-block mt-2 text-xs font-bold text-[#1E4D2B] bg-[#EAF0E6] px-2 py-0.5 rounded-full">
+                {/* Photographic Header */}
+                <div className="relative h-28 sm:h-32 w-full overflow-hidden bg-[#15381F]">
+                  <img
+                    src={cat.image}
+                    alt={lang === 'or' ? cat.title_or : cat.title_en}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+                  
+                  {/* Floating Icon and Tool Count Badge */}
+                  <div className="absolute bottom-2.5 inset-x-3 flex items-center justify-between">
+                    <div className="flex items-center space-x-2">
+                      <div className={`p-1.5 rounded-lg backdrop-blur-md bg-white/90 shadow-xs ${cat.accent}`}>
+                        <IconComp className="w-4 h-4" />
+                      </div>
+                      <span className="text-white text-xs font-bold drop-shadow-sm">
+                        {lang === 'or' ? cat.title_or : cat.title_en}
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-bold text-white bg-black/50 backdrop-blur-xs px-2 py-0.5 rounded-full border border-white/20">
                       {cat.services.length} {lang === 'or' ? 'ଟୁଲ୍' : 'tools'}
                     </span>
                   </div>
-                  <ChevronRight className="w-4 h-4 text-[#BAC8AA] group-hover:text-[#1E4D2B] flex-shrink-0 mt-1 transition-colors" />
+                </div>
+
+                {/* Body Content */}
+                <div className="p-3.5 flex-1 flex flex-col justify-between">
+                  <p className="text-xs text-[#4A3E38] leading-relaxed">
+                    {lang === 'or' ? cat.desc_or : cat.desc_en}
+                  </p>
+                  <div className="mt-3 pt-2 border-t border-[#EAF0E6] flex items-center justify-between text-xs font-bold text-[#1E4D2B]">
+                    <span>{lang === 'or' ? 'ଟୁଲ୍ ଖୋଲନ୍ତୁ' : 'Open Category Tools'}</span>
+                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </button>
             );

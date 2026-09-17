@@ -6,18 +6,42 @@ export default function Header({ lang, setLang, backendOnline }) {
   const t = translations[lang];
 
   return (
-    <header className="bg-[#1E4D2B] text-[#FDFCFA] border-b border-[#15381F] shadow-sm">
-      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-3.5 sm:py-4 flex items-center justify-between">
+    <header className="bg-[#1E4D2B] text-[#FDFCFA] border-b-2 border-[#D97706] shadow-sm">
+      {/* Official State Agri Portal Sub-Bar */}
+      <div className="bg-[#13331D] text-[#BAC8AA] text-[11px] py-1 px-4 sm:px-6 lg:px-8 border-b border-[#2C6E3B]/40">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D97706]" aria-hidden="true" />
+            <span className="font-medium">
+              {lang === 'or' 
+                ? 'ଓଡ଼ିଶା ସରକାର — କୃଷି ଓ କୃଷକ ସଶକ୍ତିକରଣ ମଡେଲ୍' 
+                : 'Govt of Odisha — Department of Agriculture & Farmers Empowerment'}
+            </span>
+          </div>
+          <div className="hidden sm:flex items-center space-x-3 text-[10px] text-[#D5DEC9]">
+            <span>🌾 ଖରିଫ ଓ ରବି ସହାୟତା</span>
+            <span>•</span>
+            <span>📞 କୃଷି ହେଲ୍ପଲାଇନ୍: 155333</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-3.5 flex items-center justify-between">
         
         {/* Branding */}
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-lg bg-[#2C6E3B] flex items-center justify-center text-white shadow-inner flex-shrink-0" aria-hidden="true">
-            <Leaf className="w-5 h-5" />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2C6E3B] to-[#15381F] border border-[#BAC8AA]/40 flex items-center justify-center text-[#F59E0B] shadow-inner flex-shrink-0" aria-hidden="true">
+            <Leaf className="w-5 h-5 text-[#86EFAC]" />
           </div>
           <div>
-            <h1 className="text-lg sm:text-xl font-bold tracking-tight text-white leading-tight">
-              {t.app_title}
-            </h1>
+            <div className="flex items-center space-x-2">
+              <h1 className="text-lg sm:text-xl font-extrabold tracking-tight text-white leading-tight">
+                {t.app_title}
+              </h1>
+              <span className="hidden md:inline-block text-[10px] font-bold uppercase tracking-wider bg-[#D97706] text-white px-2 py-0.5 rounded-full">
+                {lang === 'or' ? 'ସ୍ମାର୍ଟ କୃଷି' : 'Smart Agri'}
+              </span>
+            </div>
             <p className="text-xs text-[#D5DEC9] hidden sm:block normal-case tracking-normal">
               {t.app_subtitle}
             </p>

@@ -7,6 +7,7 @@ import ResultCard from './components/ResultCard';
 import RetakeGuidance from './components/RetakeGuidance';
 import Footer from './components/Footer';
 import DesktopSidebar from './components/DesktopSidebar';
+import HeroBanner from './components/HeroBanner';
 import { translations } from './translations';
 import { API_BASE_URL } from './config';
 import { performClientDiagnosis } from './utils/offlineDiagnosis';
@@ -293,10 +294,14 @@ export default function App() {
         <div role="tabpanel" id="main-tabpanel" aria-labelledby={`tab-btn-${activeTab}`}>
           {/* Tab 1: Leaf Disease Diagnosis (Responsive 2-Column Desktop Grid) */}
           {activeTab === 'diagnosis' && (
-            <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-start">
-              
-              {/* Primary Left Column: Upload, Scan & Diagnosis Results */}
-              <div className="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div className="space-y-6 sm:space-y-7">
+              {/* Full-width Krushak Odisha Style Hero Banner */}
+              <HeroBanner lang={lang} onNavigateTab={handleTabChange} />
+
+              <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-start">
+                
+                {/* Primary Left Column: Upload, Scan & Diagnosis Results */}
+                <div className="lg:col-span-7 xl:col-span-7 space-y-6">
                 {/* Crop Filter Context */}
                 <CropSelectorFilter
                   selectedCrop={selectedCrop}
@@ -367,9 +372,9 @@ export default function App() {
               <div className="hidden lg:block lg:col-span-5 xl:col-span-5 sticky top-6">
                 <DesktopSidebar lang={lang} onSelectSample={handleSelectSample} />
               </div>
-
             </div>
-          )}
+          </div>
+        )}
 
           {/* Tab 2: Crop Growing Guide */}
           {activeTab === 'guide' && (

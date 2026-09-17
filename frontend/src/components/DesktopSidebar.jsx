@@ -52,6 +52,34 @@ export default function DesktopSidebar({ lang, onSelectSample }) {
   return (
     <aside className="space-y-5 text-left" aria-label={lang === 'or' ? "କୃଷି ସନ୍ଦର୍ଭ ସୂଚନା" : "Agricultural Reference Gallery"}>
       
+      {/* Official Odisha Farmer Field Advisory Card with Real Photo */}
+      <div className="bg-[#FAFDF8] border border-[#BAC8AA] rounded-2xl p-4 shadow-xs">
+        <div className="flex items-center space-x-3">
+          <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#1E4D2B] flex-shrink-0 shadow-xs">
+            <img
+              src="/images/farmer_portrait.jpg"
+              alt="Odisha Farmer"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xs font-bold text-[#1E4D2B]">
+                {lang === 'or' ? 'ଓଡ଼ିଶା କ୍ଷେତ୍ର ପରାମର୍ଶ' : 'State Agronomy Desk'}
+              </h3>
+              <span className="text-[9px] font-bold bg-[#86EFAC]/30 text-[#166534] px-2 py-0.5 rounded-full border border-[#86EFAC]/60">
+                {lang === 'or' ? 'ସକ୍ରିୟ ଋତୁ' : 'Active Season'}
+              </span>
+            </div>
+            <p className="text-[11px] text-[#4A3E38] mt-0.5 leading-snug">
+              {lang === 'or'
+                ? 'ବର୍ତ୍ତମାନ ଖରିଫ ଓ ରବି ଋତୁରେ ଧାନ ମହିଷା ଓ ପୋକ ସମସ୍ୟା ଦେଖାଦେଲେ ତୁରନ୍ତ ଫଟୋ ଉଠାଇ ଯାଞ୍ଚ କରନ୍ତୁ।'
+                : 'Rice blast and bacterial blight risk elevated during humid weather. Upload early leaves for prompt intervention.'}
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Visual Disease Pathology Reference Gallery */}
       <div className="bg-[#FDFCFA] border border-[#D5DEC9] rounded-xl p-5 card-shadow">
         <div className="flex items-center justify-between mb-3 pb-2.5 border-b border-[#EAF0E6]">

@@ -47,24 +47,31 @@ const SCHEMES = [
 
 export default function GovtSchemesCard({ lang }) {
   return (
-    <div className="bg-[#FDFCFA] border border-[#D5DEC9] rounded-xl p-4 sm:p-5 card-shadow text-left mb-6">
-      
-      {/* Header */}
-      <div className="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-[#EAF0E6]">
-        <div className="flex items-center space-x-2">
-          <div className="p-2 rounded-lg bg-[#EAF0E6] text-[#1E4D2B]">
-            <Landmark className="w-5 h-5" />
+    <div className="space-y-5 text-left mb-6">
+      {/* Real Photo Banner inspired by Krushak Odisha */}
+      <div className="relative rounded-2xl overflow-hidden border border-[#BAC8AA] shadow-sm bg-[#15381F] min-h-[140px] sm:min-h-[160px] flex items-center">
+        <img
+          src="/images/schemes_govt.jpg"
+          alt="Govt Schemes for Odisha Farmers"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0C2413]/95 via-[#15381F]/85 to-black/40" />
+        <div className="relative z-10 p-5 sm:p-6 text-white max-w-2xl">
+          <div className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full bg-[#EAF0E6]/20 backdrop-blur-md text-[#86EFAC] text-xs font-semibold mb-2">
+            <Landmark className="w-3.5 h-3.5 text-[#F59E0B]" />
+            <span>{lang === 'or' ? 'ଓଡ଼ିଶା ସରକାର କୃଷକ କଲ୍ୟାଣ' : 'Department of Agriculture & Farmers Empowerment'}</span>
           </div>
-          <div>
-            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
-              {lang === 'or' ? 'କୃଷକ ସରକାରୀ ଯୋଜନା ଓ ସହାୟତା ମାର୍ଗଦର୍ଶିକା' : 'Odisha Govt Farmer Schemes & Subsidies'}
-            </h2>
-            <p className="text-xs text-[#7A6E62]">
-              {lang === 'or' ? 'ସରକାରୀ ଆର୍ଥିକ ସହାୟତା, ବିହନ ରିହାତି ଏବଂ ସୋଲାର ପମ୍ପ ଯୋଜନା' : 'Official direct benefit transfers, certified seed subsidies & solar irrigation grants'}
-            </p>
-          </div>
+          <h2 className="font-extrabold text-white text-lg sm:text-2xl drop-shadow-sm">
+            {lang === 'or' ? 'କୃଷକ ସରକାରୀ ଯୋଜନା ଓ ସହାୟତା ମାର୍ଗଦର୍ଶିକା' : 'Odisha Govt Farmer Schemes & Subsidies'}
+          </h2>
+          <p className="text-xs sm:text-sm text-[#D5DEC9] mt-1 leading-relaxed">
+            {lang === 'or' ? 'କାଳିଆ, ପିଏମ୍-କିଷାନ, ସୌର ଜଳନିଧି ଏବଂ ରିହାତି ବିହନ ସମ୍ପର୍କିତ ସମ୍ପୂର୍ଣ୍ଣ ତଥ୍ୟ ଓ ଆବେଦନ ପ୍ରକ୍ରିୟା।' : 'Direct benefit transfers, certified seed subsidies, and solar irrigation grants for registered farmers.'}
+          </p>
         </div>
       </div>
+
+      <div className="bg-[#FDFCFA] border border-[#D5DEC9] rounded-xl p-4 sm:p-5 card-shadow">
 
       {/* Schemes Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -102,6 +109,7 @@ export default function GovtSchemesCard({ lang }) {
 
           </div>
         ))}
+      </div>
       </div>
 
     </div>

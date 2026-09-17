@@ -85,24 +85,31 @@ export default function HelplineDirectory({ lang }) {
   );
 
   return (
-    <div className="bg-[#FDFCFA] border border-[#D5DEC9] rounded-xl p-4 sm:p-5 card-shadow text-left mb-6">
-      
-      {/* Top Header */}
-      <div className="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-[#EAF0E6]">
-        <div className="flex items-center space-x-2">
-          <div className="p-2 rounded-lg bg-[#EAF0E6] text-[#1E4D2B]">
-            <PhoneCall className="w-5 h-5" />
+    <div className="space-y-5 text-left mb-6">
+      {/* Real Photo Banner inspired by Krushak Odisha */}
+      <div className="relative rounded-2xl overflow-hidden border border-[#BAC8AA] shadow-sm bg-[#15381F] min-h-[140px] sm:min-h-[160px] flex items-center">
+        <img
+          src="/images/helpline_support.jpg"
+          alt="Odisha Farmer Helpline and Call Support"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0C2413]/95 via-[#15381F]/85 to-black/40" />
+        <div className="relative z-10 p-5 sm:p-6 text-white max-w-2xl">
+          <div className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full bg-[#EAF0E6]/20 backdrop-blur-md text-[#86EFAC] text-xs font-semibold mb-2">
+            <PhoneCall className="w-3.5 h-3.5 text-[#F59E0B]" />
+            <span>{lang === 'or' ? 'ଆମ କୃଷି ୧୫୫୩୩୩ ମାଗଣା ଫୋନ୍ ସେବା' : 'Ama Krushi 155333 Direct Advisory'}</span>
           </div>
-          <div>
-            <h2 className="font-bold text-[#2C221E] text-base sm:text-lg">
-              {lang === 'or' ? 'ଜରୁରୀ କୃଷି ହେଲ୍ପଲାଇନ୍ ଓ କେଭିକେ ଡାଇରେକ୍ଟରୀ' : 'Emergency Krishi Helplines & KVK Directory'}
-            </h2>
-            <p className="text-xs text-[#7A6E62]">
-              {lang === 'or' ? 'ଓଡ଼ିଶା ସରକାର ଓ କୃଷି ବୈଜ୍ଞାନିକଙ୍କ ସହିତ ସିଧାସଳଖ ଫୋନରେ କଥା ହୁଅନ୍ତୁ' : '1-Tap direct dialing to Odisha agricultural scientists & official helplines'}
-            </p>
-          </div>
+          <h2 className="font-extrabold text-white text-lg sm:text-2xl drop-shadow-sm">
+            {lang === 'or' ? 'ଜରୁରୀ କୃଷି ହେଲ୍ପଲାଇନ୍ ଓ କେଭିକେ ଡାଇରେକ୍ଟରୀ' : 'Emergency Krishi Helplines & KVK Directory'}
+          </h2>
+          <p className="text-xs sm:text-sm text-[#D5DEC9] mt-1 leading-relaxed">
+            {lang === 'or' ? 'ଓଡ଼ିଶା କୃଷି ବିଭାଗ, ICAR-NRRI ଏବଂ OUAT କୃଷି ବିଜ୍ଞାନ କେନ୍ଦ୍ର ଅଧିକାରୀଙ୍କ ସହିତ ୧-ଟ୍ୟାପ୍ ତୁରନ୍ତ କଲ୍ କରନ୍ତୁ।' : '1-Tap direct dialing to state agricultural scientists, crop extension officers, and district KVK heads.'}
+          </p>
         </div>
       </div>
+
+      <div className="bg-[#FDFCFA] border border-[#D5DEC9] rounded-xl p-4 sm:p-5 card-shadow">
 
       {/* Emergency Toll-Free Banners */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
@@ -179,6 +186,7 @@ export default function HelplineDirectory({ lang }) {
             </div>
           ))}
         </div>
+      </div>
       </div>
 
     </div>

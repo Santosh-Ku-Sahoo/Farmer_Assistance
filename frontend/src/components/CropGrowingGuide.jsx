@@ -41,7 +41,7 @@ export default function CropGrowingGuide({ lang }) {
                 : 'text-[#5A4D41] hover:text-[#1E4D2B]'
             }`}
           >
-            <Sprout className="w-4 h-4 flex-shrink-0" />
+            <img src="/samples/rice_healthy.jpg" alt="Rice" className="w-5 h-5 rounded-full object-cover border border-[#BAC8AA] flex-shrink-0" />
             <span className="truncate">{lang === 'or' ? 'ଧାନ (Rice)' : 'Rice / Paddy'}</span>
           </button>
 
@@ -54,7 +54,7 @@ export default function CropGrowingGuide({ lang }) {
                 : 'text-[#5A4D41] hover:text-[#1E4D2B]'
             }`}
           >
-            <Leaf className="w-4 h-4 flex-shrink-0" />
+            <img src="/samples/tomato_healthy.jpg" alt="Tomato" className="w-5 h-5 rounded-full object-cover border border-[#BAC8AA] flex-shrink-0" />
             <span className="truncate">{lang === 'or' ? 'ଟମାଟୋ (Tomato)' : 'Tomato'}</span>
           </button>
 
@@ -67,7 +67,7 @@ export default function CropGrowingGuide({ lang }) {
                 : 'text-[#5A4D41] hover:text-[#1E4D2B]'
             }`}
           >
-            <Calendar className="w-4 h-4 flex-shrink-0" />
+            <img src="/samples/potato_healthy.jpg" alt="Potato" className="w-5 h-5 rounded-full object-cover border border-[#BAC8AA] flex-shrink-0" />
             <span className="truncate">{lang === 'or' ? 'ଆଳୁ (Potato)' : 'Potato'}</span>
           </button>
         </div>
