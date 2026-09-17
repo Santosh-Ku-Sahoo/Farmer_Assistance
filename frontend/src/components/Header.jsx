@@ -44,20 +44,20 @@ export default function Header({ lang, setLang, backendOnline }) {
           <div className="inline-flex rounded-lg border border-[#2C6E3B] bg-[#15381F] p-0.5">
             <button
               onClick={() => setLang('or')}
-              className={`px-3 py-1 text-xs sm:text-sm font-semibold rounded-md transition-colors ${
+              className={`btn-tab ${
                 lang === 'or'
-                  ? 'bg-[#2C6E3B] text-white shadow-sm'
-                  : 'text-[#D5DEC9] hover:text-white'
+                  ? 'btn-tab-active !bg-[#2C6E3B]'
+                  : 'text-[#D5DEC9] hover:text-white hover:bg-[#2C6E3B]/40'
               }`}
             >
               ଓଡ଼ିଆ
             </button>
             <button
               onClick={() => setLang('en')}
-              className={`px-3 py-1 text-xs sm:text-sm font-semibold rounded-md transition-colors ${
+              className={`btn-tab ${
                 lang === 'en'
-                  ? 'bg-[#2C6E3B] text-white shadow-sm'
-                  : 'text-[#D5DEC9] hover:text-white'
+                  ? 'btn-tab-active !bg-[#2C6E3B]'
+                  : 'text-[#D5DEC9] hover:text-white hover:bg-[#2C6E3B]/40'
               }`}
             >
               English

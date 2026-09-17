@@ -156,11 +156,7 @@ export default function App() {
           <button
             type="button"
             onClick={() => handleTabChange('diagnosis')}
-            className={`py-2 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1.5 transition-all cursor-pointer ${
-              activeTab === 'diagnosis'
-                ? 'bg-[#1E4D2B] text-white shadow-xs'
-                : 'text-[#382E28] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
-            }`}
+            className={`btn-tab ${activeTab === 'diagnosis' ? 'btn-tab-active' : ''}`}
             title="Leaf Disease Diagnosis (Primary ML Feature)"
           >
             <Leaf className="w-4 h-4 flex-shrink-0" />
@@ -170,11 +166,7 @@ export default function App() {
           <button
             type="button"
             onClick={() => handleTabChange('guide')}
-            className={`py-2 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1.5 transition-all cursor-pointer ${
-              activeTab === 'guide'
-                ? 'bg-[#1E4D2B] text-white shadow-xs'
-                : 'text-[#382E28] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
-            }`}
+            className={`btn-tab ${activeTab === 'guide' ? 'btn-tab-active' : ''}`}
             title="Crop Cultivation Guide (Static Reference)"
           >
             <BookOpen className="w-4 h-4 flex-shrink-0" />
@@ -184,11 +176,7 @@ export default function App() {
           <button
             type="button"
             onClick={() => handleTabChange('weather')}
-            className={`py-2 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1.5 transition-all cursor-pointer ${
-              activeTab === 'weather'
-                ? 'bg-[#1E4D2B] text-white shadow-xs'
-                : 'text-[#382E28] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
-            }`}
+            className={`btn-tab ${activeTab === 'weather' ? 'btn-tab-active' : ''}`}
             title="Spray Weather Advisory & Cyclone Alert"
           >
             <CloudSun className="w-4 h-4 flex-shrink-0" />
@@ -198,11 +186,7 @@ export default function App() {
           <button
             type="button"
             onClick={() => handleTabChange('mandi')}
-            className={`py-2 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1.5 transition-all cursor-pointer ${
-              activeTab === 'mandi'
-                ? 'bg-[#1E4D2B] text-white shadow-xs'
-                : 'text-[#382E28] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
-            }`}
+            className={`btn-tab ${activeTab === 'mandi' ? 'btn-tab-active' : ''}`}
             title="Odisha Mandi Prices"
           >
             <IndianRupee className="w-4 h-4 flex-shrink-0" />
@@ -212,11 +196,7 @@ export default function App() {
           <button
             type="button"
             onClick={() => handleTabChange('services')}
-            className={`py-2 px-1 text-xs font-bold rounded-lg flex items-center justify-center space-x-1.5 transition-all cursor-pointer ${
-              activeTab === 'services'
-                ? 'bg-[#1E4D2B] text-white shadow-xs'
-                : 'text-[#382E28] hover:text-[#1E4D2B] hover:bg-[#EAF0E6]'
-            }`}
+            className={`btn-tab ${activeTab === 'services' ? 'btn-tab-active' : ''}`}
             title="Comprehensive Categorized Agro Services"
           >
             <Landmark className="w-4 h-4 flex-shrink-0 text-[#D97706]" />

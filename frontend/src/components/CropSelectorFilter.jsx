@@ -30,9 +30,9 @@ export default function CropSelectorFilter({ selectedCrop, onSelectCrop, lang })
               key={crop.id}
               type="button"
               onClick={() => onSelectCrop(crop.id)}
-              className={`py-2 px-3 text-xs sm:text-sm font-medium rounded-lg border text-center transition-all ${
+              className={`btn-tab border ${
                 isSelected
-                  ? 'bg-[#1E4D2B] text-white border-[#1E4D2B] shadow-sm font-semibold'
+                  ? 'btn-tab-active border-[#1E4D2B]'
                   : 'bg-[#FDFCFA] text-[#2C221E] border-[#D5DEC9] hover:border-[#1E4D2B] hover:bg-[#F3F7EE]'
               }`}
             >

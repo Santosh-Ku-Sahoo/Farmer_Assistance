@@ -155,7 +155,7 @@ export default function ImageUploader({
             <button
               type="button"
               onClick={() => cameraInputRef.current?.click()}
-              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-lg bg-[#1E4D2B] text-white text-xs sm:text-sm font-bold hover:bg-[#163B21] transition-colors shadow-sm cursor-pointer"
+              className="btn-primary w-full sm:w-auto"
             >
               <Camera className="w-4 h-4" />
               <span>{t.take_photo}</span>
@@ -164,7 +164,7 @@ export default function ImageUploader({
             <button
               type="button"
               onClick={() => fileInputRef.current?.click()}
-              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-lg bg-[#FDFCFA] text-[#2C221E] border border-[#BAC8AA] text-xs sm:text-sm font-bold hover:bg-[#EAF0E6] transition-colors cursor-pointer"
+              className="btn-secondary w-full sm:w-auto"
             >
               <Upload className="w-4 h-4 text-[#5A4D41]" />
               <span>{t.upload_photo}</span>
@@ -181,28 +181,28 @@ export default function ImageUploader({
               <button
                 type="button"
                 onClick={() => onSelectSample('rice_blast.jpg')}
-                className="text-xs px-3 py-1.5 rounded-lg bg-[#EAF0E6] text-[#1E4D2B] hover:bg-[#D5DEC9] border border-[#BAC8AA] font-bold transition-all shadow-2xs cursor-pointer flex items-center space-x-1"
+                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B]"
               >
                 <span>🌾 {lang === 'or' ? 'ଧାନ ପତ୍ର ମହିଷା (Rice Blast)' : 'Rice Blast'}</span>
               </button>
               <button
                 type="button"
                 onClick={() => onSelectSample('tomato_early_blight.jpg')}
-                className="text-xs px-3 py-1.5 rounded-lg bg-[#EAF0E6] text-[#1E4D2B] hover:bg-[#D5DEC9] border border-[#BAC8AA] font-bold transition-all shadow-2xs cursor-pointer flex items-center space-x-1"
+                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B]"
               >
                 <span>🍅 {lang === 'or' ? 'ଟମାଟୋ ଆଗୁଆ ଝାଉଁଳା' : 'Tomato Early Blight'}</span>
               </button>
               <button
                 type="button"
                 onClick={() => onSelectSample('potato_late_blight.jpg')}
-                className="text-xs px-3 py-1.5 rounded-lg bg-[#EAF0E6] text-[#1E4D2B] hover:bg-[#D5DEC9] border border-[#BAC8AA] font-bold transition-all shadow-2xs cursor-pointer flex items-center space-x-1"
+                className="btn-tab bg-[#EAF0E6] border border-[#BAC8AA] text-[#1E4D2B]"
               >
                 <span>🥔 {lang === 'or' ? 'ଆଳୁ ପଛୁଆ ପତ୍ରପୋଡ଼ା' : 'Potato Late Blight'}</span>
               </button>
               <button
                 type="button"
                 onClick={() => onSelectSample('unclear_photo.jpg')}
-                className="text-xs px-3 py-1.5 rounded-lg bg-[#FEF3C7] text-[#92400E] hover:bg-[#FDE68A] border border-[#FCD34D] font-bold transition-all shadow-2xs cursor-pointer flex items-center space-x-1"
+                className="btn-tab bg-[#FEF3C7] border border-[#FCD34D] text-[#92400E] hover:bg-[#FDE68A]"
                 title="Test low-confidence retake guidance"
               >
                 <span>⚠️ {lang === 'or' ? 'ଅସ୍ପଷ୍ଟ ଫଟୋ (Retake State)' : 'Unclear Photo'}</span>
