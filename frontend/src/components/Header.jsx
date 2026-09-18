@@ -7,24 +7,6 @@ export default function Header({ lang, setLang, backendOnline }) {
 
   return (
     <header className="bg-[#1E4D2B] text-[#FDFCFA] border-b-2 border-[#D97706] shadow-sm">
-      {/* Official State Agri Portal Sub-Bar */}
-      <div className="bg-[#13331D] text-[#BAC8AA] text-[11px] py-1 px-4 sm:px-6 lg:px-8 border-b border-[#2C6E3B]/40">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#D97706]" aria-hidden="true" />
-            <span className="font-medium">
-              {lang === 'or' 
-                ? 'ଓଡ଼ିଶା ସରକାର — କୃଷି ଓ କୃଷକ ସଶକ୍ତିକରଣ ମଡେଲ୍' 
-                : 'Govt of Odisha — Department of Agriculture & Farmers Empowerment'}
-            </span>
-          </div>
-          <div className="hidden sm:flex items-center space-x-3 text-[10px] text-[#D5DEC9]">
-            <span>{lang === 'or' ? '🌾 ଖରିଫ ଓ ରବି ସହାୟତା' : '🌾 Kharif & Rabi Assistance'}</span>
-            <span>•</span>
-            <span>{lang === 'or' ? '📞 କୃଷି ହେଲ୍ପଲାଇନ୍: 155333' : '📞 Krushi Helpline: 155333'}</span>
-          </div>
-        </div>
-      </div>
 
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-3.5 flex items-center justify-between">
         
